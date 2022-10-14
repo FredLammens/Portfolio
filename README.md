@@ -103,3 +103,20 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+https://youtu.be/s37Gu4z878I
+Structuring NX Workspace:
+1. create inside lib folder per project + shared folder
+2. later when lib needs to be shared put inside shared folder
+3. inside this project folder you add new folder per route 
+4. inside this one you create libs with naming convention (feature,ui,data-access,utility)
+   1. feature (smart component with injected services)
+   2. ui (dumb components presentational)
+   3. data-access (ngrx, services)
+   4. utility (helper functions)
+5. always generate with @nrwl/angular:library 
+6. if multiple child components inside feature => create feature folder (grouping) with libraries inside to hold each smart component
+7. ex: libs/mobile/home/feature/src/lib/
+8. tsconfig.base.json => paths are links to path you create 
+9. common practice to have library for application shell to hold routes and hold root levels , like store effects routermodule etc. [App.ts module file]
+10. 
