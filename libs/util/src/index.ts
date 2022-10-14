@@ -9,11 +9,6 @@ export * from './lib/util.module';
 export * from './lib/loading/loading.operators';
 
 /**************
- * Directives *
- *************/
-export * from './lib/loading/loading.directive';
-
-/**************
  * Decorators *
  *************/
 export * from './lib/logger';
