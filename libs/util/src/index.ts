@@ -16,4 +16,6 @@ export * from './lib/logger';
 /*********************
  * Helper functions *
  ******************/
-export * from './lib/remove-empty-attributes'
+export * from './lib/remove-empty-attributes';
+export * from './lib/destroy.base';
+
