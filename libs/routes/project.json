@@ -1,0 +1,24 @@
+{
+  "name": "routes",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/routes/src",
+  "prefix": "fred",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/routes"],
+      "options": {
+        "jestConfig": "libs/routes/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/routes/**/*.ts", "libs/routes/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
