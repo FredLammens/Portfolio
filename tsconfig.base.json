@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@fred/data": ["libs/data/src/index.ts"],
+      "@fred/portfolio/shell/feature": [
+        "libs/portfolio/shell/feature/src/index.ts"
+      ],
       "@fred/routes": ["libs/routes/src/index.ts"],
       "@fred/ui": ["libs/ui/src/index.ts"],
       "@fred/util": ["libs/util/src/index.ts"]
