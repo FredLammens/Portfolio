@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "start:portfolio": "nx serve portfolio",
+    "build:portfolio": "nx build portfolio",
+    "test:portfolio": "nx test portfolio"
   },
   "private": true,
   "dependencies": {
