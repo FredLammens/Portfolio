@@ -1,0 +1,27 @@
+{
+  "name": "shared-util-common-extensions-ng-rx-extensions",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/util/common-extensions/ng-rx-extensions/src",
+  "prefix": "fred",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/util/common-extensions/ng-rx-extensions"],
+      "options": {
+        "jestConfig": "libs/shared/util/common-extensions/ng-rx-extensions/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/util/common-extensions/ng-rx-extensions/**/*.ts",
+          "libs/shared/util/common-extensions/ng-rx-extensions/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["util"]
+}

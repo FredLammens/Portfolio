@@ -1,0 +1,27 @@
+{
+  "name": "shared-util-common-extensions-ng-model-extension",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/util/common-extensions/ng-model-extension/src",
+  "prefix": "fred",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/util/common-extensions/ng-model-extension"],
+      "options": {
+        "jestConfig": "libs/shared/util/common-extensions/ng-model-extension/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/util/common-extensions/ng-model-extension/**/*.ts",
+          "libs/shared/util/common-extensions/ng-model-extension/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["util"]
+}

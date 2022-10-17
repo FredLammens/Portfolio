@@ -1,0 +1,27 @@
+{
+  "name": "shared-util-common-extensions-decorators",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/util/common-extensions/decorators/src",
+  "prefix": "fred",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/util/common-extensions/decorators"],
+      "options": {
+        "jestConfig": "libs/shared/util/common-extensions/decorators/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/util/common-extensions/decorators/**/*.ts",
+          "libs/shared/util/common-extensions/decorators/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["util"]
+}
