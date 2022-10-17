@@ -9,12 +9,14 @@ Structuring NX Workspace:
    2. ui (dumb components presentational)
    3. data-access (ngrx, services)
    4. utility (helper functions)
-4. always generate with `ng g @nrwl/angular:lib my-lib`
+   5. [Unconventional]: added type lib naming convention for factories and models
+4. always generate with `ng g @nrwl/angular:lib my-lib` and dont forget to add the appropriate tags
 5. if multiple child components inside feature => create feature folder (grouping) with libraries inside to hold each smart component
     ex: libs/mobile/home/feature/src/lib/
 6. tsconfig.base.json => paths are links to path you create 
 7. common practice to have library for application shell to hold routes and hold root levels , like store effects routermodule etc. [App.ts module file]
 
+the library dependencies are configured with the tags in eslint.json in rules => depConstraints
 
 ## Generate a library
 
