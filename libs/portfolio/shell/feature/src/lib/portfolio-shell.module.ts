@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { PorfolioShellRoutingModule } from './porfolio-shell-routing.module';
+import { ShellRoutes } from './shell.routing';
 
 @NgModule({
-  imports: [PorfolioShellRoutingModule],
+  imports: [ShellRoutes],
 })
 export class PortfolioShellModule {}
