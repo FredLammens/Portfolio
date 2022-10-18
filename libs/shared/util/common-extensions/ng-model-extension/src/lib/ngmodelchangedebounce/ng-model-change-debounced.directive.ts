@@ -1,8 +1,8 @@
 /* eslint-disable @angular-eslint/directive-selector */
-import { NgModel } from '@angular/forms';
-import { debounceTime, distinctUntilChanged, skip } from 'rxjs/operators';
 import { Directive, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { Subscription } from 'rxjs/internal/Subscription';
+import { debounceTime, distinctUntilChanged, skip } from 'rxjs/operators';
 
 /**
  * to be used in combination with ngModel to add a debounce time to it's value

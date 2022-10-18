@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { isDevMode } from '@angular/core';
 
 interface LoggerParams {
@@ -15,11 +16,9 @@ function formatConsoleDate(date: Date) {
   const seconds = date.getSeconds();
   const milliseconds = date.getMilliseconds();
 
-  return `[${hour < 10 ? `0${hour}` : hour}:${
-    minutes < 10 ? `0${minutes}` : minutes
-  }:${seconds < 10 ? `0${seconds}` : seconds}.${`00${milliseconds}`.slice(
-    -3,
-  )}]`;
+  return `[${hour < 10 ? `0${hour}` : hour}:${minutes < 10 ? `0${minutes}` : minutes}:${
+    seconds < 10 ? `0${seconds}` : seconds
+  }.${`00${milliseconds}`.slice(-3)}]`;
 }
 
 // Default values when just @Log() is used
@@ -92,19 +91,11 @@ export function Log(
   const options: Required<LoggerParams> = {
     type: params?.type || defaultParams.type,
     inputs: params?.inputs === undefined ? defaultParams.inputs : params.inputs,
-    outputs:
-      params?.outputs === undefined ? defaultParams.outputs : params.outputs,
-    timeStamp:
-      params?.timeStamp === undefined
-        ? defaultParams.timeStamp
-        : params.timeStamp,
+    outputs: params?.outputs === undefined ? defaultParams.outputs : params.outputs,
+    timeStamp: params?.timeStamp === undefined ? defaultParams.timeStamp : params.timeStamp,
   };
 
-  return (
-    _target: any,
-    _propertyKey: string,
-    descriptor: PropertyDescriptor,
-  ) => {
+  return (_target: any, _propertyKey: string, descriptor: PropertyDescriptor) => {
     // Overwrite console logging in production with printInProd = true
     // https://angular.io/api/core/isDevMode
     if (!isDevMode()) {
@@ -146,11 +137,7 @@ export function Log(
 
       // Only Inputs
       if (params?.inputs && !params?.outputs) {
-        console[options.type](
-          timeStamp,
-          `${original.name} -> IN: `,
-          nameAndValue,
-        );
+        console[options.type](timeStamp, `${original.name} -> IN: `, nameAndValue);
       }
 
       // Only Outputs

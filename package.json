@@ -8,7 +8,8 @@
     "start:portfolio": "nx serve portfolio",
     "build:portfolio": "nx build portfolio",
     "test:portfolio": "nx test portfolio",
-    "lint": "nx run-many --all --target=lint"
+    "lint": "nx run-many --all --target=lint",
+    "lint:fix": "nx run-many --all --target=lint --fix"
   },
   "private": true,
   "dependencies": {

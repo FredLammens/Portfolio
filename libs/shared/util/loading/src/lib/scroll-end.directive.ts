@@ -74,7 +74,6 @@ export class ScrollEndDirective implements OnInit, OnDestroy {
             entry.isIntersecting &&
             this.scrollDirection === this.desiredDirection
           ) {
-            console.log('emit');
             this.scrollEnd.emit();
           }
 

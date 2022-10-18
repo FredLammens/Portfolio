@@ -1,5 +1,7 @@
-import { NavigationComponent } from './../../../ui/navigation/src/lib/navigation/navigation.component';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+import { NavigationComponent } from '@fred/portfolio/shell/ui/navigation';
+
 //layoutcomponent add ui folder with lib and put it underneath path with component:navigationComponent,
 const routes: Routes = [
   {
