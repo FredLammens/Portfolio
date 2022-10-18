@@ -1,9 +1,10 @@
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+
+import { PortfolioShellModule } from '@fred/portfolio/shell/feature';
 
 import { AppComponent } from './app.component';
-import { PortfolioShellModule } from '@fred/portfolio/shell/feature';
 
 @NgModule({
   declarations: [AppComponent],

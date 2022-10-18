@@ -7,7 +7,8 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
     "start:portfolio": "nx serve portfolio",
     "build:portfolio": "nx build portfolio",
-    "test:portfolio": "nx test portfolio"
+    "test:portfolio": "nx test portfolio",
+    "lint": "nx run-many --all --target=lint"
   },
   "private": true,
   "dependencies": {
@@ -42,12 +43,13 @@
     "@swc/core": "^1.2.173",
     "@types/jest": "28.1.1",
     "@types/node": "16.11.7",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
     "cypress": "^10.7.0",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-import": "^2.26.0",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
     "jest-preset-angular": "~12.2.2",

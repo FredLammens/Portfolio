@@ -85,5 +85,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:portfolio","type:app"]
 }
