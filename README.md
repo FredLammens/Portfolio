@@ -30,3 +30,7 @@ Libraries are shareable across libraries and applications. They can be imported 
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
 
+## ESLINT
+
+https://www.youtube.com/watch?v=tEVNYmJ05Ew
+Added custom Nx eslint rules (created with astexplorer.net)

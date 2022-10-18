@@ -38,6 +38,8 @@
     "@nrwl/jest": "14.8.5",
     "@nrwl/linter": "14.8.5",
     "@nrwl/workspace": "14.8.5",
+    "@swc-node/register": "^1.4.2",
+    "@swc/core": "^1.2.173",
     "@types/jest": "28.1.1",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",

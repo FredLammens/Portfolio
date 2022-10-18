@@ -9,6 +9,7 @@
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {
+            "@nrwl/nx/workspace/uppercase-const": "error",
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
@@ -54,7 +55,8 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "rules": {
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
