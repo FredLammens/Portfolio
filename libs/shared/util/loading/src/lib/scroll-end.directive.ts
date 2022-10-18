@@ -43,12 +43,11 @@ export enum ScrollendDirection {
   selector: '[scrollEnd]',
 })
 export class ScrollEndDirective implements OnInit, OnDestroy {
-  @Output() public scrollEnd: EventEmitter<any> = new EventEmitter();
+  @Output() public readonly scrollEnd: EventEmitter<any> = new EventEmitter();
 
   @Input() public rootMargin = '0px 0px 0px 0px';
 
-  @Input() public desiredDirection: ScrollendDirection =
-    ScrollendDirection.DOWN;
+  @Input() public desiredDirection: ScrollendDirection = ScrollendDirection.DOWN;
 
   private observer: IntersectionObserver;
 
@@ -66,8 +65,7 @@ export class ScrollEndDirective implements OnInit, OnDestroy {
       (entries) => {
         entries.forEach((entry) => {
           this.scrollDirection =
-            this.previousEntry?.boundingClientRect.bottom >
-            entry.boundingClientRect.bottom
+            this.previousEntry?.boundingClientRect.bottom > entry.boundingClientRect.bottom
               ? ScrollendDirection.DOWN
               : ScrollendDirection.UP;
 

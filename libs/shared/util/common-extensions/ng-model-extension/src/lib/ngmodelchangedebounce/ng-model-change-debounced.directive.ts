@@ -1,13 +1,7 @@
 /* eslint-disable @angular-eslint/directive-selector */
 import { NgModel } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, skip } from 'rxjs/operators';
-import {
-  Directive,
-  EventEmitter,
-  Input,
-  OnDestroy,
-  Output,
-} from '@angular/core';
+import { Directive, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
 import { Subscription } from 'rxjs/internal/Subscription';
 
 /**
@@ -22,7 +16,7 @@ import { Subscription } from 'rxjs/internal/Subscription';
 })
 export class NgModelChangeDebouncedDirective implements OnDestroy {
   @Output()
-  public ngModelChangeDebounced = new EventEmitter<any>();
+  public readonly ngModelChangeDebounced = new EventEmitter<any>();
 
   @Input()
   public ngModelChangeDebounceTime = 500; // optional, 500 default
