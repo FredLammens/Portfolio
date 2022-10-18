@@ -41,10 +41,6 @@
               {
                 "sourceTag": "type:type",
                 "onlyDependOnLibsWithTags": ["type:type", "type:util"]
-              },
-              {
-                "sourceTag": "scope:shared",
-                "onlyDependOnLibsWithTags": ["scope:shared"]
               }
             ]
           }
