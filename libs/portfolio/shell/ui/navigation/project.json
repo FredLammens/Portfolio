@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-shell-ui-navigation",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/portfolio/shell/ui/navigation/src",
+  "prefix": "fred",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/portfolio/shell/ui/navigation"],
+      "options": {
+        "jestConfig": "libs/portfolio/shell/ui/navigation/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/portfolio/shell/ui/navigation/**/*.ts",
+          "libs/portfolio/shell/ui/navigation/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:portfolio type:ui"]
+}
