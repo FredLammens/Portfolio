@@ -7,7 +7,10 @@ const MAX_VALUE = 0x10000;
 export class RepeatTimesContext {
   public constructor(public readonly $implicit: number) {}
 }
-
+/**
+ * @example
+ * <div *repeatTimes="let n of 6" >
+ */
 @Directive({
   selector: '[repeatTimes][repeatTimesOf]',
 })
