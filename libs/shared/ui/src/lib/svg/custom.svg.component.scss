@@ -1,0 +1,46 @@
+svg {
+  width: inherit;
+  height: inherit;
+}
+
+.xs {
+  width: $icon-xs-sm;
+  height: $icon-xs-sm;
+}
+
+.sm {
+  width: $icon-sm-sm;
+  height: $icon-sm-sm;
+}
+
+.md {
+  width: $icon-md-sm;
+  height: $icon-md-sm;
+}
+
+.lg {
+  width: $icon-lg-sm;
+  height: $icon-lg-sm;
+}
+
+@media (min-width: $breakpoint-md) {
+  .xs {
+    width: $icon-xs-md;
+    height: $icon-xs-md;
+  }
+
+  .sm {
+    width: $icon-sm-md;
+    height: $icon-sm-md;
+  }
+
+  .md {
+    width: $icon-md-md;
+    height: $icon-md-md;
+  }
+
+  .lg {
+    width: $icon-lg-md;
+    height: $icon-lg-md;
+  }
+}
