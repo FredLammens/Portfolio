@@ -44,3 +44,8 @@ on explanation on how to use and write eslint
 2. change navigation component to shared one and remove constructor
 3. fix linting before push (husky integration)
 4. put mixin from navigation to mixins (fix it)
+
+#Usefull sites:
+
+1. https://nekocalc.com/px-to-rem-converter
+2. https://css.glass/

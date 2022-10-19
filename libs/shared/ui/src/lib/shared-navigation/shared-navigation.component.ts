@@ -21,9 +21,7 @@ export class SharedNavigationComponent {
   public readonly navroutes = this.router.config;
   public linkClass = '';
 
-  public constructor(private router: Router, private scroller: ViewportScroller) {
-    this.singlePageAnchors = ['Home', 'About', 'Work', 'Skills', 'Contact'];
-  }
+  public constructor(private router: Router, private scroller: ViewportScroller) {}
 
   private setAnchorToggled(anchor: string): void {
     this._singPageAnchors = this._singPageAnchors.map((mAnchor: Anchor) => {
