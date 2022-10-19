@@ -1,5 +1,3 @@
-$nav-margin: 0.5rem;
-
 @mixin glassmorphism {
   //make it glassmorphism
   background: rgba(255, 255, 255, 0.19);
@@ -14,7 +12,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: $nav-margin;
+  margin: var(--nav-margin);
   .links {
     @include glassmorphism;
     //put it in the middle
@@ -38,7 +36,7 @@ nav {
     align-items: center;
 
     .icon {
-      margin: $nav-margin;
+      margin: var(--nav-margin);
     }
   }
 }
