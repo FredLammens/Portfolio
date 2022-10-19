@@ -1,11 +1,18 @@
 <nav>
+  <!--TODO: change to svg icon when svg lib ready -->
   <span class="icon-container"><p class="icon">Frederic lammens</p></span>
   <span class="links">
     <ul>
-      <li><a [routerLink]="['/home']" routerLinkActive="active-link">Home</a></li>
-      <li><a>Experiments</a></li>
-      <li><a>Blog</a></li>
-      <li><a>Contact</a></li>
+      <ng-container *ngIf="singlePageAnchors.length; else multiPage">
+        <li *ngFor="let anchor of singlePageAnchors">
+          <a (click)="scrollTo(anchor)">{{ anchor }}</a>
+        </li>
+      </ng-container>
+      <ng-template #multiPage>
+        <li *ngFor="let route of navroutes">
+          <a [routerLink]="['/' + route.path]" routerLinkActive="active-link">{{ route.title }}</a>
+        </li>
+      </ng-template>
     </ul>
   </span>
 </nav>
