@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { SvgSize } from './svg.size.enum';
 
 //https://cloudengineering.studio/articles/the-right-way-to-componentize-svgs-for-your-angular-app
+//TODO: remake using this as reference : https://medium.com/angular-in-depth/how-to-create-an-icon-library-in-angular-4f8863d95a
 @Component({
   selector: 'custom-svg',
   templateUrl: './custom.svg.component.html',
