@@ -16,7 +16,7 @@ nav {
   .links {
     @include glassmorphism;
     //put it in the middle
-    margin: auto;
+    // margin: auto;
     > ul {
       list-style-type: none;
       padding: 0;
@@ -68,6 +68,35 @@ nav {
 
     .icon {
       margin: var(--nav-margin);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    position: fixed;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+
+    .links {
+      margin: auto;
+    }
+
+    .icon-container {
+      display: none;
+    }
+    //todo: add small animation
+    a {
+      all: unset;
+    }
+
+    .active-link {
+      all: unset;
+      color: var(--primary-text-highlited-color);
+      border-bottom: 0.125rem solid var(--primary-text-highlited-color);
     }
   }
 }
