@@ -37,3 +37,8 @@ Added custom Nx eslint rules (created with astexplorer.net)
 
 https://www.freecodecamp.org/news/these-tools-will-help-you-write-clean-code-da4b5401f68e
 on explanation on how to use and write eslint
+
+#TODO:
+
+1. add svg library and implement code-logo in navigation
+2. change navigation component to shared one and remove constructor

@@ -3,9 +3,11 @@
   <span class="icon-container"><p class="icon">Frederic lammens</p></span>
   <span class="links">
     <ul>
-      <ng-container *ngIf="singlePageAnchors.length; else multiPage">
-        <li *ngFor="let anchor of singlePageAnchors">
-          <a (click)="scrollTo(anchor)">{{ anchor }}</a>
+      <ng-container *ngIf="_singPageAnchors.length; else multiPage">
+        <li *ngFor="let sAnchor of _singPageAnchors">
+          <a (click)="scrollTo(sAnchor.anchor)" [ngClass]="sAnchor.toggled ? 'active-link ' : ''">{{
+            sAnchor.anchor
+          }}</a>
         </li>
       </ng-container>
       <ng-template #multiPage>
