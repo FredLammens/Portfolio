@@ -11,4 +11,15 @@
 
   //styling nav
   --nav-margin: 0.5rem;
+
+  //breakpoints
+  --mobile-min: 320px;
+  --mobile-max: 480px;
+  --tablets-min: 481px;
+  --tablets-max: 768px;
+  --laptops-min: 769px;
+  --laptops-max: 1024px;
+  --desktops-min: 1025px;
+  --desktops-max: 1200px;
+  --tv-min: 1201px;
 }
