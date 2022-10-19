@@ -23,5 +23,5 @@
       }
     }
   },
-  "tags": ["scope:portfolio type:ui"]
+  "tags": ["scope:portfolio", "type:ui"]
 }
