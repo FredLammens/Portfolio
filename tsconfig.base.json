@@ -18,6 +18,7 @@
       "@fred/portfolio/home/feature": ["libs/portfolio/home/feature/src/index.ts"],
       "@fred/portfolio/shell/feature": ["libs/portfolio/shell/feature/src/index.ts"],
       "@fred/portfolio/shell/ui/navigation": ["libs/portfolio/shell/ui/navigation/src/index.ts"],
+      "@fred/shared/ui": ["libs/shared/ui/src/index.ts"],
       "@fred/shared/util/common-extensions/decorators": [
         "libs/shared/util/common-extensions/decorators/src/index.ts"
       ],
