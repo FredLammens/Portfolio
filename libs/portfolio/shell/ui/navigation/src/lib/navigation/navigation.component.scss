@@ -30,6 +30,36 @@ nav {
     }
   }
 
+  a {
+    all: unset;
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0.125rem;
+      background: var(--primary-text-color);
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .active-link {
+    color: var(--primary-text-highlited-color);
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0.125rem;
+      background: var(--primary-text-highlited-color);
+      transition: width 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
   .icon-container {
     @include glassmorphism;
     display: flex;
