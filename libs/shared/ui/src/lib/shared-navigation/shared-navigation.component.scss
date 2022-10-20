@@ -1,11 +1,12 @@
 @mixin glassmorphism {
   //make it glassmorphism
-  background: rgba(255, 255, 255, 0.19);
+  //hsl = hue saturation lightness
+  background: hsl(0 0% var(--glass) / 50%); //rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid hsl(0 0% var(--glass) / 50%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.5px);
-  -webkit-backdrop-filter: blur(4.5px);
-  border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 nav {
@@ -13,6 +14,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   margin: var(--nav-margin);
+  color: var(--primary-text-color);
   .links {
     @include glassmorphism;
     //put it in the middle

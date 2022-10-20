@@ -1,18 +1,15 @@
 :root {
-  //dark
-  --header-color-dk: #647c90;
-  --background-color-dk: #1d1c36;
-
   //normal (light)
-  --header-color: #e2ded0;
   --background-color: #fefefe;
   --primary-text-color: black;
   --primary-text-highlited-color: #3a3ca2;
+  //glasmorphism (navbar)
+  --glass: 100%;
 
   //styling nav
   --nav-margin: 0.5rem;
 
-  //breakpoints
+  //------------------------breakpoints only for mental info--------------
   --mobile-min: 320px;
   --mobile-max: 480px;
   --tablets-min: 481px;
@@ -22,4 +19,11 @@
   --desktops-min: 1025px;
   --desktops-max: 1200px;
   --tv-min: 1201px;
+  //----------------------------------------------------------------------
+  @media (prefers-color-scheme: dark) {
+    --background-color: #2b2a33;
+    --primary-text-color: #fefefe;
+    --primary-text-highlited-color: #6f709b;
+    --glass: 0%;
+  }
 }
