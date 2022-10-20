@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import './variables';
 @import './mixins';
-//TODO: add typography
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 :root {
+  font-family: 'Roboto Slab', serif;
   body {
     background-color: var(--background-color);
   }
