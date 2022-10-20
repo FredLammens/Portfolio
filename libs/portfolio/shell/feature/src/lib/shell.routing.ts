@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: NavigationComponent,
-    title: 'Home',
+    title: 'Portfolio',
     loadChildren: () =>
       import('@fred/portfolio/home/feature').then((m) => m.PortfolioHomeFeatureModule),
   },
