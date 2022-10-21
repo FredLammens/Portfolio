@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { ThreeDeeObjectComponent } from './3Dobject/3Dobject.component';
+import { ThreeDeeObjectComponent } from './hero/3Dobject/3Dobject.component';
 
 import { HeroComponent } from './hero/hero.component';
 

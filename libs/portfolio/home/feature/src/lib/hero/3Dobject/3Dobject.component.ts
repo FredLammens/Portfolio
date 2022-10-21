@@ -8,6 +8,7 @@ import * as THREE from 'three';
   templateUrl: './3Dobject.component.html',
   styleUrls: ['./3Dobject.component.scss'],
 })
+//put inside shared lib inside own lib
 export class ThreeDeeObjectComponent implements AfterViewInit {
   @ViewChild('canvas')
   private canvasRef!: ElementRef;
