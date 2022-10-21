@@ -1,13 +1,8 @@
 .hero {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   flex: 1;
   justify-content: center;
-}
-
-@media (max-width: 480px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-  }
 }
