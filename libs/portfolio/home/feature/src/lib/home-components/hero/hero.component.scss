@@ -5,12 +5,12 @@
   flex-direction: row;
   flex: 1;
   justify-content: center;
-  margin-top: calc(var(--nav-height) + var(--nav-margin));
+  padding-top: calc(var(--nav-height) + var(--nav-margin));
 }
 
 @media (max-width: 480px) {
   .hero {
-    margin-top: 0;
-    margin-bottom: calc(var(--nav-height) + var(--nav-margin));
+    padding-top: 0;
+    padding-bottom: calc(var(--nav-height) + var(--nav-margin));
   }
 }
