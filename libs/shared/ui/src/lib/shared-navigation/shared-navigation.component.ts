@@ -2,7 +2,7 @@ import { ViewportScroller } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Anchor } from './shared-navigationAnchor.model';
+import { Anchor } from '../models/shared-navigationAnchor.model';
 
 @Component({
   selector: 'navigation',

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'card',
@@ -7,5 +7,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  constructor() {}
+  @Input() public cardTitle = '';
+  @Input() public cardDescription = '';
+
+  @Input()
+  public set cardImg(img: string) {
+    this._cardImg = '/assets/img/' + img + '.png';
+  }
+
+  public get cardImg(): string {
+    return this._cardImg;
+  }
+
+  private _cardImg = '';
 }

@@ -3,6 +3,24 @@
   min-height: 100vh;
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > h1 {
+      margin: 0.5rem;
+    }
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 1rem;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
