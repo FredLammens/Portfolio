@@ -8,6 +8,27 @@
   padding-top: calc(var(--nav-height) + var(--nav-margin));
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  > p {
+    margin-bottom: 0;
+  }
+  > h1 {
+    margin-top: 0;
+  }
+  &_subtext {
+    font-size: 0.7rem;
+  }
+}
+
 @media (max-width: 480px) {
   .hero {
     padding-top: 0;
