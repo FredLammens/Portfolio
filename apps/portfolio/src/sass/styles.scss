@@ -3,8 +3,10 @@
 @import './mixins';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 :root {
+  //font
   font-family: 'Roboto Slab', serif;
   color: var(--primary-text-color);
+  scroll-behavior: smooth;
   body {
     background-color: var(--primary-color);
   }

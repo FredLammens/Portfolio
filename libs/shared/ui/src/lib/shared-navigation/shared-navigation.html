@@ -11,6 +11,7 @@
             >
           </li>
         </ng-container>
+        <!-- TODO: add selection when scrolling -->
         <ng-template #multiPage>
           <li *ngFor="let route of navroutes">
             <a [routerLink]="['/' + route.path]" routerLinkActive="active-link"

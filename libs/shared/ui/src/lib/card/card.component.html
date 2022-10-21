@@ -1,6 +1,14 @@
 <section class="card">
-  <div class="container">
-    <!-- TODO: add svg icon ? -->
-    <ng-content select="[role=text]"></ng-content>
+  <ng-container *ngIf="custom.hasChildNodes() === false">
+    <img [src]="cardImg" alt="Avatar" style="width: 100%" loading="lazy" />
+    <div class="container">
+      <h4>
+        <b>{{ cardTitle }}</b>
+      </h4>
+      <p>{{ cardDescription }}</p>
+    </div>
+  </ng-container>
+  <div class="container" #custom>
+    <ng-content select="[role=custom]"></ng-content>
   </div>
 </section>
