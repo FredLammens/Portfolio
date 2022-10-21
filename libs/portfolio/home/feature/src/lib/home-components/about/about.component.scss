@@ -1,0 +1,13 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--nav-margin));
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding-top: 0;
+    padding-bottom: calc(var(--nav-height) + var(--nav-margin));
+  }
+}

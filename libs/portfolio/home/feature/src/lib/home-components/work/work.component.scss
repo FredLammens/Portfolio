@@ -1,0 +1,12 @@
+.work {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--nav-margin));
+}
+
+@media (max-width: 480px) {
+  .work {
+    padding-top: 0;
+    padding-bottom: calc(var(--nav-height) + var(--nav-margin));
+  }
+}

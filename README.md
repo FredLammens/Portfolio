@@ -41,9 +41,8 @@ on explanation on how to use and write eslint
 #TODO:
 
 1. add svg library and implement code-logo in navigation
-2. change navigation component to shared one and remove constructor
-3. fix linting before push (husky integration)
-4. put mixin from navigation to mixins (fix it)
+2. put mixin from navigation to mixins (fix it)
+3. add cube to shared lib and add card to
 
 #Usefull sites:
 

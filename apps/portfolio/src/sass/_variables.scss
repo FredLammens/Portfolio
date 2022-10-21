@@ -1,6 +1,9 @@
 :root {
   //normal (light)
-  --background-color: #fefefe;
+  --primary-color: #fefefe
+  --secondary-color: #FAF7F0;
+
+  //text
   --primary-text-color: black;
   --primary-text-highlited-color: #3a3ca2;
   //glasmorphism (navbar)
@@ -8,6 +11,7 @@
 
   //styling nav
   --nav-margin: 0.5rem;
+  --nav-height: 3.5rem;
 
   //------------------------breakpoints only for mental info--------------
   --mobile-min: 320px;
@@ -21,7 +25,8 @@
   --tv-min: 1201px;
   //----------------------------------------------------------------------
   @media (prefers-color-scheme: dark) {
-    --background-color: #2b2a33;
+    --primary-color:  #2b2a33;
+    --secondary-color: #42414d;
     --primary-text-color: #fefefe;
     --primary-text-highlited-color: #6f709b;
     --glass: 0%;
