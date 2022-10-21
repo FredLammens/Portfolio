@@ -1,4 +1,12 @@
 .about {
   width: 100%;
   min-height: 100vh;
+  margin-top: calc(var(--nav-height) + var(--nav-margin));
+}
+
+@media (max-width: 480px) {
+  .about {
+    margin-top: 0;
+    margin-bottom: calc(var(--nav-height) + var(--nav-margin));
+  }
 }
