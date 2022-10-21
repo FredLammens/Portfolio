@@ -27,5 +27,8 @@
   .about {
     padding-top: 0;
     padding-bottom: calc(var(--nav-height) + var(--nav-margin));
+    .cards {
+      flex-direction: column;
+    }
   }
 }
