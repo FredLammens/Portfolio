@@ -4,6 +4,7 @@
     <span class="icon-container"><p class="icon">Frederic lammens</p></span>
     <span class="links">
       <ul>
+        <!-- TODO: add selection when scrolling -->
         <ng-container *ngIf="_singPageAnchors.length; else multiPage">
           <li *ngFor="let sAnchor of _singPageAnchors">
             <a (click)="scrollTo(sAnchor.anchor)" [ngClass]="sAnchor.toggled ? 'active-link ' : ''"
@@ -11,7 +12,6 @@
             >
           </li>
         </ng-container>
-        <!-- TODO: add selection when scrolling -->
         <ng-template #multiPage>
           <li *ngFor="let route of navroutes">
             <a [routerLink]="['/' + route.path]" routerLinkActive="active-link"
