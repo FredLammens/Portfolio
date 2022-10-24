@@ -1,6 +1,8 @@
 <section class="card">
   <ng-container *ngIf="custom.hasChildNodes() === false">
-    <img [src]="cardImg" alt="Avatar" style="width: 100%" loading="lazy" />
+    <div *ngIf="img" class="img-container">
+      <img [src]="cardImg" [alt]="img" loading="lazy" />
+    </div>
     <div class="container">
       <h4>
         <b>{{ cardTitle }}</b>

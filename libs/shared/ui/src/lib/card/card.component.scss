@@ -4,11 +4,19 @@
   transition: 0.3s;
   border-radius: 0.3rem;
   background-color: var(--secondary-color);
-  width: fit-content;
+}
+
+.img-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 img {
   border-radius: 0.3rem 0.3rem 0 0;
+  object-fit: contain;
+  height: auto;
+  width: 100%;
 }
 
 /* On mouse-over, add a deeper shadow */

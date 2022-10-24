@@ -11,22 +11,22 @@ export class AboutComponent {
   //(img.png in assets/img)
   public cards: Array<Card> = [
     {
-      img: 'webDesigner',
-      title: 'Web Designer',
+      img: 'avatar',
+      title: 'About me',
       description:
-        'I am a web designer with a passion for creating beatifull and functional web applications.',
+        'I am a open, calm and highly-motivated to bring a project to completion with a focus on quality and customer priorities.',
+    },
+    {
+      img: 'frontend',
+      title: 'Frontend Developer',
+      description:
+        'I am a Frontend developer with a passion for building beatiful and functional web applicaitons ',
     },
     {
       img: 'angular',
-      title: 'Angular Developer',
+      title: 'Angular Framework',
       description:
-        "I'm a Angular developer with a passion for building beatiful and functional mobile applications.",
-    },
-    {
-      img: 'frontEnd',
-      title: 'Frontend Developer',
-      description:
-        'Im a frontend developer with a passion for building beatiful and functional web applicaitons ',
+        'I have multiple work experiences in the Angular framework. Including application support services and creating management systems.',
     },
   ];
 }
