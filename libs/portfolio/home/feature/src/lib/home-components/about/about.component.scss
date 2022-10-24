@@ -1,6 +1,4 @@
 .about {
-  width: 100%;
-  min-height: 100vh;
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   background-color: var(--secondary-color);
   display: flex;
@@ -15,20 +13,19 @@
     }
   }
   .cards {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
     margin: 1rem;
-    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .about {
     padding-top: 0;
-    padding-bottom: calc(var(--nav-height) + var(--nav-margin));
+
     .cards {
-      flex-direction: column;
+      grid-template-columns: 1fr;
     }
   }
 }
