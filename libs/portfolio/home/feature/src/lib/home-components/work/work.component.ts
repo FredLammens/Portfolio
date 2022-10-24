@@ -7,5 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkComponent {
+  public filters = [
+    { name: 'Web', isActive: false },
+    { name: 'mobile', isActive: false },
+    { name: 'All', isActive: true },
+  ];
   constructor() {}
 }
