@@ -1,0 +1,25 @@
+.radio {
+  display: inline-flex;
+  overflow: hidden; //borderradius always displayed
+  border-radius: 1rem;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.25);
+  // + is sibling selector
+  &__input {
+    display: none;
+    &:checked + .radio__label {
+      background-color: var(--secondary-label-color);
+    }
+  }
+  &__label {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+    color: var(--radio-text-color);
+    background-color: var(--primary-label-color);
+    cursor: pointer;
+    transition: background-color 0.1s;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid var(--secondary-label-color);
+    }
+  }
+}

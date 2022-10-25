@@ -14,13 +14,13 @@ export class AboutComponent {
       img: 'avatar',
       title: 'About me',
       description:
-        'I am a open, calm and highly-motivated to bring a project to completion with a focus on quality and customer priorities.',
+        'I am open, calm and highly-motivated to bring a project to completion with a focus on quality and customer priorities.',
     },
     {
       img: 'frontend',
       title: 'Frontend Developer',
       description:
-        'I am a Frontend developer with a passion for building beatiful and functional web applicaitons ',
+        'I am a Frontend developer with a passion for building beautiful and functional web applications ',
     },
     {
       img: 'angular',

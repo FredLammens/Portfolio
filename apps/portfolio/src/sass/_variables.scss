@@ -1,17 +1,24 @@
 :root {
+  //color-theme
   //normal (light)
-  --primary-color: #fefefe
-  --secondary-color: #FAF7F0;
+  --primary-color: #fefefe;
+  --secondary-color: #d7cec7;
+  --third-color: #76323f;
 
   //text
   --primary-text-color: black;
-  --primary-text-highlited-color: #3a3ca2;
+  --primary-text-highlited-color: var(--third-color); //3a3ca2
   //glasmorphism (navbar)
   --glass: 100%;
 
   //styling nav
   --nav-margin: 0.5rem;
   --nav-height: 3.5rem;
+
+  //styling radio buttons
+  --primary-label-color: #76323f;
+  --secondary-label-color: #76323f99;
+  --radio-text-color: #fefefe;
 
   //------------------------breakpoints only for mental info--------------
   --mobile-min: 320px;
@@ -25,10 +32,12 @@
   --tv-min: 1201px;
   //----------------------------------------------------------------------
   @media (prefers-color-scheme: dark) {
-    --primary-color:  #2b2a33;
+    --primary-color: #2b2a33;
     --secondary-color: #42414d;
     --primary-text-color: #fefefe;
-    --primary-text-highlited-color: #6f709b;
+    --primary-text-highlited-color: #e27d60;
+    --primary-label-color: #e27d60;
+    --secondary-label-color: #e27c60b6;
     --glass: 0%;
   }
 }

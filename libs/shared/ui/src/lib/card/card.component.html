@@ -4,10 +4,12 @@
       <img [src]="cardImg" [alt]="img" loading="lazy" />
     </div>
     <div class="container">
-      <h4>
-        <b>{{ cardTitle }}</b>
-      </h4>
-      <p>{{ cardDescription }}</p>
+      <div class="description">
+        <h4>
+          <b>{{ cardTitle }}</b>
+        </h4>
+        <p>{{ cardDescription }}</p>
+      </div>
     </div>
   </ng-container>
   <div class="container" #custom>

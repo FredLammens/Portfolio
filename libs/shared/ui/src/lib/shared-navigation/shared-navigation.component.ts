@@ -11,11 +11,15 @@ import { Anchor } from '../models/shared-navigationAnchor.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SharedNavigationComponent {
-  public _singPageAnchors: Array<Anchor> = [];
+  private _singlePageAnchors: Array<Anchor> = [];
 
   @Input()
-  public set singlePageAnchors(anchors: Array<string>) {
-    this._singPageAnchors = anchors.map((anchor: string) => ({ anchor, toggled: false }));
+  public set singlePageAnchors(sAnchors: Array<Anchor>) {
+    this._singlePageAnchors = sAnchors;
+  }
+
+  public get singlePageAnchors(): Array<Anchor> {
+    return this._singlePageAnchors;
   }
 
   public readonly navroutes = this.router.config;
@@ -23,17 +27,7 @@ export class SharedNavigationComponent {
 
   public constructor(private router: Router, private scroller: ViewportScroller) {}
 
-  private setAnchorToggled(anchor: string): void {
-    this._singPageAnchors = this._singPageAnchors.map((mAnchor: Anchor) => {
-      if (mAnchor.anchor === anchor) {
-        return { anchor, toggled: true };
-      }
-      return { ...mAnchor, toggled: false };
-    });
-  }
-
   public scrollTo(anchor: string): void {
-    this.setAnchorToggled(anchor);
     this.scroller.scrollToAnchor(anchor);
   }
 }

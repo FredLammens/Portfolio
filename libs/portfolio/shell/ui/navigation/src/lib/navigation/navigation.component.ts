@@ -5,6 +5,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './navigation.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavigationComponent {
-  public anchors = ['Home', 'About', 'Work', 'Skills', 'Contact'];
-}
+export class NavigationComponent {}

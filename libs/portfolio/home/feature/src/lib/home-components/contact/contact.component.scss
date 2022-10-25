@@ -4,6 +4,11 @@
   padding-top: calc(var(--nav-height) + var(--nav-margin));
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 480px) {
   .contact {
     padding-top: 0;
