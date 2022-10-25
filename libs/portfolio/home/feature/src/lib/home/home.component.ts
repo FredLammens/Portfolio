@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Anchor } from '@fred/shared/ui';
 
 @Component({
   selector: 'home',
@@ -7,5 +8,23 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
+  public anchors = [
+    { anchor: 'Home', toggled: false },
+    { anchor: 'About', toggled: false },
+    { anchor: 'Work', toggled: false },
+    { anchor: 'Skills', toggled: false },
+    { anchor: 'Contact', toggled: false },
+  ];
   public constructor() {}
+
+  public setActiveAnchor(activeElement: { entry: IntersectionObserverEntry }) {
+    const activeAnchor = activeElement.entry.target.id;
+
+    this.anchors = this.anchors.map((mAnchor: Anchor) => {
+      if (mAnchor.anchor === activeAnchor) {
+        return { anchor: activeAnchor, toggled: true };
+      }
+      return { ...mAnchor, toggled: false };
+    });
+  }
 }

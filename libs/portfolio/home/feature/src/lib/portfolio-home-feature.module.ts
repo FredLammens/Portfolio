@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { SharedUiModule } from '@fred/shared/ui';
+import { NgrxentensionsModule } from '@fred/shared/util/common-extensions/ng-rx-extensions';
 
 import { AboutComponent } from './home-components/about/about.component';
 import { ContactComponent } from './home-components/contact/contact.component';
@@ -26,7 +27,7 @@ const homeComponents = [
 
 @NgModule({
   declarations: [HomeComponent, ...homeComponents],
-  imports: [CommonModule, HomeRoutes, SharedUiModule],
+  imports: [CommonModule, HomeRoutes, SharedUiModule, NgrxentensionsModule],
   exports: [HomeComponent],
 })
 export class PortfolioHomeFeatureModule {}

@@ -1,5 +1,6 @@
-<hero id="Home"></hero>
-<about id="About"></about>
-<work id="Work"></work>
-<skills id="Skills"></skills>
-<contact id="Contact"></contact>
+<navigation [singlePageAnchors]="anchors"></navigation>
+<hero id="Home" (isVisible)="setActiveAnchor($event)"></hero>
+<about id="About" (isVisible)="setActiveAnchor($event)"></about>
+<work id="Work" (isVisible)="setActiveAnchor($event)"></work>
+<skills id="Skills" (isVisible)="setActiveAnchor($event)"></skills>
+<contact id="Contact" (isVisible)="setActiveAnchor($event)"></contact>
