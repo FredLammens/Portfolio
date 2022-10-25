@@ -14,9 +14,9 @@ export class WorkComponent {
     { tags: [], tech: [], githubLink: '', webisteLink: '' },
   ];
   public radioGroups: Array<radioGroup> = [
+    { name: 'ALL', emoji: '' },
     { name: 'Web', emoji: '💻' },
     { name: 'Mobile', emoji: '📱' },
-    { name: 'ALL', emoji: '' },
   ];
 
   constructor() {}
