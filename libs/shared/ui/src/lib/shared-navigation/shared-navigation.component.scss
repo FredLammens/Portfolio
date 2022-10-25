@@ -21,7 +21,7 @@
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: var(--nav-margin);
   color: var(--primary-text-color);
 
@@ -71,20 +71,6 @@ nav {
       width: 100%;
     }
   }
-
-  .icon-container {
-    @include glassmorphism;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-
-    .icon {
-      margin: var(--nav-margin);
-    }
-  }
 }
 
 @media (max-width: 480px) {
@@ -98,10 +84,6 @@ nav {
   nav {
     .links {
       margin: auto;
-    }
-
-    .icon-container {
-      display: none;
     }
     //todo: add small animation
     a {
