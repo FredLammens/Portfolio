@@ -1,0 +1,13 @@
+<section class="radio">
+  <!-- TODO: add [emoji]="radio.emoji" to label  -->
+  <ng-container *ngFor="let radio of radioGroups; let i = index">
+    <input
+      class="radio__input"
+      type="radio"
+      [id]="radio.name + i"
+      [name]="groupName"
+      [value]="radio.name"
+    />
+    <label class="radio__label" [for]="radio.name + i"> {{ radio.name }} </label>
+  </ng-container>
+</section>
