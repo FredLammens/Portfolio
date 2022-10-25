@@ -17,7 +17,7 @@ export class IntersectDirective implements AfterViewInit, OnDestroy  {
   /**
    * threshold for indicating at what percentage function should be callled
    */
-  @Input() public threshold = 0.8;
+  @Input() public threshold = 0.67;
 
   private observer?: IntersectionObserver;
 
