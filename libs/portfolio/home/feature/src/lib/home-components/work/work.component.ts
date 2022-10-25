@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Project } from '@fred/portfolio/home/data-access';
 
 @Component({
   selector: 'work',
@@ -7,10 +8,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkComponent {
-  public filters = [
-    { name: 'Web', isActive: false },
-    { name: 'mobile', isActive: false },
-    { name: 'All', isActive: true },
+  public projects: Array<Project> = [
+    { tags: [], tech: [], githubLink: '', webisteLink: '' },
+    { tags: [], tech: [], githubLink: '', webisteLink: '' },
   ];
   constructor() {}
 }
