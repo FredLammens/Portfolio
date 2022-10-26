@@ -12,6 +12,7 @@ import {
 
 /**
  * directive to bind to the parent to check what children are visible to be used together with toCheck Directive
+ * parent needs to be scrollable element => add css :   set fixed height (100vh) +  overflow: auto;
  * @example
  * <div intersectObserver>
  *  <navigation [singlePageAnchors]="anchors"></navigation>
@@ -40,9 +41,13 @@ export class IntersectDirective implements OnDestroy {
   /**
    * threshold for indicating at what percentage function should be callled
    */
-  @Input() public threshold = 0;
+  @Input() public threshold = 0.2;
 
-  constructor() {
+  //TODO: add debouncer for missed inputs etc
+  //https://stackoverflow.com/questions/61951380/intersection-observer-fails-sometimes-when-i-scroll-fast
+  //Extra info : https://blog.webdevsimplified.com/2022-01/intersection-observer/
+
+  constructor(element: ElementRef) {
     // As each observable child attaches itself to the parent observer, we need to
     // map Elements to Callbacks so that when an Element's intersection changes,
     // we'll know which callback to invoke. For this, we'll use an ES6 Map.
@@ -50,18 +55,15 @@ export class IntersectDirective implements OnDestroy {
 
     // no root = browser viewport
     const options = {
+      root: element.nativeElement,
       rootMargin: this.rootMargin,
       threshold: this.threshold,
     };
 
-    const isIntersecting = (entry: IntersectionObserverEntry) =>
-      entry.isIntersecting || entry.intersectionRatio > 0;
-
     this.observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
       for (const entry of entries) {
         const callback = this.mapping.get(entry.target);
-
-        callback && callback(isIntersecting(entry));
+        callback && callback(entry.isIntersecting);
       }
     }, options);
   }

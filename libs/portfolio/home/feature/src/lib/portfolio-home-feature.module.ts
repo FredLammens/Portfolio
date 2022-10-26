@@ -27,7 +27,7 @@ const homeComponents = [
 
 @NgModule({
   declarations: [HomeComponent, ...homeComponents],
-  imports: [CommonModule, HomeRoutes, SharedUiModule, NgrxentensionsModule],
+  imports: [HomeRoutes, CommonModule, SharedUiModule, NgrxentensionsModule],
   exports: [HomeComponent],
 })
 export class PortfolioHomeFeatureModule {}
