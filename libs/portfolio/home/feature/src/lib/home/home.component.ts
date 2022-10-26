@@ -17,9 +17,7 @@ export class HomeComponent {
   ];
   public constructor() {}
 
-  public setActiveAnchor(activeElement: { entry: IntersectionObserverEntry }) {
-    const activeAnchor = activeElement.entry.target.id;
-
+  public setActiveAnchor(activeAnchor: string) {
     this.anchors = this.anchors.map((mAnchor: Anchor) => {
       if (mAnchor.anchor === activeAnchor) {
         return { anchor: activeAnchor, toggled: true };

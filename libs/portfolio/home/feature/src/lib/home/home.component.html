@@ -1,6 +1,8 @@
-<navigation [singlePageAnchors]="anchors"></navigation>
-<hero id="Home" (isVisible)="setActiveAnchor($event)"></hero>
-<about id="About" (isVisible)="setActiveAnchor($event)" [threshold]="0.5"></about>
-<work id="Work" (isVisible)="setActiveAnchor($event)"></work>
-<skills id="Skills" (isVisible)="setActiveAnchor($event)"></skills>
-<contact id="Contact" (isVisible)="setActiveAnchor($event)"></contact>
+<div intersectObserver>
+  <navigation [singlePageAnchors]="anchors"></navigation>
+  <hero (toCheck)="setActiveAnchor($event)" id="Home"></hero>
+  <about (toCheck)="setActiveAnchor($event)" id="About"></about>
+  <work (toCheck)="setActiveAnchor($event)" id="Work"></work>
+  <skills (toCheck)="setActiveAnchor($event)" id="Skills"></skills>
+  <contact (toCheck)="setActiveAnchor($event)" id="Contact"></contact>
+</div>
