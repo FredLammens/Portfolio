@@ -1,0 +1,12 @@
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--secondary-color);
+  &-image {
+    flex: 1 1 120px;
+    aspect-ratio: 1/ 1;
+  }
+  &-content {
+    flex: 1 1 200px;
+  }
+}
