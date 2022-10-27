@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Project } from '@fred/portfolio/home/data-access';
-import { radioGroup } from '@fred/shared/ui';
+import { Project, radioGroup } from '@fred/shared/ui';
 
 @Component({
   selector: 'work',
