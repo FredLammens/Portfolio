@@ -22,7 +22,7 @@ import {
  *  <skills (toCheck)="setActiveAnchor($event)" id="Skills"></skills>
  *  <contact (toCheck)="setActiveAnchor($event)" id="Contact"></contact>
  * </div>
-
+ * Extra info : https://blog.webdevsimplified.com/2022-01/intersection-observer/
  */
 @Directive({
   selector: '[intersectObserver]',
@@ -41,21 +41,23 @@ export class IntersectDirective implements OnDestroy {
   /**
    * threshold for indicating at what percentage function should be callled
    */
-  @Input() public threshold = 0.2;
+  @Input() public threshold = [0.2];
 
-  //TODO: add debouncer for missed inputs etc
-  //https://stackoverflow.com/questions/61951380/intersection-observer-fails-sometimes-when-i-scroll-fast
-  //Extra info : https://blog.webdevsimplified.com/2022-01/intersection-observer/
-
-  constructor(element: ElementRef) {
+  constructor() {
     // As each observable child attaches itself to the parent observer, we need to
     // map Elements to Callbacks so that when an Element's intersection changes,
     // we'll know which callback to invoke. For this, we'll use an ES6 Map.
     this.mapping = new Map();
 
-    // no root = browser viewport
+    // no root = browser viewport | root: element.nativeElement, if you want to use it inside div (now removed for navigation sake)
+    /**
+     * .container {
+     * height: 100vh;
+     * overflow: auto;
+     * }
+     *  => class on div
+     */
     const options = {
-      root: element.nativeElement,
       rootMargin: this.rootMargin,
       threshold: this.threshold,
     };
@@ -99,7 +101,10 @@ export class IntersectDirective implements OnDestroy {
  */
 @Directive({ selector: '[toCheck]' })
 export class ToCheckDirective implements OnDestroy, OnInit {
-  @Output() public readonly toCheck = new EventEmitter<string>();
+  @Output() public readonly toCheck = new EventEmitter<{
+    elementId: string;
+    isIntersecting: boolean;
+  }>();
 
   private elementRef: ElementRef;
   private parent: IntersectDirective;
@@ -124,7 +129,8 @@ export class ToCheckDirective implements OnDestroy, OnInit {
     // using a shared observer in the parent element.
     // with a CALLBACK style approach so that we're reducing the number of IntersectionObserver instances. (cant acces children elemnets from parent directive)
     this.parent.add(this.elementRef.nativeElement, (isIntersecting: boolean) => {
-      if (isIntersecting) this.toCheck.next(this.elementRef.nativeElement.id);
+      if (isIntersecting)
+        this.toCheck.next({ elementId: this.elementRef.nativeElement.id, isIntersecting });
     });
   }
 }

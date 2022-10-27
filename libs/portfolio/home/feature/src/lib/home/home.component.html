@@ -1,8 +1,8 @@
-<div class="container" intersectObserver>
+<div intersectObserver>
   <navigation [singlePageAnchors]="anchors"></navigation>
-  <hero (toCheck)="setActiveAnchor($event)" id="Home"></hero>
-  <about (toCheck)="setActiveAnchor($event)" id="About"></about>
-  <work (toCheck)="setActiveAnchor($event)" id="Work"></work>
-  <skills (toCheck)="setActiveAnchor($event)" id="Skills"></skills>
-  <contact (toCheck)="setActiveAnchor($event)" id="Contact"></contact>
+  <hero (toCheck)="setActiveAnchor($event)" [id]="anchors[0].anchor"></hero>
+  <about (toCheck)="setActiveAnchor($event)" [id]="anchors[1].anchor"></about>
+  <work (toCheck)="setActiveAnchor($event)" [id]="anchors[2].anchor"></work>
+  <skills (toCheck)="setActiveAnchor($event)" [id]="anchors[3].anchor"></skills>
+  <contact (toCheck)="setActiveAnchor($event)" [id]="anchors[4].anchor"></contact>
 </div>
