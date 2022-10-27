@@ -8,7 +8,7 @@ import { Anchor } from '@fred/shared/ui';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  public anchors = [
+  public anchors: Array<Anchor> = [
     { anchor: 'Home', toggled: false },
     { anchor: 'About', toggled: false },
     { anchor: 'Work', toggled: false },
@@ -17,10 +17,10 @@ export class HomeComponent {
   ];
   public constructor() {}
 
-  public setActiveAnchor(activeAnchor: string) {
+  public setActiveAnchor(anchorState: { elementId: string; isIntersecting: boolean }) {
     this.anchors = this.anchors.map((mAnchor: Anchor) => {
-      if (mAnchor.anchor === activeAnchor) {
-        return { anchor: activeAnchor, toggled: true };
+      if (mAnchor.anchor === anchorState.elementId) {
+        return { anchor: anchorState.elementId, toggled: anchorState.isIntersecting };
       }
       return { ...mAnchor, toggled: false };
     });

@@ -12,6 +12,7 @@ import {
 
 /**
  * directive to bind to the parent to check what children are visible to be used together with toCheck Directive
+ * parent needs to be scrollable element => add css :   set fixed height (100vh) +  overflow: auto;
  * @example
  * <div intersectObserver>
  *  <navigation [singlePageAnchors]="anchors"></navigation>
@@ -21,7 +22,7 @@ import {
  *  <skills (toCheck)="setActiveAnchor($event)" id="Skills"></skills>
  *  <contact (toCheck)="setActiveAnchor($event)" id="Contact"></contact>
  * </div>
-
+ * Extra info : https://blog.webdevsimplified.com/2022-01/intersection-observer/
  */
 @Directive({
   selector: '[intersectObserver]',
@@ -40,7 +41,7 @@ export class IntersectDirective implements OnDestroy {
   /**
    * threshold for indicating at what percentage function should be callled
    */
-  @Input() public threshold = 0;
+  @Input() public threshold = [0.2];
 
   constructor() {
     // As each observable child attaches itself to the parent observer, we need to
@@ -48,20 +49,23 @@ export class IntersectDirective implements OnDestroy {
     // we'll know which callback to invoke. For this, we'll use an ES6 Map.
     this.mapping = new Map();
 
-    // no root = browser viewport
+    // no root = browser viewport | root: element.nativeElement, if you want to use it inside div (now removed for navigation sake)
+    /**
+     * .container {
+     * height: 100vh;
+     * overflow: auto;
+     * }
+     *  => class on div
+     */
     const options = {
       rootMargin: this.rootMargin,
       threshold: this.threshold,
     };
 
-    const isIntersecting = (entry: IntersectionObserverEntry) =>
-      entry.isIntersecting || entry.intersectionRatio > 0;
-
     this.observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
       for (const entry of entries) {
         const callback = this.mapping.get(entry.target);
-
-        callback && callback(isIntersecting(entry));
+        callback && callback(entry.isIntersecting);
       }
     }, options);
   }
@@ -97,7 +101,10 @@ export class IntersectDirective implements OnDestroy {
  */
 @Directive({ selector: '[toCheck]' })
 export class ToCheckDirective implements OnDestroy, OnInit {
-  @Output() public readonly toCheck = new EventEmitter<string>();
+  @Output() public readonly toCheck = new EventEmitter<{
+    elementId: string;
+    isIntersecting: boolean;
+  }>();
 
   private elementRef: ElementRef;
   private parent: IntersectDirective;
@@ -122,7 +129,8 @@ export class ToCheckDirective implements OnDestroy, OnInit {
     // using a shared observer in the parent element.
     // with a CALLBACK style approach so that we're reducing the number of IntersectionObserver instances. (cant acces children elemnets from parent directive)
     this.parent.add(this.elementRef.nativeElement, (isIntersecting: boolean) => {
-      if (isIntersecting) this.toCheck.next(this.elementRef.nativeElement.id);
+      if (isIntersecting)
+        this.toCheck.next({ elementId: this.elementRef.nativeElement.id, isIntersecting });
     });
   }
 }
