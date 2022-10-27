@@ -1,4 +1,4 @@
-<section class="radio">
+<div class="radio">
   <!-- TODO: add [emoji]="radio.emoji" to label if mobile ? -->
   <ng-container *ngFor="let radio of radioGroups; let i = index">
     <input
@@ -10,4 +10,4 @@
     />
     <label class="radio__label" [for]="radio.name + i"> {{ radio.name }} </label>
   </ng-container>
-</section>
+</div>

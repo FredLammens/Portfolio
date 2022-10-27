@@ -1,4 +1,4 @@
-<section class="card">
+<div class="card">
   <ng-container *ngIf="custom.hasChildNodes() === false">
     <div *ngIf="img" class="img-container">
       <img [src]="cardImg" [alt]="img" loading="lazy" />
@@ -15,4 +15,4 @@
   <div class="container" #custom>
     <ng-content select="[role=custom]"></ng-content>
   </div>
-</section>
+</div>
