@@ -1,7 +1,8 @@
 .project-card {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: 0.2rem solid var(--secondary-color);
   &-image {
     flex: 1 1 120px;
     aspect-ratio: 1/ 1;

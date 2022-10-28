@@ -1,0 +1,35 @@
+.boards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.board {
+  background-color: var(--secondary-color);
+
+  &:first-of-type {
+    margin-left: 0.5rem;
+  }
+  &:last-of-type {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .boards {
+    grid-template-columns: auto;
+  }
+  .board {
+    all: unset;
+    background-color: var(--secondary-color);
+    margin: 0.5rem;
+
+    &:first-of-type {
+      margin-left: 0.5rem;
+    }
+    &:last-of-type {
+      margin-right: 0.5rem;
+    }
+  }
+}

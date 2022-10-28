@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Project, radioGroup } from '@fred/shared/ui';
+import { Project, radioGroup, State } from '@fred/shared/ui';
 
 @Component({
   selector: 'work',
@@ -9,8 +9,8 @@ import { Project, radioGroup } from '@fred/shared/ui';
 })
 export class WorkComponent {
   public projects: Array<Project> = [
-    { tags: [], tech: [], githubLink: '', webisteLink: '' },
-    { tags: [], tech: [], githubLink: '', webisteLink: '' },
+    { tags: [], tech: [], githubLink: '', webisteLink: '', state: State.Backlog },
+    { tags: [], tech: [], githubLink: '', webisteLink: '', state: State.Backlog },
   ];
   public radioGroups: Array<radioGroup> = [
     { name: 'ALL', emoji: '' },
