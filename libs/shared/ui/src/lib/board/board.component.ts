@@ -8,12 +8,15 @@ import { Project, State } from '../models/project.model';
   styleUrls: ['./board.component.scss'],
 })
 export class BoardComponent {
+  public projectsDone: Array<Project> = [];
+  public projectsBacklog: Array<Project> = [];
+  public projectsInProgress: Array<Project> = [];
   @Input()
-  public projects: Array<Project> = [
-    { tags: [], tech: [], githubLink: '', webisteLink: '', state: State.Backlog },
-    { tags: [], tech: [], githubLink: '', webisteLink: '', state: State.InProgess },
-    { tags: [], tech: [], githubLink: '', webisteLink: '', state: State.Done },
-  ];
-
-  constructor() {}
+  public set projects(projs: Array<Project>) {
+    projs.forEach((proj) => {
+      if (proj.state === State.Backlog) this.projectsBacklog.push(proj);
+      if (proj.state === State.InProgess) this.projectsInProgress.push(proj);
+      if (proj.state === State.Done) this.projectsDone.push(proj);
+    });
+  }
 }

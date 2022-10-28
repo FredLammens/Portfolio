@@ -9,8 +9,42 @@ import { Project, radioGroup, State } from '@fred/shared/ui';
 })
 export class WorkComponent {
   public projects: Array<Project> = [
-    { tags: [], tech: [], githubLink: '', webisteLink: '', state: State.Backlog },
-    { tags: [], tech: [], githubLink: '', webisteLink: '', state: State.Backlog },
+    {
+      tags: [],
+      tech: [],
+      githubLink: '',
+      webisteLink: '',
+      title: '',
+      description: '',
+      state: State.Backlog,
+      img: '',
+      imgSrc: '',
+      date: new Date(),
+    },
+    {
+      tags: [],
+      tech: [],
+      githubLink: '',
+      webisteLink: '',
+      title: '',
+      description: '',
+      state: State.InProgess,
+      img: '',
+      imgSrc: '',
+      date: new Date(),
+    },
+    {
+      tags: [],
+      tech: [],
+      githubLink: '',
+      webisteLink: '',
+      title: '',
+      description: '',
+      state: State.Done,
+      img: '',
+      imgSrc: '',
+      date: new Date(),
+    },
   ];
   public radioGroups: Array<radioGroup> = [
     { name: 'ALL', emoji: '' },

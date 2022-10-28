@@ -3,8 +3,12 @@ export interface Project {
   tech: Array<TechStack>;
   githubLink: string;
   webisteLink: string;
-  extraInfo?: string;
+  title: string;
+  description: string;
   state: State;
+  img: string;
+  imgSrc: string;
+  date: Date;
 }
 
 export const enum Tag {

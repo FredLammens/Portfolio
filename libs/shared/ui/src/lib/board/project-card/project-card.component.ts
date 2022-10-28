@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Project, State } from './../../models/project.model';
 
 @Component({
   selector: 'project-card',
@@ -6,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-card.component.scss'],
 })
 export class ProjectCardComponent {
+  @Input()
+  public project: Project = {
+    tags: [],
+    tech: [],
+    githubLink: '',
+    webisteLink: '',
+    title: 'Default',
+    description: 'Default description',
+    state: State.Backlog,
+    img: 'altImg',
+    imgSrc: '',
+    date: new Date(),
+  };
   constructor() {}
 }
