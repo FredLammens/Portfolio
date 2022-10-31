@@ -2,6 +2,10 @@
   padding-top: calc(var(--nav-height) + var(--nav-margin));
 }
 
+.filterGroup {
+  margin-left: 0.5rem;
+}
+
 @media (max-width: 480px) {
   .work {
     padding-top: 0;
