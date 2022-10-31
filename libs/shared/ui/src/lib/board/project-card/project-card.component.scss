@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   background-color: var(--primary-color);
   border: 0.2rem solid var(--secondary-color);
-  &-image {
+  &__image {
     padding: 0.5rem;
     display: flex;
     flex: 1;
@@ -16,7 +16,7 @@
       object-fit: cover;
     }
   }
-  &-content {
+  &__content {
     flex: 1;
     min-width: 200px;
   }

@@ -1,0 +1,16 @@
+.chip {
+  display: inline-block;
+  padding: 0 1.563rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 1.563rem;
+  background-color: var(--secondary-color);
+
+  img {
+    float: left;
+    margin: 0 0.625rem 0 -1.563rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+  }
+}
