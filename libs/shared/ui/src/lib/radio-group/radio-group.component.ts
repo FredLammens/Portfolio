@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 import { radioGroup } from '../models/radioGroup.model';
 
@@ -8,11 +8,16 @@ import { radioGroup } from '../models/radioGroup.model';
   styleUrls: ['./radio-group.component.scss'],
 })
 export class RadioGroupComponent {
+  @Output()
+  public groupSelected = new EventEmitter<string>();
+
   @Input()
   public radioGroups: Array<radioGroup> = [];
 
   @Input()
   public groupName = '';
 
-  constructor() {}
+  public inputClicked(radioName: string): void {
+    this.groupSelected.next(radioName);
+  }
 }

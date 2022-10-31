@@ -7,6 +7,7 @@
       [id]="radio.name + i"
       [name]="groupName"
       [value]="radio.name"
+      (click)="inputClicked(radio.name); $event.stopPropagation()"
     />
     <label class="radio__label" [for]="radio.name + i"> {{ radio.name }} </label>
   </ng-container>

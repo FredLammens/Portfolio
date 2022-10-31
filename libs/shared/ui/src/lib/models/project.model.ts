@@ -1,5 +1,5 @@
 export interface Project {
-  tags: Array<Tag>;
+  tags: Array<string>;
   tech: Array<TechStack>;
   githubLink: string;
   webisteLink: string;
@@ -9,11 +9,6 @@ export interface Project {
   img: string;
   imgSrc: string;
   date: Date;
-}
-
-export const enum Tag {
-  Web,
-  Mobile,
 }
 
 export enum TechStack {

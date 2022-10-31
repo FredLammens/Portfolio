@@ -13,6 +13,9 @@ export class BoardComponent {
   public projectsInProgress: Array<Project> = [];
   @Input()
   public set projects(projs: Array<Project>) {
+    this.projectsBacklog = [];
+    this.projectsDone = [];
+    this.projectsInProgress = [];
     projs.forEach((proj) => {
       if (proj.state === State.Backlog) this.projectsBacklog.push(proj);
       if (proj.state === State.InProgess) this.projectsInProgress.push(proj);
