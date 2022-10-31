@@ -18,8 +18,8 @@ export class WorkComponent {
       title: 'Portfolio',
       description: 'A small website showcasing my curriculum vitae in a fun responsive web format',
       state: State.Backlog,
-      img: 'PlaceHolder',
-      imgSrc: 'assets/img/placeholder.png',
+      img: 'portfolio',
+      imgSrc: 'assets/img/portfolio.png',
       date: new Date(),
     },
     {
@@ -30,8 +30,8 @@ export class WorkComponent {
       title: 'Portfolio',
       description: 'A small website showcasing my curriculum vitae in a fun responsive web format',
       state: State.InProgess,
-      img: 'PlaceHolder',
-      imgSrc: 'assets/img/placeholder.png',
+      img: 'portfolio',
+      imgSrc: 'assets/img/portfolio.png',
       date: new Date(),
     },
     {
