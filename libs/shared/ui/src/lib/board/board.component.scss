@@ -20,6 +20,10 @@
   }
 }
 
+.empty_text {
+  margin: 1rem;
+}
+
 @media (max-width: 1150px) {
   .boards {
     grid-template-columns: auto;
