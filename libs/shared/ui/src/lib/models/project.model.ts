@@ -29,6 +29,14 @@ export const techMap = new Map([
   [TechStack.NxWorkspace, '#1c2d53'],
 ]);
 
+//found with https://iconscout.com/all-assets/nx
+export const TechImgMap = new Map([
+  [TechStack.Angular, 'angularIcon'],
+  [TechStack.Firebase, 'firebaseIcon'],
+  [TechStack.Ionic, 'ionicIcon'],
+  [TechStack.NxWorkspace, 'nxIcon'],
+]);
+
 export const enum State {
   Backlog,
   InProgess,
