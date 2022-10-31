@@ -1,5 +1,8 @@
 .chip {
   display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   padding: 0 1.563rem;
   height: 3.125rem;
   line-height: 3.125rem;

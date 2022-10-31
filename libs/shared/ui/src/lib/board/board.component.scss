@@ -7,6 +7,7 @@
 }
 .board {
   background-color: var(--secondary-color);
+  height: 90vh;
 
   &:first-of-type {
     margin-left: 0.5rem;
