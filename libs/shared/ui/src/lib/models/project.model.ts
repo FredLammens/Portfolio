@@ -16,12 +16,18 @@ export const enum Tag {
   Mobile,
 }
 
-export const enum TechStack {
+export enum TechStack {
   Angular,
   Firebase,
   Ionic,
   NxWorkspace,
 }
+export const techMap = new Map([
+  [TechStack.Angular, '#c3002f'],
+  [TechStack.Firebase, '#ffcc2f'],
+  [TechStack.Ionic, '#176bff'],
+  [TechStack.NxWorkspace, '#1c2d53'],
+]);
 
 export const enum State {
   Backlog,

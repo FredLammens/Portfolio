@@ -10,6 +10,9 @@ export class ChipsComponent {
   public text = 'placeholderText';
 
   @Input()
+  public color = '';
+
+  @Input()
   public set cardImg(img: string) {
     this.img = img;
     this._cardImg = '/assets/img/' + img + '.png';
