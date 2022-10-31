@@ -43,6 +43,7 @@ on explanation on how to use and write eslint
 1. add svg library and implement code-logo in navigation
 2. put mixin from navigation to mixins (fix it)
 3. add cube to shared lib and add card to
+4. Add on project card hover github/website link
 
 #Usefull sites:
 

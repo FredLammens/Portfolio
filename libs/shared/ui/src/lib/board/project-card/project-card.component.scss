@@ -1,0 +1,28 @@
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+  border: 0.2rem solid var(--secondary-color);
+  &__image {
+    padding: 0.5rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    min-width: 350px;
+    height: fit-content;
+    img {
+      max-width: 350px;
+      max-height: 350px;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    flex: 1;
+    min-width: 200px;
+  }
+  &__techStack {
+    display: flex;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+  }
+}

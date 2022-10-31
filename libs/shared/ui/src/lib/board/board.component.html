@@ -1,0 +1,39 @@
+<div class="boards">
+  <div class="board">
+    <h1 class="board__title">{{ 'Backlog' }}</h1>
+    <div class="board-items">
+      <!--TODO: add tracky to all ngFors-->
+      <ng-container *ngIf="projectsBacklog.length > 0; else emptyProjBackl">
+        <project-card *ngFor="let projBack of projectsBacklog" [project]="projBack"></project-card>
+      </ng-container>
+      <ng-template #emptyProjBackl>
+        <h1 class="empty_text">{{ 'No projects in backlog.' }}</h1>
+      </ng-template>
+    </div>
+  </div>
+  <div class="board">
+    <h1 class="board__title">{{ 'In progress' }}</h1>
+    <div class="board-items">
+      <ng-container *ngIf="projectsInProgress.length > 0; else emptyProjInProg">
+        <project-card
+          *ngFor="let projInProg of projectsInProgress"
+          [project]="projInProg"
+        ></project-card>
+      </ng-container>
+      <ng-template #emptyProjInProg>
+        <h1 class="empty_text">{{ 'No projects in progress.' }}</h1>
+      </ng-template>
+    </div>
+  </div>
+  <div class="board">
+    <h1 class="board__title">{{ 'Done' }}</h1>
+    <div class="board-items">
+      <ng-container *ngIf="projectsDone.length > 0; else emptyProjDone">
+        <project-card *ngFor="let projDone of projectsDone" [project]="projDone"></project-card>
+      </ng-container>
+      <ng-template #emptyProjDone>
+        <h1 class="empty_text">{{ 'No projects finished yet.' }}</h1>
+      </ng-template>
+    </div>
+  </div>
+</div>
