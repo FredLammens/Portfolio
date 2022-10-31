@@ -1,13 +1,13 @@
 <div class="boards">
   <div class="board">
-    <h1>{{ 'Backlog' }}</h1>
+    <h1 class="board__title">{{ 'Backlog' }}</h1>
     <div class="board-items">
       <!--TODO: add tracky to all ngFors-->
       <project-card *ngFor="let projBack of projectsBacklog" [project]="projBack"></project-card>
     </div>
   </div>
   <div class="board">
-    <h1>{{ 'In progress' }}</h1>
+    <h1 class="board__title">{{ 'In progress' }}</h1>
     <div class="board-items">
       <!--TODO: add special card for if empty-->
       <project-card
@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="board">
-    <h1>{{ 'Done' }}</h1>
+    <h1 class="board__title">{{ 'Done' }}</h1>
     <div class="board-items">
       <project-card *ngFor="let projDone of projectsDone" [project]="projDone"></project-card>
     </div>

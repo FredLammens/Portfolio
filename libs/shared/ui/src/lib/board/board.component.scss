@@ -14,9 +14,12 @@
   &:last-of-type {
     margin-right: 0.5rem;
   }
+  &__title {
+    margin: 1rem;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1150px) {
   .boards {
     grid-template-columns: auto;
   }

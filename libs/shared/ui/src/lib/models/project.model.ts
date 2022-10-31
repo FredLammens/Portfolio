@@ -20,6 +20,7 @@ export const enum TechStack {
   Angular,
   Firebase,
   Ionic,
+  NxWorkspace,
 }
 
 export const enum State {

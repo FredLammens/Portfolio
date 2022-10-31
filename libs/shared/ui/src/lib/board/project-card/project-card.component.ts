@@ -18,7 +18,7 @@ export class ProjectCardComponent {
     description: 'Default description',
     state: State.Backlog,
     img: 'altImg',
-    imgSrc: '',
+    imgSrc: 'assets/img/placeholder.png',
     date: new Date(),
   };
   constructor() {}

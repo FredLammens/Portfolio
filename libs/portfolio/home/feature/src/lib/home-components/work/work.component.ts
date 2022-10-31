@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Project, radioGroup, State } from '@fred/shared/ui';
+import { Project, radioGroup, State, Tag, TechStack } from '@fred/shared/ui';
 
 @Component({
   selector: 'work',
@@ -8,41 +8,42 @@ import { Project, radioGroup, State } from '@fred/shared/ui';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkComponent {
+  //add filtering to projets =>  if one of the buttons are pressed
   public projects: Array<Project> = [
     {
-      tags: [],
-      tech: [],
+      tags: [Tag.Web, Tag.Mobile],
+      tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
-      webisteLink: '',
-      title: '',
-      description: '',
+      webisteLink: 'https://frederic-lammens.netlify.app/home',
+      title: 'Portfolio',
+      description: 'A small website showcasing my curriculum vitae in a fun responsive web format',
       state: State.Backlog,
-      img: '',
-      imgSrc: '',
+      img: 'PlaceHolder',
+      imgSrc: 'assets/img/placeholder.png',
       date: new Date(),
     },
     {
-      tags: [],
-      tech: [],
+      tags: [Tag.Web, Tag.Mobile],
+      tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
-      webisteLink: '',
-      title: '',
-      description: '',
+      webisteLink: 'https://frederic-lammens.netlify.app/home',
+      title: 'Portfolio',
+      description: 'A small website showcasing my curriculum vitae in a fun responsive web format',
       state: State.InProgess,
-      img: '',
-      imgSrc: '',
+      img: 'PlaceHolder',
+      imgSrc: 'assets/img/placeholder.png',
       date: new Date(),
     },
     {
-      tags: [],
-      tech: [],
+      tags: [Tag.Web, Tag.Mobile],
+      tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
-      webisteLink: '',
-      title: '',
-      description: '',
+      webisteLink: 'https://frederic-lammens.netlify.app/home',
+      title: 'Portfolio',
+      description: 'A small website showcasing my curriculum vitae in a fun responsive web format',
       state: State.Done,
-      img: '',
-      imgSrc: '',
+      img: 'PlaceHolder',
+      imgSrc: 'assets/img/placeholder.png',
       date: new Date(),
     },
   ];
