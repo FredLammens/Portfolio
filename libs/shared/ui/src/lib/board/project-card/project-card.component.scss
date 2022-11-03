@@ -8,11 +8,11 @@
     display: flex;
     flex: 1;
     justify-content: center;
-    min-width: 350px;
+    min-width: 300px;
     height: fit-content;
     img {
-      max-width: 350px;
-      max-height: 350px;
+      max-width: 300px;
+      max-height: 300px;
       object-fit: cover;
     }
   }
