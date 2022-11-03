@@ -12,6 +12,7 @@ import { IconComponent } from './iconGroup/icon/icon.component';
 import { IconGroupComponent } from './iconGroup/iconGroup.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SharedNavigationComponent } from './shared-navigation/shared-navigation.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 const kanban = [BoardComponent, ProjectCardComponent];
 const iconGroup = [IconGroupComponent, IconComponent];
@@ -22,6 +23,7 @@ const components = [
   ...kanban,
   ChipsComponent,
   ...iconGroup,
+  TimelineComponent,
 ];
 
 @NgModule({
