@@ -23,7 +23,7 @@
 .empty_text {
   margin: 1rem;
 }
-
+//add carousel if mobile ish
 @media (max-width: 1150px) {
   .boards {
     grid-template-columns: auto;
@@ -32,6 +32,7 @@
     all: unset;
     background-color: var(--secondary-color);
     margin: 0.5rem;
+    height: 90vh;
 
     &:first-of-type {
       margin-left: 0.5rem;
