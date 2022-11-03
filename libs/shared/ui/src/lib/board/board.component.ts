@@ -25,11 +25,10 @@ export class BoardComponent {
   public projectsBacklog: Array<Project> = [];
   public projectsInProgress: Array<Project> = [];
 
-  //TODO: add check if mobile to put done to true rest to false
-  public boards = {
-    backlog: true,
-    inProgress: true,
-    done: true,
+  public boards: { backlog: boolean | null; inProgress: boolean | null; done: boolean | null } = {
+    backlog: null,
+    inProgress: null,
+    done: null,
   };
 
   @Input()
