@@ -1,5 +1,5 @@
 <div class="boards">
-  <div class="board" *ngIf="boards.backlog">
+  <div class="board" *ngIf="boards.backlog" [@easeInOut]>
     <h1 class="board__title">{{ 'Backlog' }}</h1>
     <div class="board-items">
       <!--TODO: add tracky to all ngFors-->
@@ -11,7 +11,7 @@
       </ng-template>
     </div>
   </div>
-  <div class="board" *ngIf="boards.inProgress">
+  <div class="board" *ngIf="boards.inProgress" [@easeInOut]>
     <h1 class="board__title">{{ 'In progress' }}</h1>
     <div class="board-items">
       <ng-container *ngIf="projectsInProgress.length > 0; else emptyProjInProg">
@@ -25,7 +25,7 @@
       </ng-template>
     </div>
   </div>
-  <div class="board" *ngIf="boards.done">
+  <div class="board" *ngIf="boards.done" [@easeInOut]>
     <h1 class="board__title">{{ 'Done' }}</h1>
     <div class="board-items">
       <ng-container *ngIf="projectsDone.length > 0; else emptyProjDone">
@@ -39,8 +39,8 @@
 </div>
 <div class="carousel-indicator">
   <ul class="indicator-container">
-    <li (click)="switch('backlog')"></li>
-    <li (click)="switch('inProgress')"></li>
-    <li (click)="switch('done')"></li>
+    <li [ngStyle]="{ opacity: boards.backlog ? 1 : 0.2 }" (click)="switch('backlog')"></li>
+    <li [ngStyle]="{ opacity: boards.inProgress ? 1 : 0.2 }" (click)="switch('inProgress')"></li>
+    <li [ngStyle]="{ opacity: boards.done ? 1 : 0.2 }" (click)="switch('done')"></li>
   </ul>
 </div>

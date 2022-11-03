@@ -35,7 +35,7 @@
   .boards {
     display: grid;
     grid-template-columns: auto;
-    height: 90vh;
+    height: 80vh;
     grid-template-areas: 'overlap';
   }
   //item
@@ -43,7 +43,7 @@
     all: unset;
     background-color: var(--secondary-color);
     margin: 0.5rem;
-    height: 90vh;
+    // height: 85vh;
     border-radius: 1.25rem;
     grid-area: overlap;
 
@@ -60,7 +60,8 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      font-size: 2rem;
+      font-size: 1rem;
+      margin: 0.5rem;
     }
   }
 }
