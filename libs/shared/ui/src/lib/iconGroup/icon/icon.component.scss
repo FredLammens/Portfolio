@@ -1,0 +1,15 @@
+.icon {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  &__image {
+    border-radius: 50%;
+    border: 0.25rem solid white;
+    width: 100%;
+    max-width: 6rem;
+    height: auto;
+  }
+  &__title {
+  }
+}

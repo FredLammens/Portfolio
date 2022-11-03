@@ -1,6 +1,8 @@
 .skills {
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 480px) {

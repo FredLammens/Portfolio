@@ -44,6 +44,7 @@ on explanation on how to use and write eslint
 2. put mixin from navigation to mixins (fix it)
 3. add cube to shared lib and add card to
 4. Add on project card hover github/website link
+5. wrap img tags with picture tag
 
 #Usefull sites:
 
