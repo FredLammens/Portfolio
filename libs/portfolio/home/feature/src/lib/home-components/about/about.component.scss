@@ -3,13 +3,16 @@
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
+
   .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
     > h1 {
       margin: 0.5rem;
+      font-size: 4rem;
     }
   }
   .cards {
@@ -17,6 +20,8 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
     margin: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -26,6 +31,12 @@
 
     .cards {
       grid-template-columns: 1fr;
+    }
+
+    .title {
+      > h1 {
+        font-size: 1.5rem;
+      }
     }
   }
 }

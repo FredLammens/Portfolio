@@ -12,10 +12,10 @@
     margin: 0;
   }
 }
-html {
-  scroll-snap-type: y mandatory;
-}
+// html {
+//   scroll-snap-type: y mandatory;
+// }
 section {
   min-height: 100vh;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 }
