@@ -63,4 +63,8 @@ export class BoardComponent {
       return;
     }
   }
+
+  public goTo(url: string): void {
+    window.open(url, '_blank');
+  }
 }
