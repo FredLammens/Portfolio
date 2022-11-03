@@ -6,10 +6,12 @@
   &__image {
     border-radius: 50%;
     border: 0.25rem solid white;
-    width: 100%;
-    max-width: 6rem;
+    width: 6rem;
     height: auto;
+    aspect-ratio: 1 /1;
   }
   &__title {
+    display: flex;
+    justify-content: center;
   }
 }
