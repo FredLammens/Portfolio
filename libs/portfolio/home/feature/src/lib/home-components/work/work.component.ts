@@ -62,7 +62,7 @@ export class WorkComponent {
       date: new Date(),
     },
     {
-      tags: ['Web', 'Mobile'],
+      tags: ['Web'],
       tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
       webisteLink: 'https://frederic-lammens.netlify.app/home',
@@ -74,7 +74,7 @@ export class WorkComponent {
       date: new Date(),
     },
     {
-      tags: ['Web', 'Mobile'],
+      tags: ['Mobile'],
       tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
       webisteLink: 'https://frederic-lammens.netlify.app/home',
@@ -94,6 +94,10 @@ export class WorkComponent {
   ];
 
   public selectedGroup(tag: string): void {
+    if (tag === 'ALL') {
+      this.projects = this._projects;
+      return;
+    }
     this.projects = this._projects.filter((v) => v.tags.includes(tag));
   }
 }
