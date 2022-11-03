@@ -8,6 +8,7 @@
 .board {
   background-color: var(--secondary-color);
   height: 90vh;
+  border-radius: 1.25rem;
 
   &:first-of-type {
     margin-left: 0.5rem;
@@ -24,20 +25,43 @@
   margin: 1rem;
 }
 
+.carousel-indicator {
+  visibility: hidden;
+}
+
+//add carousel if mobile ish
 @media (max-width: 1150px) {
+  //container
   .boards {
+    display: grid;
     grid-template-columns: auto;
+    height: 80vh;
+    grid-template-areas: 'overlap';
   }
+  //item
   .board {
     all: unset;
     background-color: var(--secondary-color);
     margin: 0.5rem;
+    // height: 85vh;
+    border-radius: 1.25rem;
+    grid-area: overlap;
 
     &:first-of-type {
       margin-left: 0.5rem;
     }
     &:last-of-type {
       margin-right: 0.5rem;
+    }
+  }
+  .carousel-indicator {
+    visibility: visible;
+    .indicator-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      font-size: 1rem;
+      margin: 0.5rem;
     }
   }
 }
