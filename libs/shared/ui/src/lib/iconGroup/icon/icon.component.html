@@ -1,4 +1,9 @@
 <div class="icon">
-  <img class="icon__image" [alt]="logoIcon.name" [src]="logoIcon.logoUrl" />
+  <img
+    class="icon__image"
+    [alt]="logoIcon.name"
+    [src]="logoIcon.logoUrl"
+    [ngStyle]="{ border: '0.25rem solid' + logoIcon.color ? logoIcon.color : 'white' }"
+  />
   <p class="icon__title">{{ logoIcon.name }}</p>
 </div>
