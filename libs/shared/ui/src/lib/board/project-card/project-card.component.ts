@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 import { TechStack } from '../../models/project.model';
 
@@ -8,6 +8,7 @@ import { Project, State, techMap, TechImgMap } from './../../models/project.mode
   selector: 'project-card',
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectCardComponent implements OnInit {
   @Input()

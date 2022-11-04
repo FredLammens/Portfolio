@@ -18,6 +18,7 @@
         <project-card
           *ngFor="let projInProg of projectsInProgress"
           [project]="projInProg"
+          (click)="goTo(projInProg.webisteLink)"
         ></project-card>
       </ng-container>
       <ng-template #emptyProjInProg>
@@ -29,7 +30,11 @@
     <h1 class="board__title">{{ 'Done' }}</h1>
     <div class="board-items">
       <ng-container *ngIf="projectsDone.length > 0; else emptyProjDone">
-        <project-card *ngFor="let projDone of projectsDone" [project]="projDone"></project-card>
+        <project-card
+          *ngFor="let projDone of projectsDone"
+          [project]="projDone"
+          (click)="goTo(projDone.webisteLink)"
+        ></project-card>
       </ng-container>
       <ng-template #emptyProjDone>
         <h1 class="empty_text">{{ 'No projects finished yet.' }}</h1>

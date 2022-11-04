@@ -23,6 +23,7 @@ import {
  *  <contact (toCheck)="setActiveAnchor($event)" id="Contact"></contact>
  * </div>
  * Extra info : https://blog.webdevsimplified.com/2022-01/intersection-observer/
+ *  TODO: check this to make is visible or not instead of intersects (is what makes it buggy ) https://medium.com/@joosep.parts/how-to-use-intersection-observer-api-with-a-directive-e86f0253c207
  */
 @Directive({
   selector: '[intersectObserver]',

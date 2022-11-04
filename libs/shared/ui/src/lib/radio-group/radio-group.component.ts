@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 
 import { radioGroup } from '../models/radioGroup.model';
 
@@ -6,6 +6,7 @@ import { radioGroup } from '../models/radioGroup.model';
   selector: 'radio-group',
   templateUrl: './radio-group.component.html',
   styleUrls: ['./radio-group.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RadioGroupComponent {
   @Output()

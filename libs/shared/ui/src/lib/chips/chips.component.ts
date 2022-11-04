@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'chip',
   templateUrl: './chips.component.html',
   styleUrls: ['./chips.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChipsComponent {
   @Input()
