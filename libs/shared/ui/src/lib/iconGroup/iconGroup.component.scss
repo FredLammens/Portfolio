@@ -1,7 +1,8 @@
+//todo: make this more responsive (check why repeat is not working)
 .iconGroup {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
   max-width: 30rem;
   grid-gap: 0.5rem;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
 }

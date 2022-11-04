@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { LogoIcon } from './../models/icon.model';
 
@@ -8,22 +8,7 @@ import { LogoIcon } from './../models/icon.model';
   styleUrls: ['./iconGroup.component.scss'],
 })
 export class IconGroupComponent {
-  public icons: Array<LogoIcon> = [
-    { name: 'Typescript', logoUrl: 'assets/img/placeholder.png', color: 'green' },
-    { name: 'HTML5', logoUrl: 'assets/img/placeholder.png', color: 'blue' },
-    { name: 'Sass', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'CSS3', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'Javascript', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'C#', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'Node JS', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'Angular', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'Git', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-  ];
+  @Input()
+  public icons: Array<LogoIcon> = [];
   constructor() {}
 }
