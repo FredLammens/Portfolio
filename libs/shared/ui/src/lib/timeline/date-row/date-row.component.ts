@@ -10,14 +10,6 @@ import { Job } from '../../models/timeLine.model';
 })
 export class DateRowComponent {
   @Input()
-  public job: Job = {
-    year: '2022',
-    jobInfo: [
-      {
-        Title: 'Analyst Developer',
-        Company: 'CTG',
-      },
-    ],
-  };
+  public job!: Job;
   constructor() {}
 }

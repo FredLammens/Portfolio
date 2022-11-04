@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { Job } from '../models/timeLine.model';
 
@@ -9,16 +9,7 @@ import { Job } from '../models/timeLine.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TimelineComponent {
-  public times: Array<Job> = [
-    {
-      year: '2022',
-      jobInfo: [
-        {
-          Title: 'Analyst Developer',
-          Company: 'CTG',
-        },
-      ],
-    },
-  ];
+  @Input()
+  public jobs: Array<Job> = [];
   constructor() {}
 }

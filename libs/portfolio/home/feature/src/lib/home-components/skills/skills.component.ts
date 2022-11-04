@@ -17,12 +17,18 @@ export class SkillsComponent {
     { name: 'Node JS', logoUrl: 'assets/img/placeholder.png' },
     { name: 'Angular', logoUrl: 'assets/img/placeholder.png' },
     { name: 'Git', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
-    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
+  ];
+
+  public jobs = [
+    {
+      year: '2022',
+      jobInfo: [
+        {
+          Title: 'Analyst Developer',
+          Company: 'CTG',
+        },
+      ],
+    },
   ];
   constructor() {}
 }
