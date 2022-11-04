@@ -9,21 +9,21 @@ import { LogoIcon } from './../models/icon.model';
 })
 export class IconGroupComponent {
   public icons: Array<LogoIcon> = [
-    { name: 'Typescript', logoUrl: '' },
-    { name: 'HTML5', logoUrl: '' },
-    { name: 'Sass', logoUrl: '' },
-    { name: 'CSS3', logoUrl: '' },
-    { name: 'Javascript', logoUrl: '' },
-    { name: 'C#', logoUrl: '' },
-    { name: 'Node JS', logoUrl: '' },
-    { name: 'Angular', logoUrl: '' },
-    { name: 'Git', logoUrl: '' },
-    { name: 'dummy', logoUrl: '' },
-    { name: 'dummy', logoUrl: '' },
-    { name: 'dummy', logoUrl: '' },
-    { name: 'dummy', logoUrl: '' },
-    { name: 'dummy', logoUrl: '' },
-    { name: 'dummy', logoUrl: '' },
+    { name: 'Typescript', logoUrl: 'assets/img/placeholder.png', color: 'green' },
+    { name: 'HTML5', logoUrl: 'assets/img/placeholder.png', color: 'blue' },
+    { name: 'Sass', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'CSS3', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'Javascript', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'C#', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'Node JS', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'Angular', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'Git', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
+    { name: 'dummy', logoUrl: 'assets/img/placeholder.png' },
   ];
   constructor() {}
 }

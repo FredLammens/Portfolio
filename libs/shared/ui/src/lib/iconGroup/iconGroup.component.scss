@@ -1,4 +1,7 @@
 .iconGroup {
-  display: flex;
-  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  max-width: 30rem;
+  grid-gap: 0.5rem;
+  margin: 0 0.5rem;
 }

@@ -45,6 +45,7 @@ on explanation on how to use and write eslint
 3. add cube to shared lib and add card to
 4. Add on project card hover github/website link
 5. wrap img tags with picture tag
+6. learn and apply grid/subgrid more
 
 #Usefull sites:
 

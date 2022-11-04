@@ -1,8 +1,16 @@
 .skills {
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   background-color: var(--secondary-color);
-  display: flex;
-  flex-direction: row;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 480px) {
