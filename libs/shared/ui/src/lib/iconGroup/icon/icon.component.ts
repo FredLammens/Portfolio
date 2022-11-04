@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { LogoIcon } from './../../models/icon.model';
 
@@ -6,6 +6,7 @@ import { LogoIcon } from './../../models/icon.model';
   selector: 'icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {
   //TODO: change LogoUrl to internal file for future proofing

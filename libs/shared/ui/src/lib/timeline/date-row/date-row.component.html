@@ -1,0 +1,15 @@
+<div class="date-row">
+  <div class="date-row__year">
+    <b>{{ job.year }}</b>
+  </div>
+  <div class="date-row__jobInfo">
+    <div *ngFor="let jobInf of job.jobInfo">
+      <b>
+        {{ jobInf.Title }}
+      </b>
+      <p class="date-row__jobInfo--company">
+        {{ jobInf.Company }}
+      </p>
+    </div>
+  </div>
+</div>

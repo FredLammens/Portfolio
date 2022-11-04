@@ -1,0 +1,14 @@
+.date-row {
+  display: flex;
+  flex-direction: row;
+  &__year {
+    width: 5rem;
+    color: var(--third-color);
+  }
+  &__jobInfo {
+    &--company {
+      margin: 0;
+      font-size: 0.7rem;
+    }
+  }
+}

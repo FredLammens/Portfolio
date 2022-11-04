@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { LogoIcon } from './../models/icon.model';
 
@@ -6,6 +6,7 @@ import { LogoIcon } from './../models/icon.model';
   selector: 'iconGroup',
   templateUrl: './iconGroup.component.html',
   styleUrls: ['./iconGroup.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconGroupComponent {
   @Input()

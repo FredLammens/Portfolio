@@ -1,5 +1,5 @@
 import { trigger, transition, style, animate } from '@angular/animations';
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { Project, State } from '../models/project.model';
 
@@ -7,6 +7,7 @@ import { Project, State } from '../models/project.model';
   selector: 'kanban-board',
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('easeInOut', [
       transition(':enter', [
