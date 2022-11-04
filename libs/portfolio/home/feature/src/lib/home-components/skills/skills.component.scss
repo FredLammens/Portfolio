@@ -1,16 +1,24 @@
-//todo: change this to grid instead of flex for less confusion
 .skills {
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   background-color: var(--secondary-color);
-
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em 1em;
+  grid-template-areas:
+    'title title'
+    'icons timeline'
+    'icons timeline';
   &__title {
+    grid-area: title;
     text-align: center;
     font-size: 4rem;
+  }
+  &__icons {
+    grid-area: icons;
+  }
+  &__timeline {
+    grid-area: timeline;
   }
 }
 

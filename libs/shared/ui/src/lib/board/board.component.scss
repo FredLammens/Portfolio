@@ -30,13 +30,14 @@
 }
 
 //add carousel if mobile ish
-@media (max-width: 1150px) {
+@media (max-width: 480px) {
   //container
   .boards {
     display: grid;
     grid-template-columns: auto;
     height: 80vh;
     grid-template-areas: 'overlap';
+    grid-gap: 0.5rem;
   }
   //item
   .board {
@@ -46,13 +47,6 @@
     // height: 85vh;
     border-radius: 1.25rem;
     grid-area: overlap;
-
-    &:first-of-type {
-      margin-left: 0.5rem;
-    }
-    &:last-of-type {
-      margin-right: 0.5rem;
-    }
   }
   .carousel-indicator {
     visibility: visible;
