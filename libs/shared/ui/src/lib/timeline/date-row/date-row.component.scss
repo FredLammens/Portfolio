@@ -3,11 +3,11 @@
   flex-direction: row;
   &__year {
     width: 5rem;
-    color: var(--third-color);
+    color: var(--primary-text-highlited-color);
   }
   &__jobInfo {
     &--company {
-      margin: 0;
+      margin: 0.2rem;
       font-size: 0.7rem;
     }
   }

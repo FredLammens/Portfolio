@@ -46,6 +46,8 @@ on explanation on how to use and write eslint
 4. Add on project card hover github/website link
 5. wrap img tags with picture tag
 6. learn and apply grid/subgrid more
+7. fix the carousel on mobile not working (radio group + buttons are weird )
+8. make it PWA
 
 #Usefull sites:
 

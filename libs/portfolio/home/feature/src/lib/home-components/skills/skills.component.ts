@@ -29,6 +29,23 @@ export class SkillsComponent {
         },
       ],
     },
+    {
+      year: '2022',
+      jobInfo: [
+        {
+          Title: 'Analyst Developer',
+          Company: 'CTG',
+        },
+        {
+          Title: 'Analyst Developer',
+          Company: 'CTG',
+        },
+        {
+          Title: 'Analyst Developer',
+          Company: 'CTG',
+        },
+      ],
+    },
   ];
   constructor() {}
 }
