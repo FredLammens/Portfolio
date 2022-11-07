@@ -9,6 +9,8 @@
     'title title'
     'icons timeline'
     'icons timeline';
+
+  justify-items: center;
   &__title {
     grid-area: title;
     text-align: center;

@@ -9,7 +9,6 @@ import { TooltipPosition } from '../models/tooltip.model';
 })
 export class TooltipComponent {
   public tooltip = '';
-  //change this to auto add the px to it
   public left = 0;
   public top = 0;
   public position: TooltipPosition = TooltipPosition.DEFAULT;
