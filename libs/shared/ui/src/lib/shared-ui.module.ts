@@ -14,10 +14,13 @@ import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SharedNavigationComponent } from './shared-navigation/shared-navigation.component';
 import { DateRowComponent } from './timeline/date-row/date-row.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { TooltipDirective } from './tooltip/tooltip.directive';
 
 const kanban = [BoardComponent, ProjectCardComponent];
 const iconGroup = [IconGroupComponent, IconComponent];
 const timeline = [TimelineComponent, DateRowComponent];
+const tooltip = [TooltipDirective, TooltipComponent];
 const components = [
   SharedNavigationComponent,
   CardComponent,
@@ -26,6 +29,7 @@ const components = [
   ChipsComponent,
   ...iconGroup,
   ...timeline,
+  ...tooltip,
 ];
 
 @NgModule({

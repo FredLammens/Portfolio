@@ -26,6 +26,7 @@ export class SkillsComponent {
         {
           Title: 'Analyst Developer',
           Company: 'CTG',
+          description: 'testing first',
         },
       ],
     },
@@ -35,14 +36,17 @@ export class SkillsComponent {
         {
           Title: 'Analyst Developer',
           Company: 'CTG',
+          description: 'testing 1',
         },
         {
           Title: 'Analyst Developer',
           Company: 'CTG',
+          description: 'testing 2',
         },
         {
           Title: 'Analyst Developer',
           Company: 'CTG',
+          description: 'testing 3',
         },
       ],
     },
