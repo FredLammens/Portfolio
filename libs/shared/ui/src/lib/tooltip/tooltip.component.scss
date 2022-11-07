@@ -1,6 +1,6 @@
 .tooltip {
-  --tooltip-color: black;
-  --tooltip-text-color: white;
+  --tooltip-color: var(--primary-color);
+  --tooltip-text-color: var(--primary-text-color);
   position: fixed;
   background-color: var(--tooltip-color);
   border-radius: 4px;
@@ -11,71 +11,26 @@
   margin-top: 0.313rem;
   transform: translateX(-50%);
   pointer-events: none;
-  transition: opacity 300ms;
   //TODO: add max-width or z-index
 
   &--below {
     transform: translateX(-50%);
     margin-top: 7px;
-    &::before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 0.313rem solid transparent;
-      border-right: 0.313rem solid transparent;
-      border-bottom: 0.313rem solid var(--tooltip-color);
-      position: absolute;
-      left: calc(50% - 0.313rem);
-      top: -0.313rem;
-    }
+    //TODO: find a way to dynamically add arrows with size of tooltip
   }
 
   &--above {
     transform: translate(-50%, -100%);
     margin-bottom: 7px;
-    &::before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 0.313rem solid transparent;
-      border-right: 0.313rem solid transparent;
-      border-top: 0.313rem solid var(--tooltip-color);
-      position: absolute;
-      left: calc(50% - 0.313rem);
-      bottom: -0.313rem;
-    }
   }
 
   &--left {
     transform: translate(calc(-100% - 7px), -50%);
-    &::before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-top: 0.313rem solid transparent;
-      border-bottom: 0.313rem solid transparent;
-
-      border-left: 0.313rem solid var(--tooltip-color);
-      position: absolute;
-      left: calc(50% - 0.313rem);
-      top: -0.313rem;
-    }
   }
 
   &--right {
     transform: translateY(-50%);
     margin-left: 7px;
-    &::before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-top: 0.313rem solid transparent;
-      border-bottom: 0.313rem solid transparent;
-      border-right: 0.313rem solid var(--tooltip-color);
-      position: absolute;
-      left: calc(50% - 0.313rem);
-      top: -0.313rem;
-    }
   }
 
   &--dynamic {

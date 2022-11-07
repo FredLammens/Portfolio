@@ -39,16 +39,16 @@ export class TooltipDirective implements OnDestroy {
     const { left, right, top, bottom } = this.el.nativeElement.getBoundingClientRect();
     let leftpositionPopup = 0;
     let topPositionPopup = 0;
-
+    // width or height of tooltip itself added
     switch (this.position) {
       case TooltipPosition.BELOW: {
         leftpositionPopup = Math.round((right - left) / 2 + left);
-        topPositionPopup = Math.round(bottom);
+        topPositionPopup = Math.round(bottom) + 13;
         break;
       }
       case TooltipPosition.ABOVE: {
         leftpositionPopup = Math.round((right - left) / 2 + left);
-        topPositionPopup = Math.round(top);
+        topPositionPopup = Math.round(top) - 13;
         break;
       }
       case TooltipPosition.RIGHT: {
@@ -61,11 +61,16 @@ export class TooltipDirective implements OnDestroy {
         topPositionPopup = Math.round(top + (bottom - top) / 2);
         break;
       }
+      case TooltipPosition.TOPRIGHT: {
+        leftpositionPopup = Math.round(right);
+        topPositionPopup = Math.round(top) - 13;
+        break;
+      }
       default: {
         break;
       }
     }
-    this.createTooltipPopup(leftpositionPopup, topPositionPopup);
+    this.createTooltipPopup(leftpositionPopup, topPositionPopup + 5);
   }
 
   @HostListener('mouseleave') public onMouseLeave() {
