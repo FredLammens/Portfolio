@@ -1,26 +1,15 @@
 .skills {
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   background-color: var(--secondary-color);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1em 1em;
-  grid-template-areas:
-    'title title'
-    'icons timeline'
-    'icons timeline';
 
-  justify-items: center;
   &__title {
-    grid-area: title;
     text-align: center;
     font-size: 4rem;
   }
-  &__icons {
-    grid-area: icons;
-  }
-  &__timeline {
-    grid-area: timeline;
+  &-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
   }
 }
 
@@ -28,5 +17,10 @@
   .skills {
     padding-top: 0;
     padding-bottom: calc(var(--nav-height) + var(--nav-margin));
+
+    &-container {
+      grid-auto-flow: row;
+      grid-auto-rows: 1fr;
+    }
   }
 }
