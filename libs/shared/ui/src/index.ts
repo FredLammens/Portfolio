@@ -4,3 +4,4 @@ export * from './lib/models/shared-navigationAnchor.model';
 export * from './lib/models/radioGroup.model';
 export * from './lib/models/project.model';
 export * from './lib/models/tooltip.model';
+export * from './lib/models/projectstack.model';

@@ -1,0 +1,7 @@
+<radio-group
+  class="filterGroup"
+  [radioGroups]="radioGroups"
+  groupName="tech-categroy"
+  (groupSelected)="selectedGroup($event)"
+></radio-group>
+<kanban-board [projects]="projectsFiltered"></kanban-board>

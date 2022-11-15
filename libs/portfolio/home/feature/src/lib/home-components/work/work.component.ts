@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Project, radioGroup, State, TechStack } from '@fred/shared/ui';
+import { ImgInfo, Project, State, TechStack } from '@fred/shared/ui';
 
 @Component({
   selector: 'work',
@@ -8,9 +8,9 @@ import { Project, radioGroup, State, TechStack } from '@fred/shared/ui';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkComponent implements OnInit {
-  public projects: Array<Project> = [];
+  public stackImgs: Array<ImgInfo> = [];
   // later inside service
-  private _projects: Array<Project> = [
+  public projects: Array<Project> = [
     {
       tags: ['Web', 'Mobile'],
       tech: [TechStack.Angular, TechStack.NxWorkspace],
@@ -44,26 +44,17 @@ export class WorkComponent implements OnInit {
       description: 'A small website showcasing my curriculum vitae in a fun responsive web format',
       state: State.Done,
       img: 'PlaceHolder',
-      imgSrc: 'assets/img/placeholder.png',
+      imgSrc: 'assets/img/portfolio.png',
       date: new Date(),
     },
   ];
-
-  public radioGroups: Array<radioGroup> = [
-    { name: 'ALL', emoji: '' },
-    { name: 'Web', emoji: '💻' },
-    { name: 'Mobile', emoji: '📱' },
-  ];
-
   public ngOnInit(): void {
-    this.selectedGroup('ALL');
-  }
-
-  public selectedGroup(tag: string): void {
-    if (tag === 'ALL') {
-      this.projects = this._projects;
-      return;
-    }
-    this.projects = this._projects.filter((v) => v.tags.includes(tag));
+    this.projects.forEach((p) => {
+      const pImgInfo = {
+        src: p.imgSrc,
+        alt: p.img,
+      };
+      this.stackImgs.push(pImgInfo);
+    });
   }
 }
