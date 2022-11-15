@@ -10,6 +10,15 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+
+    &__icons {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__timeline {
+      justify-content: flex-start;
+    }
   }
 }
 
