@@ -1,12 +1,9 @@
 <section class="work">
-  <!--TODO: put in custom component-->
-  <!-- FILTER buttons  radio buttons  -->
-  <radio-group
-    class="filterGroup"
-    [radioGroups]="radioGroups"
-    groupName="tech-categroy"
-    (groupSelected)="selectedGroup($event)"
-  ></radio-group>
-  <!-- projects with tags of frameworks used + when hover see round icon for github link and one globe round icon for website itself  -->
-  <kanban-board [projects]="projects"></kanban-board>
+  <work-main
+    *ngIf="seeMoreIsClicked === false"
+    class="work-main"
+    [stackImgs]="stackImgs"
+    (showSeeMore)="seeMore()"
+  ></work-main>
+  <work-see-more *ngIf="seeMoreIsClicked" [projects]="projects"></work-see-more>
 </section>

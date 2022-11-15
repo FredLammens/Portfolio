@@ -6,4 +6,8 @@ export interface Job {
 export interface JobInfo {
   Title: string;
   Company: string;
+  description: string;
+  companyDescription?: string;
+  tasks?: Array<string>;
+  keywords?: Array<string>;
 }

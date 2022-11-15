@@ -1,0 +1,10 @@
+img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
+  border: solid 0.5rem white;
+  border-bottom: solid 2rem white;
+  border-radius: 0.5rem;
+  transition: transform 200ms;
+}

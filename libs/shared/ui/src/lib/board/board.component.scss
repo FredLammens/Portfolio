@@ -1,14 +1,19 @@
 .boards {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  height: max-content;
 }
 .board {
   background-color: var(--secondary-color);
-  height: 90vh;
   border-radius: 1.25rem;
+
+  &-items {
+    display: grid;
+    grid-template-rows: subgrid;
+  }
 
   &:first-of-type {
     margin-left: 0.5rem;
@@ -34,17 +39,17 @@
   //container
   .boards {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     height: 80vh;
     grid-template-areas: 'overlap';
     grid-gap: 0.5rem;
+    height: max-content;
   }
   //item
   .board {
     all: unset;
     background-color: var(--secondary-color);
     margin: 0.5rem;
-    // height: 85vh;
     border-radius: 1.25rem;
     grid-area: overlap;
   }

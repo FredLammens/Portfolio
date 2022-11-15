@@ -1,6 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { Job } from '../../models/timeLine.model';
+import { TooltipPosition } from './../../models/tooltip.model';
 
 @Component({
   selector: 'date-row',
@@ -11,5 +12,7 @@ import { Job } from '../../models/timeLine.model';
 export class DateRowComponent {
   @Input()
   public job!: Job;
+
+  public TooltipPosition = TooltipPosition;
   constructor() {}
 }

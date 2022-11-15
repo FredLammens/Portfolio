@@ -1,12 +1,13 @@
 .work {
   padding-top: calc(var(--nav-height) + var(--nav-margin));
-}
-
-.filterGroup {
-  margin-left: 0.5rem;
-  display: inline-block;
-  height: 2rem;
-  margin-top: 1.5rem;
+  margin: 1rem;
+  display: flex;
+  &-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
 }
 
 @media (max-width: 480px) {

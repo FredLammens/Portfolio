@@ -48,6 +48,8 @@ on explanation on how to use and write eslint
 6. find a better way for the carousel of work component (kanban-board)
 7. make it PWA
 8. change some fixed sizes (cards - card-images etc for mobile)
+9. check tooltip for mobile (touch should keep the tooltip)
+10. fix radio group when in area of padding ?
 
 #Usefull sites:
 
