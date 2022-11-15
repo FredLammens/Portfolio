@@ -1,4 +1,9 @@
 <section class="work">
-  <work-main class="work-main" [stackImgs]="stackImgs"></work-main>
-  <work-see-more [projects]="projects" *ngIf="false"></work-see-more>
+  <work-main
+    *ngIf="seeMoreIsClicked === false"
+    class="work-main"
+    [stackImgs]="stackImgs"
+    (showSeeMore)="seeMore()"
+  ></work-main>
+  <work-see-more *ngIf="seeMoreIsClicked" [projects]="projects"></work-see-more>
 </section>

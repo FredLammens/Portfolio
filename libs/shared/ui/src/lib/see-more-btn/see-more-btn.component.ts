@@ -11,6 +11,11 @@ export class SeeMoreBtnComponent {
   public btnText = 'see more';
 
   @Output()
-  public isClicked = new EventEmitter<boolean>();
+  public showMore: EventEmitter<boolean> = new EventEmitter();
+
   constructor() {}
+
+  public handleClick(): void {
+    this.showMore.emit(true);
+  }
 }

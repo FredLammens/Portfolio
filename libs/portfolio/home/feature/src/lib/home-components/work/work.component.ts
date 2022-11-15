@@ -8,6 +8,7 @@ import { ImgInfo, Project, State, TechStack } from '@fred/shared/ui';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WorkComponent implements OnInit {
+  public seeMoreIsClicked = false;
   public stackImgs: Array<ImgInfo> = [];
   // later inside service
   public projects: Array<Project> = [
@@ -56,5 +57,9 @@ export class WorkComponent implements OnInit {
       };
       this.stackImgs.push(pImgInfo);
     });
+  }
+
+  public seeMore(): void {
+    this.seeMoreIsClicked = true;
   }
 }

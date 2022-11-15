@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, EventEmitter, Output } from '@angular/core';
 import { ImgInfo } from '@fred/shared/ui';
 
 @Component({
@@ -10,4 +10,6 @@ import { ImgInfo } from '@fred/shared/ui';
 export class MainComponent {
   @Input()
   public stackImgs: Array<ImgInfo> = [];
+  @Output()
+  public showSeeMore = new EventEmitter<boolean>();
 }
