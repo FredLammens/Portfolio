@@ -7,13 +7,13 @@
       <b>{{ project.title }}</b>
     </h4>
     <p>{{ project.description }}</p>
-    <div class="project-card__techStack">
-      <chip
-        *ngFor="let dChip of chips"
-        [text]="dChip.name"
-        [color]="dChip.color"
-        [cardImg]="dChip.img"
-      ></chip>
-    </div>
+  </div>
+  <div class="project-card__techStack">
+    <chip
+      *ngFor="let dChip of chips"
+      [text]="dChip.name"
+      [color]="dChip.color"
+      [cardImg]="dChip.img"
+    ></chip>
   </div>
 </div>

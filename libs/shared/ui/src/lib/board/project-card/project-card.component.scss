@@ -1,15 +1,16 @@
 .project-card {
-  display: flex;
-  flex-wrap: wrap;
   background-color: var(--primary-color);
   border: 0.2rem solid var(--secondary-color);
   border-radius: 1.25rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: subgrid;
+
   &__image {
     padding: 0.5rem;
     display: flex;
     flex: 1;
     justify-content: center;
-    min-width: 300px;
     height: fit-content;
     img {
       max-width: 300px;
@@ -26,5 +27,27 @@
     display: flex;
     gap: 0.2rem;
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 1000px) {
+  .project-card {
+    &__image {
+      img {
+        max-width: 200px;
+        max-height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .project-card {
+    &__image {
+      img {
+        max-width: 300px;
+        max-height: 300px;
+        object-fit: cover;
+      }
+    }
   }
 }
