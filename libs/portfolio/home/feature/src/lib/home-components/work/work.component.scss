@@ -2,20 +2,12 @@
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   margin: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.filterGroup {
-  margin-left: 0.5rem;
-  display: inline-block;
-  height: 2rem;
-  margin-top: 1.5rem;
-}
-
-.stack {
-  display: flex;
-  justify-content: center;
+  &-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
 }
 
 @media (max-width: 480px) {

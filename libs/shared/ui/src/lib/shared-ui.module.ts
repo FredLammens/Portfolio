@@ -13,6 +13,7 @@ import { IconGroupComponent } from './iconGroup/iconGroup.component';
 import { PolaroidCardComponent } from './project-stack/polaroid-card/polaroid-card.component';
 import { ProjectStackComponent } from './project-stack/project-stack.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
+import { SeeMoreBtnComponent } from './see-more-btn/see-more-btn.component';
 import { SharedNavigationComponent } from './shared-navigation/shared-navigation.component';
 import { DateRowComponent } from './timeline/date-row/date-row.component';
 import { TimelineComponent } from './timeline/timeline.component';
@@ -34,6 +35,7 @@ const components = [
   ...timeline,
   ...tooltip,
   ...projectStack,
+  SeeMoreBtnComponent,
 ];
 
 @NgModule({
