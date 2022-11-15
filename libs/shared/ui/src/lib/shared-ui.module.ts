@@ -10,6 +10,8 @@ import { CardComponent } from './card/card.component';
 import { ChipsComponent } from './chips/chips.component';
 import { IconComponent } from './iconGroup/icon/icon.component';
 import { IconGroupComponent } from './iconGroup/iconGroup.component';
+import { PolaroidCardComponent } from './project-stack/polaroid-card/polaroid-card.component';
+import { ProjectStackComponent } from './project-stack/project-stack.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SharedNavigationComponent } from './shared-navigation/shared-navigation.component';
 import { DateRowComponent } from './timeline/date-row/date-row.component';
@@ -21,6 +23,7 @@ const kanban = [BoardComponent, ProjectCardComponent];
 const iconGroup = [IconGroupComponent, IconComponent];
 const timeline = [TimelineComponent, DateRowComponent];
 const tooltip = [TooltipDirective, TooltipComponent];
+const projectStack = [ProjectStackComponent, PolaroidCardComponent];
 const components = [
   SharedNavigationComponent,
   CardComponent,
@@ -30,6 +33,7 @@ const components = [
   ...iconGroup,
   ...timeline,
   ...tooltip,
+  ...projectStack,
 ];
 
 @NgModule({

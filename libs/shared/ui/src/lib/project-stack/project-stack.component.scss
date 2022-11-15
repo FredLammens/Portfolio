@@ -1,0 +1,34 @@
+.stack {
+  display: grid;
+  grid-template-areas: 'stack';
+  width: 25rem;
+  height: 25rem;
+  & > .pcard {
+    grid-area: stack;
+  }
+  & > .pcard:nth-child(1) {
+    transform: rotate(5deg) translateX(1.25rem) translateY(-1.25rem);
+  }
+
+  & > .pcard:nth-child(2) {
+    transform: rotate(-10deg) translateX(-1.25rem);
+  }
+
+  & > .pcard:nth-child(3) {
+    transform: rotate(0deg);
+  }
+
+  &:hover {
+    & > .pcard:nth-child(1) {
+      transform: rotate(10deg) translateX(2.5rem) translateY(-2.5rem);
+    }
+
+    & > .pcard:nth-child(2) {
+      transform: rotate(-20deg) translateX(-3.75rem);
+    }
+
+    & > .pcard:nth-child(3) {
+      transform: rotate(0deg);
+    }
+  }
+}
