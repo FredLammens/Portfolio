@@ -1,6 +1,9 @@
 .work {
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .filterGroup {
