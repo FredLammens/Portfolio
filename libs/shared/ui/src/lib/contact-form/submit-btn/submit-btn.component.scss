@@ -1,0 +1,239 @@
+$green: #2bcb96;
+$gray: #bbbbbb;
+
+$btn_w: 380px;
+$btn_h: 120px;
+
+$timer_w: $btn_h;
+
+$success_w: 50px;
+$success_h: 45px;
+
+/* -------------------------------- resets */
+body,
+button,
+div,
+span,
+svg {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ------------------------------- Base styles */
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------------------- buttons */
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family: 'Work Sans', sans-serif;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+}
+
+.btn-lg {
+  width: $btn_w;
+  height: $btn_h;
+  border: 5px solid;
+  border-radius: $btn_h/2;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.btn-sm {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.btn-green {
+  color: $green;
+  background: white;
+  border-color: $green;
+  &:hover {
+    color: white;
+    background: $green;
+  }
+}
+
+.btn-black {
+  color: white;
+  background: darkgray;
+  &:hover {
+    background: black;
+  }
+}
+
+/* --------------------------------- timer */
+.timer {
+  position: absolute;
+  left: calc(50% - #{$timer_w}/ 2);
+  width: $timer_w;
+  height: $timer_w;
+  opacity: 0;
+  svg {
+    fill: none;
+    stroke: $green;
+    stroke-width: 10px;
+    transform: rotate(-0.25turn);
+    transform-origin: center center;
+    stroke-dasharray: 383;
+    stroke-dashoffset: 383;
+    transition: stroke-dashoffset 0.3s ease-in-out;
+  }
+}
+
+/* -------------------------- icon success */
+.icon-success {
+  position: absolute;
+  top: 35px;
+  left: calc(50% - #{$success_w}/ 2);
+  width: $success_w;
+  height: $success_h;
+  border: black;
+  svg {
+    fill: none;
+    stroke: white;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    transition: stroke-dashoffset 0.2s 0.2s linear;
+    opacity: 0;
+  }
+}
+
+/* ------------------------- button states */
+/* ----------------------- do submit */
+.do-submit {
+  color: white;
+  background: $green;
+  border-color: $green;
+  animation: closeButton 0.3s 0.3s ease-in forwards;
+  .text {
+    animation: hideText 0.3s forwards;
+  }
+  .timer {
+    transition: opacity 0.1s 0.6s linear;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+/* -------------------------- succes */
+.success {
+  border-color: $green;
+  animation: openButton 0.3s ease-in forwards;
+  .timer {
+    opacity: 0;
+    transition: opacity 0.01s linear;
+  }
+  .icon-success svg {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* --------------------------- reset */
+.reset {
+  animation: resetButton 0.5s ease-in forwards;
+  .icon-success {
+    opacity: 0;
+  }
+  .text {
+    animation: showText 0.8s ease-in forwards;
+  }
+}
+
+/* ----------------------------- keyframes */
+@keyframes closeButton {
+  90% {
+    width: $timer_w;
+    height: $timer_w;
+    background: white;
+    border-width: 10px;
+    border-color: $gray;
+  }
+  100% {
+    width: $timer_w;
+    height: $timer_w;
+    background: white;
+    border-width: 10px;
+    border-color: $gray;
+    border-radius: 50%;
+  }
+}
+
+@keyframes openButton {
+  from {
+    width: $timer_w;
+    height: $timer_w;
+    background: white;
+    border-color: $green;
+    border-width: 10px;
+    border-radius: 50%;
+  }
+  90% {
+    width: $btn_w;
+    height: $btn_h;
+    background: $green;
+    border-width: 5px;
+  }
+  100% {
+    width: $btn_w;
+    height: $btn_h;
+    background: $green;
+    border-color: $green;
+    border-width: 5px;
+    border-radius: $btn_h/2;
+  }
+}
+
+@keyframes resetButton {
+  to {
+    background: white;
+    color: $green;
+  }
+}
+
+@keyframes hideText {
+  from {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  20% {
+    transform: scaleX(1.1);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ----------------------- utility classes */
+.top-left {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
