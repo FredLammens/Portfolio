@@ -1,14 +1,12 @@
 .contact {
   padding-top: calc(var(--nav-height) + var(--nav-margin));
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   display: flex;
   justify-content: center;
-}
-
-.form-container {
-  display: flex;
 }
 
 .form {
