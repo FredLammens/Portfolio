@@ -7,6 +7,17 @@ h1 {
   justify-content: center;
 }
 
+.form-container {
+  display: flex;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
 @media (max-width: 480px) {
   .contact {
     padding-top: 0;
