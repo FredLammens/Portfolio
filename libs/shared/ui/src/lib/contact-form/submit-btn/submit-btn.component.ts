@@ -19,13 +19,25 @@ export class SubmitBtnComponent {
   public constructor(private renderer: Renderer2) {}
 
   public animateSubmit(): void {
-    //TODO: make this reactive
-    //do clicked animation
+    //do  loading animation
     this.renderer.addClass(this.btn?.nativeElement, 'animate');
-    //for now only 6 seconds
-    //on reset button
+    this.renderer.addClass(this.btn?.nativeElement, 'circle');
+    //when succesfull
+    // setTimeout(() => {
+    //   this.renderer.removeClass(this.btn?.nativeElement, 'circle'); //remove loading
+    //   this.renderer.addClass(this.btn?.nativeElement, 'success'); //set success check
+    // }, 1000);
+
+    //when error
     setTimeout(() => {
+      this.renderer.removeClass(this.btn?.nativeElement, 'circle'); //remove loading
+      this.renderer.addClass(this.btn?.nativeElement, 'error'); //set success check
+    }, 1000);
+
+    //reset button
+    setTimeout(() => {
+      this.renderer.removeClass(this.btn?.nativeElement, 'error'); //change this based on success or error
       this.renderer.removeClass(this.btn?.nativeElement, 'animate');
-    }, 6000);
+    }, 3000);
   }
 }
