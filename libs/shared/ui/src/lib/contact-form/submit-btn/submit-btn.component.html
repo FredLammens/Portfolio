@@ -1,14 +1,4 @@
-<button #jsBtn (click)="animateSubmit(); $event.stopPropagation()" class="btn btn-green btn-lg">
-  <span class="text">Submit</span>
-  <div class="timer">
-    <svg #jsTimer viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="60" r="55" />
-    </svg>
-  </div>
-  <div class="icon-success">
-    <svg viewBox="0 0 50 45" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20,42 L3, 25" />
-      <path d="M20,42 L47,3" />
-    </svg>
-  </div>
+<!--works if put class on error now programatically-->
+<button #btn (click)="animateSubmit(); $event.stopPropagation()" class="button success">
+  {{ 'submit' | uppercase }}
 </button>
