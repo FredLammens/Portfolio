@@ -25,4 +25,21 @@
   &__submit-btn {
     display: flex;
   }
+
+  & input,
+  textarea {
+    padding: 0.5rem 0.75rem;
+    outline: 0;
+    transition: 0.2s;
+
+    &:focus,
+    &:focus-visible {
+      border-color: var(--secondary-label-color);
+      box-shadow: 0 0 0.25rem var(--secondary-label-color);
+    }
+
+    &:hover:not(:disabled) {
+      border-color: var(--primary-label-color);
+    }
+  }
 }

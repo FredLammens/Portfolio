@@ -13,6 +13,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SubmitBtnComponent } from './contact-form/submit-btn/submit-btn.component';
 import { IconComponent } from './iconGroup/icon/icon.component';
 import { IconGroupComponent } from './iconGroup/iconGroup.component';
+import { PopOutCardComponent } from './pop-out-card/pop-out-card.component';
 import { PolaroidCardComponent } from './project-stack/polaroid-card/polaroid-card.component';
 import { ProjectStackComponent } from './project-stack/project-stack.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
@@ -41,6 +42,7 @@ const components = [
   ...projectStack,
   SeeMoreBtnComponent,
   ...contactForm,
+  PopOutCardComponent,
 ];
 
 @NgModule({
