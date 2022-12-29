@@ -2,18 +2,27 @@
   padding-top: calc(var(--nav-height) + var(--nav-margin));
   display: flex;
   flex-direction: column;
+
+  &-container {
+    display: flex;
+    flex: 1;
+    .side {
+      background-image: url('/assets/cofee_cup.png');
+      background-size: cover;
+      flex: 1;
+    }
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+  }
 }
 
 h1 {
   display: flex;
   justify-content: center;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
 }
 
 @media (max-width: 480px) {
