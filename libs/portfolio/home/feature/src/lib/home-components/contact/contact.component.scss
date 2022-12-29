@@ -8,7 +8,9 @@
     flex: 1;
     .side {
       background-image: url('/assets/coffee_cup.png');
-      background-size: cover;
+
+      background-position: center;
+      background-repeat: no-repeat;
       flex: 1;
     }
     .form {
