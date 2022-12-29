@@ -1,0 +1,51 @@
+//css reset for img
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.person {
+  --transform-speed: 250ms;
+  position: relative;
+  max-width: 15rem;
+
+  &__container {
+    // background: pink;
+    aspect-ratio: 1 / 1.5;
+    //to the bottom
+    display: grid;
+    align-items: end;
+    //make it a pill
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+
+    //hover effect
+    transition: scale var(--transform-speed) ease-in-out;
+    &:hover {
+      scale: 1.1;
+      //make img go up
+      .person__img {
+        transform: scale(2.5) translateY(-1rem);
+      }
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    //position it down center
+    inset: auto 0 0;
+    //----------makes it a square-----------------
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    //--------------------------------------------
+    border-radius: 50%;
+    margin-inline: auto;
+  }
+  &__img {
+    position: relative;
+    z-index: 2;
+    transform: scale(2.5); //change this for image size add left etc for positioning
+    transition: var(--transform-speed) ease-in-out;
+  }
+}

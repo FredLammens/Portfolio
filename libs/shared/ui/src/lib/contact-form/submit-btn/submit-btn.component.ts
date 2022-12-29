@@ -18,6 +18,7 @@ export class SubmitBtnComponent {
 
   public constructor(private renderer: Renderer2) {}
 
+  //TODO: fix second click being buggy
   public animateSubmit(): void {
     //do  loading animation
     this.renderer.addClass(this.btn?.nativeElement, 'animate');
