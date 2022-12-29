@@ -23,16 +23,16 @@ export class SubmitBtnComponent {
     this.renderer.addClass(this.btn?.nativeElement, 'animate');
     this.renderer.addClass(this.btn?.nativeElement, 'circle');
     //when succesfull
-    // setTimeout(() => {
-    //   this.renderer.removeClass(this.btn?.nativeElement, 'circle'); //remove loading
-    //   this.renderer.addClass(this.btn?.nativeElement, 'success'); //set success check
-    // }, 1000);
-
-    //when error
     setTimeout(() => {
       this.renderer.removeClass(this.btn?.nativeElement, 'circle'); //remove loading
-      this.renderer.addClass(this.btn?.nativeElement, 'error'); //set success check
+      this.renderer.addClass(this.btn?.nativeElement, 'success'); //set success check
     }, 1000);
+
+    //when error
+    // setTimeout(() => {
+    //   this.renderer.removeClass(this.btn?.nativeElement, 'circle'); //remove loading
+    //   this.renderer.addClass(this.btn?.nativeElement, 'error'); //set success check
+    // }, 1000);
 
     //reset button
     setTimeout(() => {

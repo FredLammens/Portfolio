@@ -17,3 +17,12 @@
   grid-gap: inherit;
   margin-bottom: 1rem;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  &__submit-btn {
+    display: flex;
+  }
+}
