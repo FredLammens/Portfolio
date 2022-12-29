@@ -50,6 +50,10 @@ on explanation on how to use and write eslint
 8. change some fixed sizes (cards - card-images etc for mobile)
 9. check tooltip for mobile (touch should keep the tooltip)
 10. fix radio group when in area of padding ?
+11. split shared ui module into seperate modules
+12. ssr ?
+13. standalone components
+14. angular elements ?
 
 #Usefull sites:
 

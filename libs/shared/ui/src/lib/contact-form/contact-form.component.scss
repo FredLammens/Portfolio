@@ -1,0 +1,28 @@
+//change this to form to make the label left of inputs
+.field {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: 1rem;
+  margin-bottom: 1rem;
+  width: 80vw;
+  max-width: 30rem;
+}
+
+.field {
+  display: grid;
+  grid-column: span 2;
+  grid: inherit;
+  grid-template-columns: 6rem 1fr; //fallback for subgrid
+  grid-template-columns: subgrid;
+  grid-gap: inherit;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  &__submit-btn {
+    display: flex;
+  }
+}
