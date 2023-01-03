@@ -7,6 +7,17 @@
   font-family: 'Roboto Slab', serif;
   color: var(--primary-text-color);
   scroll-behavior: smooth;
+  .btn {
+    padding: 1rem;
+    border-radius: 100vw;
+    //TODO: change this primary needs to be other color
+    &-primary {
+      background-color: var(--secondary-label-color);
+    }
+    &-secondary {
+      background-color: var(--primary-text-color);
+    }
+  }
   body {
     background-color: var(--primary-color);
     margin: 0;
@@ -18,5 +29,15 @@
 // }
 section {
   min-height: 100vh;
+  margin: 0 1rem;
   // scroll-snap-align: start;
+  padding-top: calc(var(--nav-height) + var(--nav-margin));
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 0;
+    padding-bottom: calc(var(--nav-height) + var(--nav-margin));
+    margin: 2rem;
+  }
 }
