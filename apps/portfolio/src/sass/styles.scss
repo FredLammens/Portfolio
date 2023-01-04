@@ -9,13 +9,14 @@
   scroll-behavior: smooth;
   .btn {
     padding: 1rem;
-    border-radius: 100vw;
-    //TODO: change this primary needs to be other color
+    border-radius: 20px;
     &-primary {
-      background-color: var(--secondary-label-color);
-    }
-    &-secondary {
-      background-color: var(--primary-text-color);
+      background-color: var(--third-color);
+      color: var(--primary-text-color);
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   body {
@@ -27,11 +28,28 @@
 // html {
 //   scroll-snap-type: y mandatory;
 // }
-section {
+
+/**
+|------------------|
+|     HEADER       |
+|------------------|
+| M  |   C    |  M |
+| |  |   O    |  | |
+| L  |   N    |  R |
+|    |   T    |    |
+|    |        |    |
+|------------------|
+*/
+section:not(.hero) {
   min-height: 100vh;
-  margin: 0 1rem;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 8.75rem 1fr 8.75rem;
+  grid-template-rows: calc(var(--nav-height) + var(--nav-margin)) 1fr;
+  grid-template-areas:
+    'header header header'
+    'margin-left content margin-right';
   // scroll-snap-align: start;
-  padding-top: calc(var(--nav-height) + var(--nav-margin));
 }
 
 @media (max-width: 480px) {
@@ -41,3 +59,24 @@ section {
     margin: 2rem;
   }
 }
+//section mobile :
+/**
+|------------------|
+| M  |   C    |  M |
+| |  |   O    |  | |
+| L  |   N    |  R |
+|    |   T    |    |
+|    |        |    |
+|------------------|
+|     HEADER       |
+|------------------|
+*/
+/**
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 8.75rem 1fr 8.75rem;
+  grid-template-rows: 1fr calc(var(--nav-height) + var(--nav-margin));
+  grid-template-areas:
+    "margin-left content margin-right"
+    "header header header";
+*/

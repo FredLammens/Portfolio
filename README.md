@@ -54,6 +54,8 @@ on explanation on how to use and write eslint
 12. ssr ?
 13. standalone components
 14. angular elements ?
+15. remove threejs
+16. cleanup shared lib
 
 #Usefull sites:
 

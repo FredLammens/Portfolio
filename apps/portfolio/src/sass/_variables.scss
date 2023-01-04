@@ -4,12 +4,16 @@
   --primary-color: #fefefe;
   --secondary-color: #d7cec7;
   --third-color: #76323f;
+  --fourth-color: #ad5566;
 
   //text
   --primary-text-color: black;
   --primary-text-highlited-color: var(--third-color); //3a3ca2
   //glasmorphism (navbar)
   --glass: 100%;
+  --small-ft: 1rem;
+  --medium-ft: 2rem;
+  --large-ft: 3.25rem;
 
   //styling nav
   --nav-margin: 0.5rem;
@@ -33,7 +37,9 @@
   //----------------------------------------------------------------------
   @media (prefers-color-scheme: dark) {
     --primary-color: #2b2a33;
-    --secondary-color: #42414d;
+    --secondary-color: #6f6c8a;
+    --third-color: #e27d60;
+    --fourth-color: #fda68d;
     --primary-text-color: #fefefe;
     --primary-text-highlited-color: #e27d60;
     --primary-label-color: #e27d60;

@@ -1,20 +1,24 @@
 .hero {
-  //try with grid ?
+  padding-left: 8.75rem;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-columns: minmax(16.875rem, 1fr);
+
   align-items: center;
 
-  .side {
-    justify-self: center;
+  &__side {
+    &-topTitle {
+      font-size: var(--small-ft);
+    }
+    &-title {
+      font-size: var(--medium-ft);
+    }
   }
 
-  .main {
-  }
-
-  .buttons-container {
-    display: flex;
-    gap: 1.5rem;
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -23,6 +27,6 @@
     white-space: nowrap;
   }
   &-tag {
-    color: var(--primary-text-highlited-color);
+    color: var(--third-color);
   }
 }
