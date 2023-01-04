@@ -53,6 +53,10 @@ section:not(.hero) {
   // scroll-snap-align: start;
 }
 
+.odd {
+  background-color: var(--secondary-color);
+}
+
 @media (max-width: 480px) {
   .hero {
     padding-top: 0;
