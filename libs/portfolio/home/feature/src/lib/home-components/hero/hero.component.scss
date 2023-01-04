@@ -7,11 +7,19 @@
   align-items: center;
 
   &__side {
-    &-topTitle {
-      font-size: var(--small-ft);
-    }
-    &-title {
-      font-size: var(--medium-ft);
+    display: flex;
+    flex-direction: column;
+    gap: 3.8125rem;
+    &-caption {
+      & * {
+        margin: 0.2rem;
+      }
+      &-topTitle {
+        font-size: var(--small-ft);
+      }
+      &-title {
+        font-size: var(--medium-ft);
+      }
     }
   }
 

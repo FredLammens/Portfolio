@@ -1,5 +1,6 @@
 .about {
-  padding-top: calc(var(--nav-height) + var(--nav-margin));
+  grid-area: content;
+
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -25,8 +26,6 @@
 
 @media (max-width: 500px) {
   .about {
-    padding-top: 0;
-
     .cards {
       grid-template-columns: 1fr;
     }

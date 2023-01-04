@@ -1,15 +1,20 @@
 <section class="hero">
   <div class="hero__side">
-    <p class="hero__side-topTitle">Hello! world</p>
-    <div class="hero__side-title">
-      <h1>I'm Frederic Lammens</h1>
-      <h1 class="function-title">
-        &#60; &#47;
-        <span class="function-tag">DEVELOPER</span>
-        &#62;
-      </h1>
+    <div class="hero__side-caption">
+      <p class="hero__side-caption-topTitle">{{ info.topTitle }}</p>
+      <div class="hero__side-caption-title">
+        <p>
+          I'm <b>{{ info.name }}</b>
+        </p>
+        <h1 class="function-title">
+          &#60; &#47;
+          <span class="function-tag">{{ info.functionTitle | uppercase }}</span>
+          &#62;
+        </h1>
+      </div>
     </div>
-    <button class="btn btn-primary">Check me out!</button>
+    <!--(showMore)="showSeeMore.emit()"-->
+    <see-more-btn class="hero__side-btn"></see-more-btn>
   </div>
   <img class="hero__img" src="/assets/img/hero/hero_background.jpg" />
 </section>

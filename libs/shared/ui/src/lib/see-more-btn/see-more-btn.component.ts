@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from '@angular/core';
-
+//TODO: change name to something better
 @Component({
   selector: 'see-more-btn',
   templateUrl: './see-more-btn.component.html',
