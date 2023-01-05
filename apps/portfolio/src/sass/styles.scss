@@ -11,13 +11,13 @@
   .btn {
     padding: 1rem;
     border-radius: 20px;
+    border: none;
+    color: var(--primary-text-color-btn);
     &-primary {
       background-color: var(--third-color);
-      color: var(--primary-text-color-btn);
-      border: none;
-      &:hover {
-        cursor: pointer;
-      }
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
   body {
