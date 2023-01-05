@@ -9,10 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: calc(var(--nav-height) + var(--nav-margin));
     > h1 {
       margin: 0.5rem;
-      font-size: 4rem;
+      font-size: var(--large-ft);
     }
   }
   .cards {
