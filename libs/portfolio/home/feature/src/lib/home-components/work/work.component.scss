@@ -2,4 +2,28 @@
   grid-area: content;
   display: flex;
   flex-direction: column;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > h1 {
+      margin: 0.5rem;
+      font-size: var(--medium-ft);
+    }
+    &-sub {
+      text-align: center;
+      > p {
+        margin: 0.5rem;
+      }
+    }
+  }
+  .section {
+    &-container {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+  }
 }
