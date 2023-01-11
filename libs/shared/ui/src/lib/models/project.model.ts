@@ -1,5 +1,5 @@
 export interface Project {
-  tags: Array<string>;
+  tags: Array<'Web' | 'Android' | 'IOS'>;
   tech: Array<TechStack>;
   githubLink: string;
   webisteLink: string;
@@ -8,6 +8,8 @@ export interface Project {
   state: State;
   img: string;
   imgSrc: string;
+  androidImgSrc?: string;
+  iosImgSrc?: string;
   date: Date;
 }
 

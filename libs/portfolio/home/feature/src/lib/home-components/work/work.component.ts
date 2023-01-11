@@ -11,7 +11,7 @@ export class WorkComponent {
   // later inside service
   public projects: Array<Project> = [
     {
-      tags: ['Web', 'Mobile'],
+      tags: ['Web', 'Android'],
       tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
       webisteLink: 'https://frederic-lammens.netlify.app/home',
@@ -35,7 +35,7 @@ export class WorkComponent {
       date: new Date(),
     },
     {
-      tags: ['Mobile'],
+      tags: ['IOS'],
       tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
       webisteLink: 'https://frederic-lammens.netlify.app/home',

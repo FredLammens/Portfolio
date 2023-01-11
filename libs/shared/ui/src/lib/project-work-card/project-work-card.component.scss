@@ -61,6 +61,8 @@
   &-img {
     grid-area: device-img;
     rotate: 7deg;
+    display: flex;
+    flex-direction: row;
   }
   &-text {
     grid-area: text;

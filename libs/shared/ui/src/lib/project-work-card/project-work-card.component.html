@@ -1,17 +1,17 @@
 <div [ngClass]="isReverse ? 'project-work-card-reverse' : 'project-work-card'">
   <div class="pwc-icon-container"><p class="pwc-icon">i</p></div>
   <div class="pwc-text">
-    <h1>{{ 'portfolio' | uppercase }}</h1>
+    <h1>{{ project.title | uppercase }}</h1>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus molestias velit vel
-      odit optio repellendus quo, enim exercitationem consequatur laudantium aliquam debitis unde
-      nihil voluptatum harum non corrupti, voluptates inventore.
+      {{ project.description }}
     </p>
   </div>
   <div class="pwc-btn">
     <button class="btn">Check it out!</button>
   </div>
   <div class="pwc-img">
-    <android-frame></android-frame>
+    <android-frame [androidWebImg]="project.imgSrc"></android-frame>
+    <desktop-frame></desktop-frame>
+    <iOS-frame></iOS-frame>
   </div>
 </div>
