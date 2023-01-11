@@ -8,8 +8,11 @@
       </div>
     </div>
     <div class="section-container">
-      <project-work-card></project-work-card>
-      <project-work-card [isReverse]="true"></project-work-card>
+      <project-work-card
+        *ngFor="let proj of projects; let i = index"
+        [project]="proj"
+        [isReverse]="i % 2 === 1"
+      ></project-work-card>
     </div>
   </div>
 </section>

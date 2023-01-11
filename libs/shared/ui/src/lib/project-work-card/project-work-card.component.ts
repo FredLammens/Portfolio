@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 import { Project, State, TechStack } from '../models/project.model';
 
@@ -8,7 +8,7 @@ import { Project, State, TechStack } from '../models/project.model';
   styleUrls: ['./project-work-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectWorkCardComponent {
+export class ProjectWorkCardComponent implements OnInit {
   @Input() public isReverse = false;
 
   @Input() public project: Project = {
@@ -23,4 +23,21 @@ export class ProjectWorkCardComponent {
     imgSrc: 'assets/img/portfolio.png',
     date: new Date(),
   };
+
+  public tag: 'Web' | 'Android' | 'IOS' = 'Web';
+
+  public ngOnInit(): void {
+    this.tag = this.getTag();
+  }
+
+  public getTag(): 'Web' | 'Android' | 'IOS' {
+    if (this.project.tags.includes('Web')) {
+      return 'Web';
+    } else {
+      if (this.project.tags.includes('IOS')) {
+        return 'IOS';
+      }
+      return 'Android';
+    }
+  }
 }
