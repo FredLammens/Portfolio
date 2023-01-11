@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'iOS-frame',
   templateUrl: './iOS-frame.svg',
-  styleUrls: ['./iOS-frame.component.css'],
+  styleUrls: ['./iOS-frame.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IOSFrameComponent {
-  constructor() {}
+  @Input() public iOSWebImg = 'assets/img/placeholder.png';
 }

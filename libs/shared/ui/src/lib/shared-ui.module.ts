@@ -16,6 +16,9 @@ import { IconGroupComponent } from './iconGroup/iconGroup.component';
 import { PopOutCardComponent } from './pop-out-card/pop-out-card.component';
 import { PolaroidCardComponent } from './project-stack/polaroid-card/polaroid-card.component';
 import { ProjectStackComponent } from './project-stack/project-stack.component';
+import { AndroidFrameComponent } from './project-work-card/android-frame/android-frame.component';
+import { DesktopFrameComponent } from './project-work-card/desktop-frame/desktop-frame.component';
+import { IOSFrameComponent } from './project-work-card/iOS-frame/iOS-frame.component';
 import { ProjectWorkCardComponent } from './project-work-card/project-work-card.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SeeMoreBtnComponent } from './see-more-btn/see-more-btn.component';
@@ -31,6 +34,12 @@ const timeline = [TimelineComponent, DateRowComponent];
 const tooltip = [TooltipDirective, TooltipComponent];
 const projectStack = [ProjectStackComponent, PolaroidCardComponent];
 const contactForm = [ContactFormComponent, SubmitBtnComponent];
+const projectWorkCard = [
+  ProjectWorkCardComponent,
+  AndroidFrameComponent,
+  DesktopFrameComponent,
+  IOSFrameComponent,
+];
 const components = [
   SharedNavigationComponent,
   CardComponent,
@@ -44,7 +53,7 @@ const components = [
   SeeMoreBtnComponent,
   ...contactForm,
   PopOutCardComponent,
-  ProjectWorkCardComponent,
+  ...projectWorkCard,
 ];
 
 @NgModule({
