@@ -1,5 +1,4 @@
 .project-work-card {
-  //todo change this to see if mirrorred or not
   background-color: var(--third-color);
   border-radius: 20px;
   display: grid;
@@ -11,6 +10,36 @@
     'free-space-left btn            device-img'
     'free-space-left free-spacedown device-img';
   max-height: 27.5rem;
+
+  &-reverse {
+    background-color: var(--fourth-color);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2rem;
+    grid-template-rows: 4rem 1fr auto 4rem;
+    grid-template-areas:
+      'device-img free-space     icon'
+      'device-img text           free-space-left'
+      'device-img btn            free-space-left'
+      'device-img free-spacedown free-space-left';
+    max-height: 27.5rem;
+
+    .pwc-img {
+      rotate: -7deg;
+    }
+
+    .pwc-btn {
+      > .btn {
+        background-color: var(--third-color);
+      }
+    }
+
+    .pwc-icon {
+      margin-left: 0;
+      margin-right: 25px;
+      margin-top: 6px;
+    }
+  }
 }
 .pwc {
   &-icon {
@@ -27,9 +56,11 @@
     border-radius: 50%;
     display: inline-block;
     text-align: center;
+    color: black;
   }
   &-img {
     grid-area: device-img;
+    rotate: 7deg;
   }
   &-text {
     grid-area: text;

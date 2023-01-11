@@ -1,4 +1,4 @@
-<div class="project-work-card">
+<div [ngClass]="isReverse ? 'project-work-card-reverse' : 'project-work-card'">
   <div class="pwc-icon-container"><p class="pwc-icon">i</p></div>
   <div class="pwc-text">
     <h1>{{ 'portfolio' | uppercase }}</h1>
