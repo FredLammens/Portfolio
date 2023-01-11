@@ -6,10 +6,10 @@
   grid-template-columns: 2rem 2fr 1fr;
   grid-template-rows: 4rem 1fr auto 4rem;
   grid-template-areas:
-    'icon            free-space     img'
-    'free-space-left text           img'
-    'free-space-left btn            img'
-    'free-space-left free-spacedown img';
+    'icon            free-space     device-img'
+    'free-space-left text           device-img'
+    'free-space-left btn            device-img'
+    'free-space-left free-spacedown device-img';
 }
 .pwc {
   &-icon {
@@ -28,7 +28,7 @@
     text-align: center;
   }
   &-img {
-    grid-area: icon;
+    grid-area: device-img;
   }
   &-text {
     grid-area: text;
