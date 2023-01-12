@@ -10,8 +10,16 @@
     <button class="btn">Check it out!</button>
   </div>
   <div class="pwc-img">
-    <android-frame *ngIf="tag === 'Android'" [androidWebImg]="project.imgSrc"></android-frame>
+    <android-frame
+      class="pwc-img-mobile"
+      *ngIf="tag === 'Android'"
+      [androidWebImg]="project.imgSrc"
+    ></android-frame>
     <desktop-frame *ngIf="tag === 'Web'" [desktopWebImg]="project.imgSrc"></desktop-frame>
-    <iOS-frame *ngIf="tag === 'IOS'" [iOSWebImg]="project.imgSrc"></iOS-frame>
+    <iOS-frame
+      class="pwc-img-mobile"
+      *ngIf="tag === 'IOS'"
+      [iOSWebImg]="project.imgSrc"
+    ></iOS-frame>
   </div>
 </div>
