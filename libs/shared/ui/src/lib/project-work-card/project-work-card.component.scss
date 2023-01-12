@@ -9,9 +9,7 @@
     'free-space-left text           device-img'
     'free-space-left btn            device-img'
     'free-space-left free-spacedown device-img';
-  max-height: 27.5rem;
-  max-width: 56.25rem;
-
+  max-height: 18.75rem;
   &-reverse {
     background-color: var(--fourth-color);
     border-radius: 20px;
@@ -23,8 +21,7 @@
       'device-img text           free-space-left'
       'device-img btn            free-space-left'
       'device-img free-spacedown free-space-left';
-    max-height: 27.5rem;
-    max-width: 56.25rem;
+    max-height: 18.75rem;
 
     .pwc-img {
       rotate: -7deg;
@@ -71,8 +68,10 @@
     rotate: 7deg;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     &-mobile {
-      width: 50%;
+      max-width: 50%;
       margin-left: 25%;
     }
   }
@@ -92,3 +91,5 @@
     }
   }
 }
+//TODO: use scale to fix mobile svg => scale svg with container or use scale on screensizes
+//TODO: change ios svg to not include top bar
