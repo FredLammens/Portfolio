@@ -1,0 +1,41 @@
+{
+  "name": "portfolio-icons",
+  "version": "1.0.0",
+  "description": "Starter project to build an SVG icon library",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build:library": "npm run transform-icons && npm run copy-library-assets",
+    "build:showcase": "npm run build:library && npm run bundle-showcase && npm run copy-showcase-files",
+    "bundle-showcase": "webpack --config ./showcase/webpack.config.js",
+    "commit": "git-cz",
+    "copy-showcase-files": "cpx showcase/index.html dist/showcase && cpx showcase/styles.css dist/showcase",
+    "copy-library-assets": "cpx package.json dist/icons && cpx README.md dist/icons",
+    "transform-icons": "svg-to-ts",
+    "serve": "npm run build:showcase && http-server ./dist/showcase -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreuzerk/svg-icon-library-starter.git"
+  },
+  "keywords": [
+    "SVG",
+    "icons",
+    "library",
+    "starter"
+  ],
+  "author": "Kevin Kreuzer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kreuzerk/svg-icon-library-starter/issues"
+  },
+  "homepage": "https://github.com/kreuzerk/svg-icon-library-starter#readme",
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "git-cz": "^4.7.1",
+    "npm-run-all": "^4.1.5",
+    "svg-to-ts": "^6.0.0",
+    "typescript": "^4.0.3",
+    "webpack": "^3.12.0"
+  }
+}
