@@ -1,0 +1,109 @@
+.dialog {
+  border: none;
+  //colors and padding
+  background-color: var(--fb-white);
+  padding: var(--spacing-4) var(--spacing-4) var(--spacing-3) var(--spacing-4);
+  box-shadow: var(--fb-box-shadow);
+
+  //position of content
+  white-space: pre-wrap;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  section {
+    @include flex(column);
+
+    //size
+    max-width: 35rem;
+    max-height: 25rem;
+    overflow: hidden;
+  }
+
+  header {
+    display: flex;
+  }
+
+  &__icon {
+    &--success {
+      color: var(--polar-green-6);
+    }
+    &--warning {
+      color: var(--calendula-gold-6);
+    }
+    &--error {
+      color: var(--dust-red-6);
+    }
+    &--confirmation {
+      color: var(--calendula-gold-6);
+    }
+    &--info {
+      color: var(--fb-daybreak-blue6);
+    }
+    &--clickable {
+      cursor: pointer;
+    }
+  }
+
+  &__heading {
+    @include flex(row, flex-start, center);
+
+    gap: var(--spacing-2);
+  }
+
+  &__title {
+    @extend .h4;
+  }
+
+  main {
+    &:not(.fba-dialog2__main-no-padding) {
+      // @TODO : replace that padding with the grid system
+      padding-left: var(--spacing-5);
+    }
+
+    overflow: auto;
+    margin-top: var(--spacing-1);
+    margin-bottom: var(--spacing-3);
+  }
+
+  &__description {
+    @extend .text--regular-md-body;
+
+    width: 100%;
+  }
+
+  &__actions {
+    @include flex(row, flex-end);
+
+    width: 100%;
+    gap: var(--spacing-1);
+    white-space: pre;
+  }
+}
+
+dialog {
+  &[open],
+  &::backdrop {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  &[closing] {
+    animation: fadeOut 0.3s forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -20,16 +20,16 @@ import { DialogType } from './dialog';
       <header>
         <div class="dialog__heading" *ngIf="customHeader.hasChildNodes() === false">
           <!-- icon in sidebar -->
-          <fba-icon
+          <!-- <fba-icon
             *ngIf="showIcon && type !== dialogTypesEnum.basic"
             class="dialog__icon"
             [ngClass]="'dialog__icon--' + type"
             [theme]="iconTheme"
             [icon]="customIcon ? customIcon : iconType"
             size="medium"
-          ></fba-icon>
+          ></fba-icon> -->
           <!-- heading -->
-          <p class="dialog__title">{{ title | translate }}</p>
+          <p class="dialog__title">{{ title }}</p>
         </div>
         <div #customHeader class="dialog__heading">
           <ng-content select="[role=header]"></ng-content>
@@ -39,12 +39,12 @@ import { DialogType } from './dialog';
       <!-- description -->
       <main
         [ngClass]="{
-          'fba-dialog2__main-no-padding': type === dialogTypesEnum.basic
+          'dialog__main-no-padding': type === dialogTypesEnum.basic
         }"
       >
-        <span class="dialog__description" *ngIf="customDescription.hasChildNodes() === false">{{
-          description | translate
-        }}</span>
+        <span class="dialog__description" *ngIf="customDescription.hasChildNodes() === false">
+          {{ description }}
+        </span>
         <div #customDescription class="dialog__description">
           <ng-content select="[role=description]"></ng-content>
         </div>
@@ -53,6 +53,7 @@ import { DialogType } from './dialog';
       <!-- buttons  -->
       <footer>
         <div class="dialog__actions" *ngIf="customActions.hasChildNodes() === false">
+          <!-- TODO: button class in dialog scss file  -->
           <button
             *ngIf="
               type !== dialogTypesEnum.info &&
@@ -60,19 +61,16 @@ import { DialogType } from './dialog';
               type !== dialogTypesEnum.warning &&
               type !== dialogTypesEnum.error
             "
-            autofocus
-            fbaButton="default"
-            size="default"
+            class="btn"
             (click)="serviceDialogSecondary ? secondaryAction() : secondary.emit($event); close()"
           >
-            {{ 'CANCEL' | translate }}
+            {{ 'CANCEL' }}
           </button>
           <button
-            fbaButton="primary"
-            size="default"
+            class="btn btn-primary"
             (click)="serviceDialogPrimary ? primaryAction() : primary.emit($event); close()"
           >
-            {{ 'OK' | translate }}
+            {{ 'OK' }}
           </button>
         </div>
         <div #customActions>
@@ -84,7 +82,7 @@ import { DialogType } from './dialog';
 })
 export class DialogComponent {
   /** Base class for the component. */
-  @HostBinding('class.fba-dialog2') public baseClass = true;
+  @HostBinding('class.dialog') public baseClass = true;
 
   private _type: DialogType = DialogType.basic;
 
