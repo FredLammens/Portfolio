@@ -91,5 +91,9 @@
     }
   }
 }
-//TODO: use scale to fix mobile svg => scale svg with container or use scale on screensizes
-//TODO: change ios svg to not include top bar
+
+@media (min-width: 800px) {
+  .pwc-img-mobile {
+    scale: 0.5;
+  }
+}
