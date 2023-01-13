@@ -1,0 +1,24 @@
+{
+  "name": "shared-util-icons",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/util/icons/src",
+  "prefix": "fred",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/util/icons"],
+      "options": {
+        "jestConfig": "libs/shared/util/icons/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/util/icons/**/*.ts", "libs/shared/util/icons/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:app"]
+}

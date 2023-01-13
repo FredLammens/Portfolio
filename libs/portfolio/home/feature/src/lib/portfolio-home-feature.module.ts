@@ -2,6 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { SharedUiModule } from '@fred/shared/ui';
 import { NgrxentensionsModule } from '@fred/shared/util/common-extensions/ng-rx-extensions';
+import {
+  ptIconsAlertCircle,
+  PtIconsRegistryService,
+  SharedUtilIconsModule,
+} from '@fred/shared/util/icons';
 
 import { AboutComponent } from './home-components/about/about.component';
 import { ContactComponent } from './home-components/contact/contact.component';
@@ -27,7 +32,11 @@ const homeComponents = [
 
 @NgModule({
   declarations: [HomeComponent, ...homeComponents],
-  imports: [HomeRoutes, CommonModule, SharedUiModule, NgrxentensionsModule],
+  imports: [HomeRoutes, CommonModule, SharedUiModule, NgrxentensionsModule, SharedUtilIconsModule],
   exports: [HomeComponent],
 })
-export class PortfolioHomeFeatureModule {}
+export class PortfolioHomeFeatureModule {
+  constructor(private ptIconsRegistryService: PtIconsRegistryService) {
+    this.ptIconsRegistryService.registerIcons([ptIconsAlertCircle]);
+  }
+}
