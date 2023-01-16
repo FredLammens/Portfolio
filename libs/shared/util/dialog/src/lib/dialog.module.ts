@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import {
   ptIconsAlertCircle,
+  ptIconsInfo,
   PtIconsRegistryService,
   SharedUtilIconsModule,
 } from '@fred/shared/util/icons';
@@ -15,6 +16,6 @@ import { DialogComponent } from './dialog.component';
 })
 export class DialogModule {
   constructor(private ptIconsRegistryService: PtIconsRegistryService) {
-    this.ptIconsRegistryService.registerIcons([ptIconsAlertCircle]);
+    this.ptIconsRegistryService.registerIcons([ptIconsAlertCircle, ptIconsInfo]);
   }
 }

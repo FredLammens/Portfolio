@@ -7,7 +7,7 @@ import {
   Injectable,
   Injector,
 } from '@angular/core';
-import { ptIconsAlertCircle, PtIconsRegistryService } from '@fred/shared/util/icons';
+import { ptIconsAlertCircle, ptIconsInfo, PtIconsRegistryService } from '@fred/shared/util/icons';
 
 import { DialogType } from '../lib/dialog';
 import { DialogComponent } from '../lib/dialog.component';
@@ -32,7 +32,7 @@ export class DialogService {
     @Inject(DOCUMENT) private doc: Document,
     private ptIconsRegistryService: PtIconsRegistryService,
   ) {
-    this.ptIconsRegistryService.registerIcons([ptIconsAlertCircle]);
+    this.ptIconsRegistryService.registerIcons([ptIconsAlertCircle, ptIconsInfo]);
     // object that knows how to create a component
     this.factory = this.resolver.resolveComponentFactory(DialogComponent);
     // exposes reference to native dom element
@@ -47,7 +47,6 @@ export class DialogService {
     type: DialogType = DialogType.confirmation,
     title?: string,
     showIcon?: boolean,
-    iconTheme?: 'outlined' | 'filled' | 'two-tone',
   ): void {
     // set up dialog component
     const cRef = this.componentRef.instance;
@@ -77,7 +76,6 @@ export class DialogService {
     }
     if (type) cRef.type = type;
     if (showIcon) cRef.showIcon = showIcon;
-    if (iconTheme) cRef.iconTheme = iconTheme;
     if (primaryAction) {
       cRef.serviceDialogPrimary = true;
       cRef.primaryAction = primaryAction;

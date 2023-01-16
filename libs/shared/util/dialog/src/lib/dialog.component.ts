@@ -3,10 +3,12 @@ import {
   Component,
   ElementRef,
   EventEmitter,
+  HostBinding,
   Input,
   Output,
   Renderer2,
 } from '@angular/core';
+import { ptIcons } from '@fred/shared/util/icons';
 
 import { DialogType } from './dialog';
 
@@ -15,19 +17,11 @@ import { DialogType } from './dialog';
   styleUrls: ['./dialog.component.scss'],
   selector: 'dialog [app-dialog]',
   template: `
-    <section>
+    <div>
       <header>
         <div class="dialog__heading" *ngIf="customHeader.hasChildNodes() === false">
           <!-- icon in sidebar -->
-          <pt-icons name="alert_circle"></pt-icons>
-          <!-- <fba-icon
-            *ngIf="showIcon && type !== dialogTypesEnum.basic"
-            class="dialog__icon"
-            [ngClass]="'dialog__icon--' + type"
-            [theme]="iconTheme"
-            [icon]="customIcon ? customIcon : iconType"
-            size="medium"
-          ></fba-icon> -->
+          <pt-icons *ngIf="showIcon && type !== dialogTypesEnum.basic" [name]="iconType"></pt-icons>
           <!-- heading -->
           <p class="dialog__title">{{ title }}</p>
         </div>
@@ -77,10 +71,13 @@ import { DialogType } from './dialog';
           <ng-content select="[role=buttons]"></ng-content>
         </div>
       </footer>
-    </section>
+    </div>
   `,
 })
 export class DialogComponent {
+  /** Base class for the component. */
+  @HostBinding('class.dialog') public baseClass = true;
+
   private _type: DialogType = DialogType.basic;
 
   public dialogTypesEnum = DialogType;
@@ -91,31 +88,31 @@ export class DialogComponent {
     switch (dT) {
       case DialogType.basic:
         this.title = this.title || '';
-        this.iconType = 'check-circle';
+        // this.iconType = 'check-circle';
         break;
       case DialogType.success:
         this.title = this.title || 'SUCCESS';
-        this.iconType = 'check-circle';
+        // this.iconType = 'check-circle';
         break;
       case DialogType.warning:
         this.title = this.title || 'WARNING';
-        this.iconType = 'exclamation-circle';
+        this.iconType = 'alert_circle';
         break;
       case DialogType.error:
         this.title = this.title || 'ERROR';
-        this.iconType = 'close-circle';
+        // this.iconType = 'close-circle';
         break;
       case DialogType.confirmation:
         this.title = this.title || 'CONFIRMATION';
-        this.iconType = 'exclamation-circle';
+        this.iconType = 'alert_circle';
         break;
       case DialogType.info:
         this.title = this.title || 'INFORMATION';
-        this.iconType = 'info-circle';
+        this.iconType = 'info';
         break;
       default:
         this.showIcon = false;
-        this.iconType = 'exclamation-circle';
+        this.iconType = 'alert_circle';
     }
   }
 
@@ -126,10 +123,6 @@ export class DialogComponent {
   @Input() public title = '';
 
   @Input() public description = '';
-
-  @Input() public iconTheme: 'outlined' | 'filled' | 'two-tone' = 'outlined';
-
-  @Input() public customIcon = '';
 
   @Input() public showIcon = true;
 
@@ -145,8 +138,7 @@ export class DialogComponent {
 
   public secondaryAction!: () => void;
 
-  public iconType: 'check-circle' | 'close-circle' | 'exclamation-circle' | 'info-circle' =
-    'exclamation-circle';
+  public iconType: ptIcons = 'alert_circle';
 
   constructor(private host: ElementRef, private renderer: Renderer2) {}
 
