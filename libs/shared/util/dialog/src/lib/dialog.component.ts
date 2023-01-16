@@ -3,7 +3,6 @@ import {
   Component,
   ElementRef,
   EventEmitter,
-  HostBinding,
   Input,
   Output,
   Renderer2,
@@ -20,6 +19,7 @@ import { DialogType } from './dialog';
       <header>
         <div class="dialog__heading" *ngIf="customHeader.hasChildNodes() === false">
           <!-- icon in sidebar -->
+          <pt-icons name="alert_circle"></pt-icons>
           <!-- <fba-icon
             *ngIf="showIcon && type !== dialogTypesEnum.basic"
             class="dialog__icon"
@@ -81,9 +81,6 @@ import { DialogType } from './dialog';
   `,
 })
 export class DialogComponent {
-  /** Base class for the component. */
-  @HostBinding('class.dialog') public baseClass = true;
-
   private _type: DialogType = DialogType.basic;
 
   public dialogTypesEnum = DialogType;

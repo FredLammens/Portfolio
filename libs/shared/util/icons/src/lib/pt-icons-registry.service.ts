@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { Injectable } from '@angular/core';
 
 import { ptIcons, PtIcons } from './icons/build/pt-icons.model';
