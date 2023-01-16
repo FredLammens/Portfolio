@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { DialogService } from '@fred/shared/util/dialog';
 
 import { Project, State, TechStack } from '../models/project.model';
 
@@ -26,6 +27,8 @@ export class ProjectWorkCardComponent implements OnInit {
 
   public tag: 'Web' | 'Android' | 'IOS' = 'Web';
 
+  public constructor(private dialogService: DialogService) {}
+
   public ngOnInit(): void {
     this.tag = this.getTag();
   }
@@ -39,5 +42,9 @@ export class ProjectWorkCardComponent implements OnInit {
       }
       return 'Android';
     }
+  }
+
+  public openDialog(): void {
+    this.dialogService.showDialog('dfs');
   }
 }

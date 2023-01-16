@@ -8,6 +8,7 @@ import {
   Optional,
 } from '@angular/core';
 
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { ptIcons } from './icons/build/pt-icons.model';
 import { PtIconsRegistryService } from './pt-icons-registry.service';
 

@@ -7,8 +7,9 @@ import {
   Injectable,
   Injector,
 } from '@angular/core';
-import { DialogType } from '../dialog/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
+
+import { DialogType } from '../lib/dialog';
+import { DialogComponent } from '../lib/dialog.component';
 
 /**
  * Service for injecting Dialog2Components to the DOM
