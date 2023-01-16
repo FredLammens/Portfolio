@@ -49,12 +49,7 @@ import { DialogType } from './dialog';
         <div class="dialog__actions" *ngIf="customActions.hasChildNodes() === false">
           <!-- TODO: button class in dialog scss file  -->
           <button
-            *ngIf="
-              type !== dialogTypesEnum.info &&
-              type !== dialogTypesEnum.success &&
-              type !== dialogTypesEnum.warning &&
-              type !== dialogTypesEnum.error
-            "
+            *ngIf="type === dialogTypesEnum.confirmation || type === dialogTypesEnum.basic"
             class="btn"
             (click)="serviceDialogSecondary ? secondaryAction() : secondary.emit($event); close()"
           >

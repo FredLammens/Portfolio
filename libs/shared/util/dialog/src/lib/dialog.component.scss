@@ -60,7 +60,7 @@
   }
 }
 
-dialog {
+::ng-deep dialog {
   &[open],
   &::backdrop {
     animation: fadeIn 0.3s ease-in;
