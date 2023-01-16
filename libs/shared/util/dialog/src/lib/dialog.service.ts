@@ -51,8 +51,10 @@ export class DialogService {
   // by default, if the dialog is shown from the service => it's a confirmation and not a basic
   public showDialog(
     description: string,
-    primaryAction?: () => void,
-    secondaryAction?: () => void,
+    actions?: {
+      primaryAction?: () => void;
+      secondaryAction?: () => void;
+    },
     type: DialogType = DialogType.confirmation,
     title?: string,
     showIcon?: boolean,
@@ -85,13 +87,15 @@ export class DialogService {
     }
     if (type) cRef.type = type;
     if (showIcon) cRef.showIcon = showIcon;
-    if (primaryAction) {
-      cRef.serviceDialogPrimary = true;
-      cRef.primaryAction = primaryAction;
-    }
-    if (secondaryAction) {
-      cRef.serviceDialogSecondary = true;
-      cRef.secondaryAction = secondaryAction;
+    if (actions) {
+      if (actions.primaryAction) {
+        cRef.serviceDialogPrimary = true;
+        cRef.primaryAction = actions.primaryAction;
+      }
+      if (actions.secondaryAction) {
+        cRef.serviceDialogSecondary = true;
+        cRef.secondaryAction = actions.secondaryAction;
+      }
     }
     // add local change dection
     this.componentRef.hostView.detectChanges();

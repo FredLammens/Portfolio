@@ -17,55 +17,65 @@ import { DialogType } from './dialog';
   styleUrls: ['./dialog.component.scss'],
   selector: 'dialog [app-dialog]',
   template: `
-    <div>
-      <header>
-        <div class="dialog__heading" *ngIf="customHeader.hasChildNodes() === false">
-          <!-- icon in sidebar -->
-          <pt-icons *ngIf="showIcon && type !== dialogTypesEnum.basic" [name]="iconType"></pt-icons>
-          <!-- heading -->
-          <p class="dialog__title">{{ title }}</p>
-        </div>
-        <div #customHeader class="dialog__heading">
-          <ng-content select="[role=header]"></ng-content>
-        </div>
-      </header>
+    <div class="container">
+      <div class="grid-container">
+        <!-- icon in sidebar -->
+        <pt-icons
+          class="icon"
+          *ngIf="showIcon && type !== dialogTypesEnum.basic"
+          [name]="iconType"
+        ></pt-icons>
+        <div class="main">
+          <header>
+            <div class="dialog__heading" *ngIf="customHeader.hasChildNodes() === false">
+              <!-- heading -->
+              <p class="dialog__title">{{ title }}</p>
+            </div>
+            <div #customHeader class="dialog__heading">
+              <ng-content select="[role=header]"></ng-content>
+            </div>
+          </header>
 
-      <!-- description -->
-      <main
-        [ngClass]="{
-          'dialog__main-no-padding': type === dialogTypesEnum.basic
-        }"
-      >
-        <span class="dialog__description" *ngIf="customDescription.hasChildNodes() === false">
-          {{ description }}
-        </span>
-        <div #customDescription class="dialog__description">
-          <ng-content select="[role=description]"></ng-content>
-        </div>
-      </main>
+          <!-- description -->
+          <main
+            [ngClass]="{
+              'dialog__main-no-padding': type === dialogTypesEnum.basic
+            }"
+          >
+            <span class="dialog__description" *ngIf="customDescription.hasChildNodes() === false">
+              {{ description }}
+            </span>
+            <div #customDescription class="dialog__description">
+              <ng-content select="[role=description]"></ng-content>
+            </div>
+          </main>
 
-      <!-- buttons  -->
-      <footer>
-        <div class="dialog__actions" *ngIf="customActions.hasChildNodes() === false">
-          <!-- TODO: button class in dialog scss file  -->
-          <button
-            *ngIf="type === dialogTypesEnum.confirmation || type === dialogTypesEnum.basic"
-            class="btn"
-            (click)="serviceDialogSecondary ? secondaryAction() : secondary.emit($event); close()"
-          >
-            {{ 'CANCEL' }}
-          </button>
-          <button
-            class="btn btn-primary"
-            (click)="serviceDialogPrimary ? primaryAction() : primary.emit($event); close()"
-          >
-            {{ 'OK' }}
-          </button>
+          <!-- buttons  -->
+          <footer>
+            <div class="dialog__actions" *ngIf="customActions.hasChildNodes() === false">
+              <!-- TODO: button class in dialog scss file  -->
+              <button
+                *ngIf="type === dialogTypesEnum.confirmation || type === dialogTypesEnum.basic"
+                class="btn"
+                (click)="
+                  serviceDialogSecondary ? secondaryAction() : secondary.emit($event); close()
+                "
+              >
+                {{ 'CANCEL' }}
+              </button>
+              <button
+                class="btn btn-primary"
+                (click)="serviceDialogPrimary ? primaryAction() : primary.emit($event); close()"
+              >
+                {{ 'OK' }}
+              </button>
+            </div>
+            <div #customActions>
+              <ng-content select="[role=buttons]"></ng-content>
+            </div>
+          </footer>
         </div>
-        <div #customActions>
-          <ng-content select="[role=buttons]"></ng-content>
-        </div>
-      </footer>
+      </div>
     </div>
   `,
 })

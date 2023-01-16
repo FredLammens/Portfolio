@@ -2,10 +2,12 @@
 import { ptIconsAlertCircle } from './ptIcons-alert-circle.icon';
 import { ptIconsAt } from './ptIcons-at.icon';
 import { ptIconsCheckmarkCircle } from './ptIcons-checkmark-circle.icon';
+import { ptIconsExpandOutline } from './ptIcons-expand-outline.icon';
 import { ptIconsInfo } from './ptIcons-info.icon';
 export const completeIconSet = [
     ptIconsAlertCircle,
     ptIconsAt,
     ptIconsCheckmarkCircle,
+    ptIconsExpandOutline,
     ptIconsInfo
 ];

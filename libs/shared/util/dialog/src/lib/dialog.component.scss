@@ -7,55 +7,49 @@
   //position of content
   white-space: pre-wrap;
 
+  border-radius: 20px;
+
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.6);
   }
 
-  div {
+  .container {
     display: flex;
     flex-direction: column;
-    //size
-    max-width: 35rem;
-    max-height: 25rem;
-    overflow: hidden;
+    min-width: 12rem;
+    margin: 1rem;
   }
 
-  header {
-    display: flex;
+  .grid-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'icon main';
+  }
+
+  .main {
+    grid-area: main;
+  }
+  &__icon {
+    grid-area: icon;
+    path,
+    circle {
+      fill: var(--third-color);
+    }
   }
 
   &__heading {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    gap: 1rem;
-  }
-
-  &__title {
-  }
-
-  main {
-    &:not(.fba-dialog2__main-no-padding) {
-      // @TODO : replace that padding with the grid system
-      padding-left: var(--spacing-5);
-    }
-
-    overflow: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  &__description {
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
   }
 
   &__actions {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 0.2rem;
-    white-space: pre;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: end;
   }
 }
 

@@ -16,7 +16,7 @@ import { PtIconsRegistryService } from './pt-icons-registry.service';
 @Component({
   selector: 'pt-icons',
   template: `<ng-content></ng-content>`,
-  styles: [':host::ng-deep svg{width: 50px; height: 50px}'],
+  styles: [':host::ng-deep svg{width: 2rem; height: 2rem}'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PtIconsComponent {

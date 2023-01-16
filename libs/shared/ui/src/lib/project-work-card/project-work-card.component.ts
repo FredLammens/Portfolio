@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { DialogService } from '@fred/shared/util/dialog';
+import { DialogService, DialogType } from '@fred/shared/util/dialog';
 
 import { Project, State, TechStack } from '../models/project.model';
 
@@ -45,6 +45,6 @@ export class ProjectWorkCardComponent implements OnInit {
   }
 
   public openDialog(): void {
-    this.dialogService.showDialog('dfs');
+    this.dialogService.showDialog('dfs', undefined, DialogType.info);
   }
 }

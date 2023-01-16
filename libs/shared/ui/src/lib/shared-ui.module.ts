@@ -4,6 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgrxentensionsModule } from '@fred/shared/util/common-extensions/ng-rx-extensions';
 
+import {
+  ptIconsExpandOutline,
+  PtIconsRegistryService,
+  SharedUtilIconsModule,
+} from '@fred/shared/util/icons';
+
 import { BoardComponent } from './board/board.component';
 
 import { ProjectCardComponent } from './board/project-card/project-card.component';
@@ -57,8 +63,18 @@ const components = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, NgrxentensionsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    NgrxentensionsModule,
+    SharedUtilIconsModule,
+  ],
   declarations: [...components],
   exports: [...components],
 })
-export class SharedUiModule {}
+export class SharedUiModule {
+  constructor(private ptIconsRegistryService: PtIconsRegistryService) {
+    this.ptIconsRegistryService.registerIcons([ptIconsExpandOutline]);
+  }
+}

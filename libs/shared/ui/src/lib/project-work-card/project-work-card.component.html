@@ -1,5 +1,7 @@
 <div [ngClass]="isReverse ? 'project-work-card-reverse' : 'project-work-card'">
-  <div class="pwc-icon-container" (click)="openDialog()"><p class="pwc-icon">i</p></div>
+  <div class="pwc-icon-container" (click)="openDialog()">
+    <pt-icons class="icon" name="expand_outline"></pt-icons>
+  </div>
   <div class="pwc-text">
     <h1>{{ project.title | uppercase }}</h1>
     <p>
