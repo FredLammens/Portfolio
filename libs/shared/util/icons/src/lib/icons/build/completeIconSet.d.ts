@@ -5,6 +5,9 @@ export declare const completeIconSet: ({
     name: "at";
     data: string;
 } | {
+    name: "checkmark_circle";
+    data: string;
+} | {
     name: "info";
     data: string;
 })[];

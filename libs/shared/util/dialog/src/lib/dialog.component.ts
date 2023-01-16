@@ -83,26 +83,26 @@ export class DialogComponent {
     switch (dT) {
       case DialogType.basic:
         this.title = this.title || '';
-        // this.iconType = 'check-circle';
+        this.iconType = 'checkmark_circle';
         break;
       case DialogType.success:
         this.title = this.title || 'SUCCESS';
-        // this.iconType = 'check-circle';
+        this.iconType = 'checkmark_circle';
         break;
       case DialogType.warning:
-        this.title = this.title || 'WARNING';
+        this.title = this.title || 'warning';
         this.iconType = 'alert_circle';
         break;
       case DialogType.error:
-        this.title = this.title || 'ERROR';
-        // this.iconType = 'close-circle';
+        this.title = this.title || 'error';
+        this.iconType = 'alert_circle';
         break;
       case DialogType.confirmation:
-        this.title = this.title || 'CONFIRMATION';
+        this.title = this.title || 'confirm';
         this.iconType = 'alert_circle';
         break;
       case DialogType.info:
-        this.title = this.title || 'INFORMATION';
+        this.title = this.title || 'info';
         this.iconType = 'info';
         break;
       default:

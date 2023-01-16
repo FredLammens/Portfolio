@@ -7,7 +7,12 @@ import {
   Injectable,
   Injector,
 } from '@angular/core';
-import { ptIconsAlertCircle, ptIconsInfo, PtIconsRegistryService } from '@fred/shared/util/icons';
+import {
+  ptIconsAlertCircle,
+  ptIconsCheckmarkCircle,
+  ptIconsInfo,
+  PtIconsRegistryService,
+} from '@fred/shared/util/icons';
 
 import { DialogType } from '../lib/dialog';
 import { DialogComponent } from '../lib/dialog.component';
@@ -32,7 +37,11 @@ export class DialogService {
     @Inject(DOCUMENT) private doc: Document,
     private ptIconsRegistryService: PtIconsRegistryService,
   ) {
-    this.ptIconsRegistryService.registerIcons([ptIconsAlertCircle, ptIconsInfo]);
+    this.ptIconsRegistryService.registerIcons([
+      ptIconsAlertCircle,
+      ptIconsInfo,
+      ptIconsCheckmarkCircle,
+    ]);
     // object that knows how to create a component
     this.factory = this.resolver.resolveComponentFactory(DialogComponent);
     // exposes reference to native dom element
