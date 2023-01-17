@@ -18,11 +18,9 @@ form {
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-
-  &__submit-btn {
+  .btn-container {
     display: flex;
+    margin-left: 5rem;
   }
 
   & input,

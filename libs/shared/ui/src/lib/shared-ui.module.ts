@@ -17,7 +17,6 @@ import { ProjectCardComponent } from './board/project-card/project-card.componen
 import { CardComponent } from './card/card.component';
 import { ChipsComponent } from './chips/chips.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { SubmitBtnComponent } from './contact-form/submit-btn/submit-btn.component';
 import { IconComponent } from './iconGroup/icon/icon.component';
 import { IconGroupComponent } from './iconGroup/iconGroup.component';
 import { PopOutCardComponent } from './pop-out-card/pop-out-card.component';
@@ -40,7 +39,7 @@ const iconGroup = [IconGroupComponent, IconComponent];
 const timeline = [TimelineComponent, DateRowComponent];
 const tooltip = [TooltipDirective, TooltipComponent];
 const projectStack = [ProjectStackComponent, PolaroidCardComponent];
-const contactForm = [ContactFormComponent, SubmitBtnComponent];
+const contactForm = [ContactFormComponent];
 const projectWorkCard = [
   ProjectWorkCardComponent,
   AndroidFrameComponent,
