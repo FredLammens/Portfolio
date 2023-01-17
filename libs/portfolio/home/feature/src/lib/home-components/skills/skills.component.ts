@@ -9,15 +9,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class SkillsComponent {
   //logo's from https://logospng.org/d/?l=aHR0cHM6Ly9sb2dvc3BuZy5vcmcvZG93bmxvYWQvaHRtbC01L2xvZ28taHRtbC01LTI1Ni5wbmc= [all 256]
   public icons = [
-    { name: 'Typescript', logoUrl: 'assets/img/skill-icons/typescript.png', color: 'blue' },
-    { name: 'HTML5', logoUrl: 'assets/img/skill-icons/html.png', color: 'orange' },
-    { name: 'Sass', logoUrl: 'assets/img/skill-icons/sass.png', color: 'pink' },
-    { name: 'CSS3', logoUrl: 'assets/img/skill-icons/css.png', color: 'blue' },
-    { name: 'Javascript', logoUrl: 'assets/img/skill-icons/JS.png', color: 'yellow' },
-    { name: 'C#', logoUrl: 'assets/img/skill-icons/c-sharp.png', color: 'green' },
-    { name: 'Node JS', logoUrl: 'assets/img/skill-icons/nodejs.png', color: 'green' },
-    { name: 'Angular', logoUrl: 'assets/img/angular.png', color: 'red' },
-    { name: 'Git', logoUrl: 'assets/img/skill-icons/git.png', color: 'orange' },
+    { name: 'Typescript', logoUrl: 'assets/img/skill-icons/typescript.png', color: '#AEBCE3' },
+    { name: 'HTML5', logoUrl: 'assets/img/skill-icons/html.png', color: 'black' },
+    { name: 'Sass', logoUrl: 'assets/img/skill-icons/sass.png', color: '#35405D' },
+    { name: 'CSS3', logoUrl: 'assets/img/skill-icons/css.png', color: '#8F9DC1' },
+    { name: 'Javascript', logoUrl: 'assets/img/skill-icons/JS.png', color: 'black' },
+    { name: 'C#', logoUrl: 'assets/img/skill-icons/c-sharp.png', color: '#82CF6F' },
+    { name: 'Node JS', logoUrl: 'assets/img/skill-icons/nodejs.png', color: 'white' },
+    { name: 'Angular', logoUrl: 'assets/img/angular.png', color: 'white' },
+    { name: 'Git', logoUrl: 'assets/img/skill-icons/git.png', color: '#E7CD9C' },
   ];
 
   public jobs = [

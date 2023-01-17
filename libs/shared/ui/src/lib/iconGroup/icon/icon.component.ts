@@ -11,13 +11,6 @@ import { LogoIcon } from './../../models/icon.model';
 export class IconComponent {
   //TODO: change LogoUrl to internal file for future proofing
   @Input()
-  public set logoIcon(logo: LogoIcon) {
-    this._logoIcon = {
-      ...logo,
-      color: logo.color ? '0.25rem solid ' + logo.color : '0.25rem solid white',
-    };
-  }
-
-  public _logoIcon: LogoIcon = { name: 'typescript', logoUrl: 'assets/img/placeholder.png' };
+  public logoIcon: LogoIcon = { name: 'typescript', logoUrl: 'assets/img/placeholder.png' };
   constructor() {}
 }
