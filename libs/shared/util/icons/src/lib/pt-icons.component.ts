@@ -38,7 +38,7 @@ export class PtIconsComponent {
     private ptIconsRegistry: PtIconsRegistryService,
     @Optional() @Inject(DOCUMENT) private document: any,
   ) {}
-
+  //TODO: change this to img tag to get better color control
   private svgElementFromString(svgContent: string): SVGElement {
     const div = this.document.createElement('DIV');
     div.innerHTML = svgContent;

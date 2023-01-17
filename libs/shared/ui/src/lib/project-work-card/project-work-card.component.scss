@@ -35,7 +35,11 @@
 
     .pwc {
       &-icon {
-        margin-right: 2.5rem;
+        &-container {
+          margin-right: 0.5rem;
+          margin-top: 0.5rem;
+          margin-left: unset;
+        }
       }
     }
     .pwc-text {
@@ -48,20 +52,13 @@
 }
 .pwc {
   &-icon {
+    display: flex;
+    justify-content: center;
     &-container {
       grid-area: icon;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-left: 25px;
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
     }
-    height: 25px;
-    width: 25px;
-    background-color: white;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    color: black;
   }
   &-img {
     grid-area: device-img;
@@ -71,7 +68,8 @@
     align-items: center;
     justify-content: center;
     &-mobile {
-      max-width: 50%;
+      width: 300px;
+      height: 210px;
       margin-left: 25%;
     }
   }
@@ -89,11 +87,5 @@
     > .btn {
       background-color: var(--fourth-color);
     }
-  }
-}
-
-@media (min-width: 800px) {
-  .pwc-img-mobile {
-    scale: 0.5;
   }
 }

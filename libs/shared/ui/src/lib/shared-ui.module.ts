@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { NgrxentensionsModule } from '@fred/shared/util/common-extensions/ng-rx-extensions';
 
 import {
-  ptIconsExpandOutline,
+  ptIconsInfo,
   PtIconsRegistryService,
   SharedUtilIconsModule,
 } from '@fred/shared/util/icons';
@@ -75,6 +75,6 @@ const components = [
 })
 export class SharedUiModule {
   constructor(private ptIconsRegistryService: PtIconsRegistryService) {
-    this.ptIconsRegistryService.registerIcons([ptIconsExpandOutline]);
+    this.ptIconsRegistryService.registerIcons([ptIconsInfo]);
   }
 }
