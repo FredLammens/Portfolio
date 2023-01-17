@@ -1,0 +1,104 @@
+.project-work-card {
+  background-color: var(--third-color);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 2rem 2fr 1fr;
+  grid-template-rows: 2rem 1fr auto 2rem;
+  grid-template-areas:
+    'icon            free-space     device-img'
+    'free-space-left text           device-img'
+    'free-space-left btn            device-img'
+    'free-space-left free-spacedown device-img';
+  max-height: 18.75rem;
+  &-reverse {
+    background-color: var(--fourth-color);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2rem;
+    grid-template-rows: 2rem 1fr auto 2rem;
+    grid-template-areas:
+      'device-img free-space     icon'
+      'device-img text           free-space-left'
+      'device-img btn            free-space-left'
+      'device-img free-spacedown free-space-left';
+    max-height: 18.75rem;
+
+    .pwc-img {
+      rotate: -7deg;
+    }
+
+    .pwc-btn {
+      > .btn {
+        background-color: var(--third-color);
+      }
+    }
+
+    .pwc {
+      &-icon {
+        &-container {
+          margin-right: 0.5rem;
+          margin-top: 0.5rem;
+          margin-left: unset;
+        }
+      }
+    }
+    .pwc-text {
+      margin-left: 1rem;
+    }
+    .pwc-btn {
+      margin-left: 1rem;
+    }
+  }
+}
+.pwc {
+  &-icon {
+    display: flex;
+    justify-content: center;
+    &-container {
+      grid-area: icon;
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+  }
+  &-img {
+    grid-area: device-img;
+    rotate: 7deg;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &-mobile {
+      width: 300px;
+      height: 210px;
+      margin-left: 25%;
+    }
+  }
+  &-text {
+    grid-area: text;
+    color: var(--primary-text-color-btn);
+    > h1 {
+      margin: 0;
+      font-size: var(--medium-ft);
+    }
+  }
+  &-btn {
+    grid-area: btn;
+
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    > .btn {
+      background-color: var(--fourth-color);
+    }
+  }
+  &-dialog {
+    &-description {
+      margin: 0.7rem 0;
+      display: flex;
+      gap: 0.2rem;
+    }
+  }
+}

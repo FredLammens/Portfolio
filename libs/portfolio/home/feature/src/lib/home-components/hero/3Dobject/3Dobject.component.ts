@@ -10,6 +10,7 @@ import * as THREE from 'three';
 
 //https://medium.com/geekculture/hello-cube-your-first-three-js-scene-in-angular-176c44b9c6c0
 //https://discoverthreejs.com/book/first-steps/first-scene/
+//TODO: move to lib
 @Component({
   selector: 'cube',
   templateUrl: './3Dobject.component.html',

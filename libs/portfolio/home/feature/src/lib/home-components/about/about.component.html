@@ -1,15 +1,19 @@
-<section class="about">
-  <div class="title">
-    <h1>I know that <mark>Good design</mark></h1>
-    <h1>means <mark>Good business</mark></h1>
-  </div>
-  <div class="cards">
-    <card
-      *ngFor="let card of cards"
-      [cardTitle]="card.title"
-      [cardDescription]="card.description"
-      [cardImg]="card.img"
-    >
-    </card>
+<section class="odd">
+  <div class="about">
+    <div class="title">
+      <h1>I know that <mark>Good design</mark></h1>
+      <h1>means <mark>Good business</mark></h1>
+    </div>
+    <div class="cards-container">
+      <div class="cards">
+        <card
+          *ngFor="let card of cards"
+          [cardTitle]="card.title"
+          [cardDescription]="card.description"
+          [cardImg]="card.img"
+        >
+        </card>
+      </div>
+    </div>
   </div>
 </section>

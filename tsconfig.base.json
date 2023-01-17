@@ -29,7 +29,9 @@
       "@fred/shared/util/common-extensions/ng-rx-extensions": [
         "libs/shared/util/common-extensions/ng-rx-extensions/src/index.ts"
       ],
+      "@fred/shared/util/dialog": ["libs/shared/util/dialog/src/index.ts"],
       "@fred/shared/util/functions": ["libs/shared/util/functions/src/index.ts"],
+      "@fred/shared/util/icons": ["libs/shared/util/icons/src/index.ts"],
       "@fred/shared/util/loading": ["libs/shared/util/loading/src/index.ts"]
     }
   },

@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ImgInfo, Project, State, TechStack } from '@fred/shared/ui';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Project, State, TechStack } from '@fred/shared/ui';
 
 @Component({
   selector: 'work',
@@ -7,13 +7,11 @@ import { ImgInfo, Project, State, TechStack } from '@fred/shared/ui';
   styleUrls: ['./work.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WorkComponent implements OnInit {
-  public seeMoreIsClicked = false;
-  public stackImgs: Array<ImgInfo> = [];
+export class WorkComponent {
   // later inside service
   public projects: Array<Project> = [
     {
-      tags: ['Web', 'Mobile'],
+      tags: ['Web', 'Android'],
       tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
       webisteLink: 'https://frederic-lammens.netlify.app/home',
@@ -37,7 +35,7 @@ export class WorkComponent implements OnInit {
       date: new Date(),
     },
     {
-      tags: ['Mobile'],
+      tags: ['IOS'],
       tech: [TechStack.Angular, TechStack.NxWorkspace],
       githubLink: '',
       webisteLink: 'https://frederic-lammens.netlify.app/home',
@@ -49,17 +47,4 @@ export class WorkComponent implements OnInit {
       date: new Date(),
     },
   ];
-  public ngOnInit(): void {
-    this.projects.forEach((p) => {
-      const pImgInfo = {
-        src: p.imgSrc,
-        alt: p.img,
-      };
-      this.stackImgs.push(pImgInfo);
-    });
-  }
-
-  public seeMore(): void {
-    this.seeMoreIsClicked = true;
-  }
 }

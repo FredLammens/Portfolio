@@ -1,36 +1,40 @@
 .hero {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  justify-content: center;
-  padding-top: calc(var(--nav-height) + var(--nav-margin));
+  padding-left: 8.75rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  align-items: center;
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    gap: 3.8125rem;
+    &-caption {
+      & * {
+        margin: 0.2rem;
+      }
+      &-topTitle {
+        font-size: var(--small-ft);
+      }
+      &-title {
+        font-size: var(--medium-ft);
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.card-name {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  > p {
-    margin-bottom: 0;
+.function {
+  &-title {
+    white-space: nowrap;
   }
-  > h1 {
-    margin-top: 0;
-  }
-  &_subtext {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding-top: 0;
-    padding-bottom: calc(var(--nav-height) + var(--nav-margin));
-    margin: 2rem;
+  &-tag {
+    color: var(--third-color);
   }
 }

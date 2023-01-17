@@ -1,22 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
 @import './variables';
 @import './mixins';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 :root {
   //font
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Playfair Display', 'Roboto Slab', serif;
   color: var(--primary-text-color);
   scroll-behavior: smooth;
+  .btn {
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    color: var(--primary-text-color-btn);
+    &-primary {
+      background-color: var(--third-color);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
   body {
     background-color: var(--primary-color);
     margin: 0;
     overflow-x: hidden;
   }
+  .odd {
+    background-color: var(--secondary-color);
+  }
+  mark {
+    background-color: var(--third-color);
+    color: var(--primary-text-color);
+  }
 }
+
 // html {
 //   scroll-snap-type: y mandatory;
 // }
-section {
+
+/**
+|------------------|
+|     HEADER       |
+|------------------|
+| M  |   C    |  M |
+| |  |   O    |  | |
+| L  |   N    |  R |
+|    |   T    |    |
+|    |        |    |
+|------------------|
+*/
+section:not(.hero) {
   min-height: 100vh;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 8.75rem 1fr 8.75rem;
+  grid-template-rows: calc(var(--nav-height) + var(--nav-margin)) 1fr;
+  grid-template-areas:
+    'header header header'
+    'margin-left content margin-right';
   // scroll-snap-align: start;
+}
+
+//section mobile :
+/**
+|------------------|
+| M  |   C    |  M |
+| |  |   O    |  | |
+| L  |   N    |  R |
+|    |   T    |    |
+|    |        |    |
+|------------------|
+|     HEADER       |
+|------------------|
+*/
+@media (max-width: 480px) {
+  section:not(.hero) {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 8.75rem 1fr 8.75rem;
+    grid-template-rows: 1fr calc(var(--nav-height) + var(--nav-margin));
+    grid-template-areas:
+      'margin-left content margin-right'
+      'header header header';
+  }
 }

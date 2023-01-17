@@ -54,6 +54,9 @@ on explanation on how to use and write eslint
 12. ssr ?
 13. standalone components
 14. angular elements ?
+15. remove threejs
+16. cleanup shared lib
+17. add svg-icon-library-starter-main from home to this workspace and add the build library to generate icons in the dist folder
 
 #Usefull sites:
 

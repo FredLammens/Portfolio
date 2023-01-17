@@ -1,7 +1,5 @@
 .skills {
-  padding-top: calc(var(--nav-height) + var(--nav-margin));
-  background-color: var(--secondary-color);
-
+  grid-area: content;
   &__title {
     text-align: center;
     font-size: 4rem;
@@ -24,9 +22,6 @@
 
 @media (max-width: 820px) {
   .skills {
-    padding-top: 0;
-    padding-bottom: calc(var(--nav-height) + var(--nav-margin));
-
     &-container {
       grid-auto-flow: row;
       grid-auto-rows: 1fr;

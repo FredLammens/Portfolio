@@ -1,0 +1,24 @@
+{
+  "name": "shared-util-dialog",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/util/dialog/src",
+  "prefix": "fred",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/util/dialog"],
+      "options": {
+        "jestConfig": "libs/shared/util/dialog/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/util/dialog/**/*.ts", "libs/shared/util/dialog/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:util"]
+}

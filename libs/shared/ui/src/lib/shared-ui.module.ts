@@ -3,6 +3,13 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgrxentensionsModule } from '@fred/shared/util/common-extensions/ng-rx-extensions';
+import { DialogModule } from '@fred/shared/util/dialog';
+
+import {
+  ptIconsInfo,
+  PtIconsRegistryService,
+  SharedUtilIconsModule,
+} from '@fred/shared/util/icons';
 
 import { BoardComponent } from './board/board.component';
 
@@ -16,6 +23,10 @@ import { IconGroupComponent } from './iconGroup/iconGroup.component';
 import { PopOutCardComponent } from './pop-out-card/pop-out-card.component';
 import { PolaroidCardComponent } from './project-stack/polaroid-card/polaroid-card.component';
 import { ProjectStackComponent } from './project-stack/project-stack.component';
+import { AndroidFrameComponent } from './project-work-card/android-frame/android-frame.component';
+import { DesktopFrameComponent } from './project-work-card/desktop-frame/desktop-frame.component';
+import { IOSFrameComponent } from './project-work-card/iOS-frame/iOS-frame.component';
+import { ProjectWorkCardComponent } from './project-work-card/project-work-card.component';
 import { RadioGroupComponent } from './radio-group/radio-group.component';
 import { SeeMoreBtnComponent } from './see-more-btn/see-more-btn.component';
 import { SharedNavigationComponent } from './shared-navigation/shared-navigation.component';
@@ -30,6 +41,12 @@ const timeline = [TimelineComponent, DateRowComponent];
 const tooltip = [TooltipDirective, TooltipComponent];
 const projectStack = [ProjectStackComponent, PolaroidCardComponent];
 const contactForm = [ContactFormComponent, SubmitBtnComponent];
+const projectWorkCard = [
+  ProjectWorkCardComponent,
+  AndroidFrameComponent,
+  DesktopFrameComponent,
+  IOSFrameComponent,
+];
 const components = [
   SharedNavigationComponent,
   CardComponent,
@@ -43,11 +60,23 @@ const components = [
   SeeMoreBtnComponent,
   ...contactForm,
   PopOutCardComponent,
+  ...projectWorkCard,
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, NgrxentensionsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    NgrxentensionsModule,
+    SharedUtilIconsModule,
+    DialogModule,
+  ],
   declarations: [...components],
   exports: [...components],
 })
-export class SharedUiModule {}
+export class SharedUiModule {
+  constructor(private ptIconsRegistryService: PtIconsRegistryService) {
+    this.ptIconsRegistryService.registerIcons([ptIconsInfo]);
+  }
+}

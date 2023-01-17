@@ -1,9 +1,18 @@
-<section class="work">
-  <work-main
-    *ngIf="seeMoreIsClicked === false"
-    class="work-main"
-    [stackImgs]="stackImgs"
-    (showSeeMore)="seeMore()"
-  ></work-main>
-  <work-see-more *ngIf="seeMoreIsClicked" [projects]="projects"></work-see-more>
+<section>
+  <div class="work">
+    <div class="title">
+      <h1>My creative work</h1>
+      <div class="title-sub">
+        <p>Rapid growth in digital technology is changing my</p>
+        <p>development with these creative crafts.</p>
+      </div>
+    </div>
+    <div class="section-container">
+      <project-work-card
+        *ngFor="let proj of projects; let i = index"
+        [project]="proj"
+        [isReverse]="i % 2 === 1"
+      ></project-work-card>
+    </div>
+  </div>
 </section>

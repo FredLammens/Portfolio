@@ -1,0 +1,83 @@
+::ng-deep .dialog {
+  border: none;
+  //colors and padding
+  background-color: var(--fourth-color);
+  color: white;
+
+  //position of content
+  white-space: pre-wrap;
+
+  border-radius: 20px;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-width: 12rem;
+    margin: 1rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'icon main';
+  }
+
+  .main {
+    grid-area: main;
+  }
+  &__icon {
+    grid-area: icon;
+
+    color: white;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & p {
+      margin: 0;
+      font-size: large;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+}
+
+::ng-deep dialog {
+  &[open],
+  &::backdrop {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  &[closing] {
+    animation: fadeOut 0.3s forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

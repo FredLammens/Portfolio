@@ -1,6 +1,6 @@
 .about {
-  padding-top: calc(var(--nav-height) + var(--nav-margin));
-  background-color: var(--secondary-color);
+  grid-area: content;
+
   display: flex;
   flex-direction: column;
 
@@ -9,24 +9,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: calc(var(--nav-height) + var(--nav-margin));
     > h1 {
       margin: 0.5rem;
-      font-size: 4rem;
+      font-size: var(--large-ft);
     }
   }
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
-    margin: 1rem;
+    margin: 1rem 0;
+    &-container {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
   }
 }
 
 @media (max-width: 500px) {
   .about {
-    padding-top: 0;
-
     .cards {
       grid-template-columns: 1fr;
     }
