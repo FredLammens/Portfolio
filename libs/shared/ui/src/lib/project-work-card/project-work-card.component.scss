@@ -58,6 +58,7 @@
       grid-area: icon;
       margin-left: 0.5rem;
       margin-top: 0.5rem;
+      cursor: pointer;
     }
   }
   &-img {
@@ -84,8 +85,20 @@
   &-btn {
     grid-area: btn;
 
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
     > .btn {
       background-color: var(--fourth-color);
+    }
+  }
+  &-dialog {
+    &-description {
+      margin: 0.7rem 0;
+      display: flex;
+      gap: 0.2rem;
     }
   }
 }

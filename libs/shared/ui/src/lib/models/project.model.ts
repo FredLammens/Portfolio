@@ -20,10 +20,10 @@ export enum TechStack {
   NxWorkspace,
 }
 export const techMap = new Map([
-  [TechStack.Angular, '#c3002f'],
+  [TechStack.Angular, '#0d47a1'],
   [TechStack.Firebase, '#ffcc2f'],
   [TechStack.Ionic, '#176bff'],
-  [TechStack.NxWorkspace, '#1c2d53'],
+  [TechStack.NxWorkspace, '#0eaed9'],
 ]);
 
 //found with https://iconscout.com/all-assets/nx

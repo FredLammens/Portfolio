@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgrxentensionsModule } from '@fred/shared/util/common-extensions/ng-rx-extensions';
+import { DialogModule } from '@fred/shared/util/dialog';
 
 import {
   ptIconsInfo,
@@ -69,6 +70,7 @@ const components = [
     ReactiveFormsModule,
     NgrxentensionsModule,
     SharedUtilIconsModule,
+    DialogModule,
   ],
   declarations: [...components],
   exports: [...components],

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { DialogService, DialogType } from '@fred/shared/util/dialog';
+import { DialogType } from '@fred/shared/util/dialog';
 
-import { Project, State, TechStack } from '../models/project.model';
+import { Project, State, TechImgMap, techMap, TechStack } from '../models/project.model';
 
 @Component({
   selector: 'project-work-card',
@@ -25,12 +25,17 @@ export class ProjectWorkCardComponent implements OnInit {
     date: new Date(),
   };
 
+  public chips: Array<{ name: string; color: string; img: string }> = [];
+
   public tag: 'Web' | 'Android' | 'IOS' = 'Web';
 
-  public constructor(private dialogService: DialogService) {}
+  public DialogTypeEnum = DialogType;
+
+  public constructor() {}
 
   public ngOnInit(): void {
     this.tag = this.getTag();
+    this.getChips();
   }
 
   public getTag(): 'Web' | 'Android' | 'IOS' {
@@ -44,7 +49,20 @@ export class ProjectWorkCardComponent implements OnInit {
     }
   }
 
-  public openDialog(): void {
-    this.dialogService.showDialog('dfs', undefined, DialogType.info);
+  public getChips(): void {
+    if (this.project.tech) {
+      for (let tech = 0; tech < this.project.tech.length; tech++) {
+        const element = this.project.tech[tech];
+        const techStackName = TechStack[element];
+        const techStackColor = techMap.get(element);
+        const techImg = TechImgMap.get(element);
+        const techObj = {
+          name: techStackName,
+          color: techStackColor ? techStackColor : '',
+          img: techImg ? techImg : 'placeholder',
+        };
+        this.chips.push(techObj);
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 <div [ngClass]="isReverse ? 'project-work-card-reverse' : 'project-work-card'">
-  <div class="pwc-icon-container" (click)="openDialog()">
+  <div class="pwc-icon-container" (click)="infoDialog.show()">
     <pt-icons class="pwc-icon" name="info"></pt-icons>
   </div>
   <div class="pwc-text">
@@ -24,4 +24,17 @@
       [iOSWebImg]="project.imgSrc"
     ></iOS-frame>
   </div>
+  <dialog app-dialog #infoDialog [type]="DialogTypeEnum.info" title="TechStacks used:">
+    <div class="pwc-dialog-description" role="description">
+      <chip
+        *ngFor="let dChip of chips"
+        [text]="dChip.name"
+        [color]="dChip.color"
+        [cardImg]="dChip.img"
+      ></chip>
+    </div>
+    <div class="pwc-btn-container" role="buttons">
+      <button class="btn btn-primary" (click)="infoDialog.close()">Close</button>
+    </div>
+  </dialog>
 </div>

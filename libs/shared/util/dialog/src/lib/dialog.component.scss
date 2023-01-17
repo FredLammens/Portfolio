@@ -1,8 +1,8 @@
 ::ng-deep .dialog {
   border: none;
   //colors and padding
-  background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  background-color: var(--fourth-color);
+  color: white;
 
   //position of content
   white-space: pre-wrap;
@@ -33,23 +33,26 @@
   }
   &__icon {
     grid-area: icon;
-    path,
-    circle {
-      fill: var(--third-color);
-    }
+
+    color: white;
   }
 
   &__heading {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    & p {
+      margin: 0;
+      font-size: large;
+    }
   }
 
   &__actions {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 

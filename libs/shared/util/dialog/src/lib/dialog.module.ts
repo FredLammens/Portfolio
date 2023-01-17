@@ -14,6 +14,7 @@ import { DialogComponent } from './dialog.component';
 @NgModule({
   imports: [CommonModule, SharedUtilIconsModule],
   declarations: [DialogComponent],
+  exports: [DialogComponent],
 })
 export class DialogModule {
   constructor(private ptIconsRegistryService: PtIconsRegistryService) {
