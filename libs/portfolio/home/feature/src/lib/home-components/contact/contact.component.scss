@@ -8,7 +8,6 @@
     background-color: var(--secondary-color);
     &-container {
       display: flex;
-      flex: 1;
       .side {
         flex: 1;
         margin: 0 1rem;
@@ -32,4 +31,14 @@ h1 {
   margin: 0.2rem 0;
   text-align: center;
   font-size: 2.5rem;
+}
+
+@media (max-width: 1180px) {
+  .contact__card-container {
+    flex-direction: column;
+
+    & .side {
+      display: none;
+    }
+  }
 }

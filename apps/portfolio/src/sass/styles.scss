@@ -73,7 +73,7 @@ section:not(.hero) {
 |     HEADER       |
 |------------------|
 */
-@media (max-width: 480px) {
+@media (max-width: 1180px) {
   section:not(.hero) {
     display: grid;
     grid-auto-columns: 1fr;
