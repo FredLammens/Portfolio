@@ -6,9 +6,9 @@
   &__card {
     border-radius: 20px;
     background-color: var(--secondary-color);
+    padding: 1rem;
     &-container {
       display: flex;
-      flex: 1;
       .side {
         flex: 1;
         margin: 0 1rem;
@@ -31,5 +31,15 @@
 h1 {
   margin: 0.2rem 0;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: var(--medium-ft);
+}
+
+@media (max-width: 1180px) {
+  .contact__card-container {
+    flex-direction: column;
+
+    & .side {
+      display: none;
+    }
+  }
 }

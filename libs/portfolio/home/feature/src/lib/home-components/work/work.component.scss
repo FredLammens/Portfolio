@@ -10,21 +10,40 @@
     align-items: center;
     > h1 {
       margin: 0.5rem;
-      font-size: var(--medium-ft);
+      font-size: var(--large-ft);
     }
     &-sub {
       text-align: center;
       > p {
         margin: 0.5rem;
+        font-size: var(--medium-ft);
       }
     }
   }
   .section {
     &-container {
-      display: flex;
-      gap: 1rem;
-      margin: 1rem 0;
-      flex-direction: column;
+      margin: auto 0;
+    }
+  }
+  .projects-cards {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 680px) {
+  .work {
+    .title {
+      > h1 {
+        font-size: var(--large-ft-mobile);
+      }
+      &-sub {
+        > p {
+          font-size: var(--medium-ft-mobile);
+        }
+      }
     }
   }
 }

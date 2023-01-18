@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
@@ -12,4 +13,10 @@ export class HeroComponent {
     functionTitle: 'developer',
     topTitle: 'Hello! world',
   };
+
+  public constructor(private scroller: ViewportScroller) {}
+
+  public scrollTo(anchor: string): void {
+    this.scroller.scrollToAnchor(anchor);
+  }
 }

@@ -10,11 +10,20 @@
   --primary-text-color: black;
   --primary-text-color-btn: white;
   --primary-text-highlited-color: var(--third-color); //3a3ca2
+
   //glasmorphism (navbar)
   --glass: 100%;
-  --small-ft: 1rem;
-  --medium-ft: 2rem;
-  --large-ft: 3.25rem;
+  //font sizes
+  //The clamp + 1rem is to make it scalable (for when text is to small etc)
+
+  --normal-ft: clamp(1rem, 2.5vw, 1.3rem);
+
+  --x-small-ft: 0.813rem;
+  --small-ft: clamp(1rem, 5vw + 1rem, 3rem);
+  --medium-ft: clamp(1.5rem, 1vw + 1rem, 2.5rem);
+  --large-ft: clamp(3.25rem, 4vw + 1rem, 6rem);
+  --large-ft-mobile: clamp(1.8rem, 3vw + 1rem, 3rem);
+  --medium-ft-mobile: clamp(1rem, 1vw + 1rem, 3rem);
 
   //styling nav
   --nav-margin: 0.5rem;

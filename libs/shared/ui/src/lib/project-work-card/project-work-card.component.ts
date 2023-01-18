@@ -38,6 +38,10 @@ export class ProjectWorkCardComponent implements OnInit {
     this.getChips();
   }
 
+  public goToLink(): void {
+    window.open(this.project.webisteLink, '_blank');
+  }
+
   public getTag(): 'Web' | 'Android' | 'IOS' {
     if (this.project.tags.includes('Web')) {
       return 'Web';

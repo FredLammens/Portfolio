@@ -1,13 +1,15 @@
 .skills {
   grid-area: content;
   &__title {
+    margin: 0.5rem;
     text-align: center;
-    font-size: 4rem;
+    font-size: var(--large-ft);
   }
   &-container {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+    margin-top: 1rem;
 
     &__icons {
       display: flex;

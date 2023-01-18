@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 :root {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
   //font
   font-family: 'Playfair Display', 'Roboto Slab', serif;
   color: var(--primary-text-color);
@@ -53,7 +58,7 @@ section:not(.hero) {
   min-height: 100vh;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 8.75rem 1fr 8.75rem;
+  grid-template-columns: max(5vh, 8.75rem) 1fr max(5vh, 8.75rem);
   grid-template-rows: calc(var(--nav-height) + var(--nav-margin)) 1fr;
   grid-template-areas:
     'header header header'
@@ -73,11 +78,11 @@ section:not(.hero) {
 |     HEADER       |
 |------------------|
 */
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   section:not(.hero) {
     display: grid;
     grid-auto-columns: 1fr;
-    grid-template-columns: 8.75rem 1fr 8.75rem;
+    grid-template-columns: min(1vh, 8.75rem) 1fr min(1vh, 8.75rem);
     grid-template-rows: 1fr calc(var(--nav-height) + var(--nav-margin));
     grid-template-areas:
       'margin-left content margin-right'

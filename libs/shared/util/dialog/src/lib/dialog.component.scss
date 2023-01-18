@@ -2,7 +2,7 @@
   border: none;
   //colors and padding
   background-color: var(--fourth-color);
-  color: white;
+  // color: white;
 
   //position of content
   white-space: pre-wrap;
@@ -44,7 +44,7 @@
 
     & p {
       margin: 0;
-      font-size: large;
+      font-size: var(--medium-ft);
     }
   }
 

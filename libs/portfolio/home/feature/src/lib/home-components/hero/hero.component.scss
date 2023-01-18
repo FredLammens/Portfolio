@@ -1,5 +1,5 @@
 .hero {
-  padding-left: 8.75rem;
+  padding-left: max(5vh, 8.75rem);
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -36,5 +36,14 @@
   }
   &-tag {
     color: var(--third-color);
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    padding-left: min(5vh, 8.75rem);
+
+    &__img {
+      display: none;
+    }
   }
 }
