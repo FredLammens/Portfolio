@@ -8,6 +8,7 @@ import { Anchor } from '@fred/shared/ui';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
+  //TODO: change the anchors to enum or type as const
   public anchors: Array<Anchor> = [
     { anchor: 'Home', toggled: false },
     { anchor: 'About', toggled: false },

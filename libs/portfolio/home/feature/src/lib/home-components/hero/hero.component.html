@@ -14,7 +14,11 @@
       </div>
     </div>
     <!--(showMore)="showSeeMore.emit()"-->
-    <see-more-btn btnText="contact" class="hero__side-btn"></see-more-btn>
+    <see-more-btn
+      (showMore)="scrollTo('Contact')"
+      btnText="contact"
+      class="hero__side-btn"
+    ></see-more-btn>
   </div>
   <img class="hero__img" src="/assets/img/hero/hero_background.jpg" />
 </section>
