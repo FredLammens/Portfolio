@@ -30,7 +30,7 @@
 h1 {
   margin: 0.2rem 0;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: var(--medium-ft);
 }
 
 @media (max-width: 1180px) {

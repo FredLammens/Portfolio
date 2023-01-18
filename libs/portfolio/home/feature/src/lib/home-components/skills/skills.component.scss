@@ -2,7 +2,7 @@
   grid-area: content;
   &__title {
     text-align: center;
-    font-size: 4rem;
+    font-size: var(--xl-ft);
   }
   &-container {
     display: grid;
