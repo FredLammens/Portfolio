@@ -15,10 +15,9 @@
   --glass: 100%;
   //font sizes
   --x-small-ft: 0.813rem;
-  --small-ft: 1rem;
-  --medium-ft: 2rem;
-  --large-ft: 3.25rem;
-  --xl-ft: 4rem;
+  --small-ft: clamp(1rem, 5vw + 1rem, 3rem);
+  --medium-ft: clamp(2rem, 8vw + 1rem, 4rem);
+  --large-ft: clamp(3.25rem, 12vw + 1rem, 6rem);
 
   //styling nav
   --nav-margin: 0.5rem;
