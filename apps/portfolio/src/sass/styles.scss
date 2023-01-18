@@ -51,6 +51,7 @@
 */
 section:not(.hero) {
   min-height: 100vh;
+
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: max(5vh, 8.75rem) 1fr max(5vh, 8.75rem);
