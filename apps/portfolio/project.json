@@ -15,7 +15,11 @@
         "polyfills": "apps/portfolio/src/polyfills.ts",
         "tsConfig": "apps/portfolio/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/portfolio/src/favicon.ico", "apps/portfolio/src/assets"],
+        "assets": [
+          "apps/portfolio/src/favicon.ico",
+          "apps/portfolio/src/assets",
+          "apps/portfolio/src/_redirects"
+        ],
         "styles": ["apps/portfolio/src/sass/styles.scss"],
         "scripts": []
       },

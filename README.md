@@ -63,3 +63,4 @@ on explanation on how to use and write eslint
 1. https://nekocalc.com/px-to-rem-converter
 2. https://css.glass/
 3. add npm to husky : npx husky add .husky/pre-commit "npm run lint:fix"
+4. netlify build site not found fix : https://www.youtube.com/watch?v=istP71u_zrI

@@ -7,6 +7,7 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
     "start:portfolio": "nx serve portfolio",
     "build:portfolio": "nx build portfolio",
+    "build:portfolioProd": "nx build portfolio --prod",
     "test:portfolio": "nx test portfolio",
     "lint": "nx run-many --all --target=lint",
     "lint:fix": "nx run-many --all --target=lint --fix"
