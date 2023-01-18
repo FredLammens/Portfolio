@@ -46,6 +46,7 @@ nav {
 
   a {
     all: unset;
+    user-select: none;
     &::after {
       content: '';
       display: block;
@@ -84,12 +85,14 @@ nav {
     right: 0;
   }
   nav {
+    cursor: pointer;
     .links {
       margin: auto;
     }
     //todo: add small animation
     a {
       all: unset;
+      user-select: none;
     }
 
     .active-link {
