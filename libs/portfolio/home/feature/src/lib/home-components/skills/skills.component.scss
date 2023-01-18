@@ -1,6 +1,7 @@
 .skills {
   grid-area: content;
   &__title {
+    margin: 0.5rem;
     text-align: center;
     font-size: var(--large-ft);
   }

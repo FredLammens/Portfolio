@@ -14,10 +14,14 @@
   //glasmorphism (navbar)
   --glass: 100%;
   //font sizes
+  //The clamp + 1rem is to make it scalable (for when text is to small etc)
+
+  --normal-ft: clamp(1rem, 2.5vw, 1.3rem);
+
   --x-small-ft: 0.813rem;
   --small-ft: clamp(1rem, 5vw + 1rem, 3rem);
-  --medium-ft: clamp(2rem, 8vw + 1rem, 4rem);
-  --large-ft: clamp(3.25rem, 12vw + 1rem, 6rem);
+  --medium-ft: clamp(1.5rem, 1vw + 1rem, 2.5rem);
+  --large-ft: clamp(3.25rem, 4vw + 1rem, 6rem);
 
   //styling nav
   --nav-margin: 0.5rem;

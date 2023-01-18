@@ -4,11 +4,15 @@
   &__year {
     width: 5rem;
     color: var(--primary-text-highlited-color);
+    font-size: var(--normal-ft);
   }
   &__jobInfo {
     &--company {
       margin: 0.2rem;
       font-size: var(--x-small-ft);
+    }
+    &--title {
+      font-size: var(--normal-ft);
     }
   }
 }
