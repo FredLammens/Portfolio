@@ -22,6 +22,8 @@
   --small-ft: clamp(1rem, 5vw + 1rem, 3rem);
   --medium-ft: clamp(1.5rem, 1vw + 1rem, 2.5rem);
   --large-ft: clamp(3.25rem, 4vw + 1rem, 6rem);
+  --large-ft-mobile: clamp(1.8rem, 3vw + 1rem, 3rem);
+  --medium-ft-mobile: clamp(1rem, 1vw + 1rem, 3rem);
 
   //styling nav
   --nav-margin: 0.5rem;

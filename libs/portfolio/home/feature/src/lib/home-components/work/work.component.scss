@@ -32,3 +32,18 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 680px) {
+  .work {
+    .title {
+      > h1 {
+        font-size: var(--large-ft-mobile);
+      }
+      &-sub {
+        > p {
+          font-size: var(--medium-ft-mobile);
+        }
+      }
+    }
+  }
+}
