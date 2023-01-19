@@ -75,6 +75,10 @@ section:not(.hero) {
 |------------------|
 */
 @media (max-width: 680px) {
+  :root {
+    //mobile doesnt count the scrollbars with width:100% height:100% so for now hide extra overflow
+    overflow-x: hidden;
+  }
   section:not(.hero) {
     display: grid;
     grid-auto-columns: 1fr;
